@@ -46,10 +46,16 @@
             <div class="col-md-12 text-center">
               <h1 class="mb-4"><a href="index.html" class="logo">Erase</a></h1>
               <ul>
-                <li><a href="index.html"><span>Home</span></a></li>
+              	
+              	<jsp:include page="menu.jsp">
+                   <jsp:param name="pageSelection" value="2" />
+                </jsp:include>
+              	
+                <!-- <li><a href="index.html"><span>Home</span></a></li>
                 <li><a href="about.html"><span>About</span></a></li>
                 <li class="active"><a href="blog.html"><span>Blog</span></a></li>
-                <li><a href="contact.html"><span>Contact</span></a></li>
+                <li><a href="contact.html"><span>Contact</span></a></li> -->
+                
               </ul>
             </div>
           </div>
