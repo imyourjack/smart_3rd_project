@@ -79,3 +79,6 @@ INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세
 INSERT INTO tbl_item(item_name, item_category, item_img_url, item_explain, pc_detail) 
    VALUES('남자향수', '향수', 'http://naver.com', '여름 쿨톤에 어울리는 남자향수!', '보라색');
 INSERT INTO tbl_result(user_id, pc_detail) VALUES('admin', '보라색');
+
+INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender) VALUES('onyu9601', '12345', '김온유', '26', '여자');
+INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '저의 퍼스널 컬러가 궁금해요!', 'onyu9601');

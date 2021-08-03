@@ -36,10 +36,7 @@
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<script type="text/javascript">
-		function goWrite() {
-			location.href = "${cpath}/boardForm.do";			
-		}		
+	<script type="text/javascript">	
 	</script>
 </head>
   <body>
@@ -89,60 +86,33 @@
 	      </div>
 	    </section>
 
-<section
-				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+			<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 				<div class="container">
+					<h2>Panel Heading</h2>
 					<div class="panel panel-default">
-						<div class="panel-heading"><h2>자유게시판</h2></div>
+						<div class="panel-heading">Panel Heading</div>
 						<div class="panel-body">
-
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th scope="col">번호</th>
-										<th scope="col">제목</th>
-										<th scope="col">내용</th>
-										<th scope="col">조회수</th>
-										<th scope="col">작성일</th>
-										<th scope="col">작성자</th>						
-									</tr>
-								</thead>
-								<tbody>
-									<c:forEach var="vo" items="${list}">
-										<tr class="table-active">
-											<th scope="row"><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_idx}</a></th>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_title}</td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_contents}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_count}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_indate}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.user_id}</a></td>											
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-							<div>
-								<form>
-									<table class="table">
-										<tr>
-											<td><select name="part" class="form-control">
-													<option value="title">제목</option>
-													<option value="writer">작성자</option>
-													<option value="contents">내용</option>
-											</select></td>
-											<td><input type="text" name="keyword"
-												class="form-control"></td>
-											<td><button type="submit" class="btn">검색</button></td>
-											<td><button class="btn" onclick="goWrite()">글쓰기</button></td>
-										</tr>
-									</table>
-								</form>
-							</div>
+							<form id="frm" method="post" action="${cpath}/boardInsert.do">
+								<div class="form-group">
+									<label>제목: </label> <input type="text" class="form-control"
+										id="title" name="title">
+								</div>
+								<div class="form-group">
+									<label>내용:</label>
+									<textarea class="form-control" rows="5" id=contents
+										name="contents"></textarea>
+								</div>
+								<div class="form-group">
+									<label>작성자: </label> <input type="text" class="form-control"
+										id="writer" name="writer">
+								</div>
+								<input type="submit" class="btn btn-primary btn-sm" value="글쓰기">
+								<input type='reset' value='취소' class='btn btn-warning btn-sm'>
+							</form>
 						</div>
 					</div>
 				</div>
-			</section>
-
-      
+			</section>      
       <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>
 	      <div class="container">
