@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Erase - Free Bootstrap 4 Template by Colorlib</title>
+    <title>PALETTE</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -44,7 +44,7 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Erase</a></h1>
+              <h1 class="mb-4"><a href="index.html" class="logo">palette</a></h1>
               <ul>
               	
               	<jsp:include page="menu.jsp">
@@ -67,7 +67,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">Erase</a>
+	          <a class="colorlib-logo" href="index.html">palette</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
@@ -78,8 +78,8 @@
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p>
-	            <h1 class="bread">Our Blog</h1>
+	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
+	            <h1 class="bread">personal color</h1>
 	          </div>
 	        </div>
 	      </div>
