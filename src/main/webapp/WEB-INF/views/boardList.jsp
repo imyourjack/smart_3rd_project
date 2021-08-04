@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PALETTE</title>
+    <title>Erase - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -29,11 +29,19 @@
     
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-  </head>
+	    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		function goWrite() {
+			location.href = "${cpath}/boardForm.do";			
+		}		
+	</script>
+</head>
   <body>
 
     <div class="page">
@@ -44,18 +52,12 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">palette</a></h1>
+              <h1 class="mb-4"><a href="index.html" class="logo">Erase</a></h1>
               <ul>
-              	
-              	<jsp:include page="menu.jsp">
-                   <jsp:param name="pageSelection" value="2" />
-                </jsp:include>
-              	
-                <!-- <li><a href="index.html"><span>Home</span></a></li>
+                <li class="active"><a href="index.html"><span>Home</span></a></li>
                 <li><a href="about.html"><span>About</span></a></li>
-                <li class="active"><a href="blog.html"><span>Blog</span></a></li>
-                <li><a href="contact.html"><span>Contact</span></a></li> -->
-                
+                <li><a href="blog.html"><span>Blog</span></a></li>
+                <li><a href="contact.html"><span>Contact</span></a></li>
               </ul>
             </div>
           </div>
@@ -67,52 +69,78 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">PALETTE</a>
+	          <a class="colorlib-logo" href="index.html">Erase</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
-      	<div class="overlay"></div>
+      <section class="hero-wrap js-fullheight">
 	      <div class="container-fluid px-0">
-	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
+	        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
-	            <h1 class="bread">personal color</h1>
+	          	<div class="desc">
+	          		<span class="subheading">Magazine</span>
+		            <h1 style="background-image: url(images/bg_1.jpg);">Erase</h1>
+		            <span class="subheading-2">UK Edition</span>
+	            </div>
 	          </div>
 	        </div>
 	      </div>
-      </section>
-
-	    <section class="ftco-section ftco-no-pb ftco-no-pt">
-	    	<div class="container-fluid px-0">
-	    		<div class="row no-gutters">
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);">
-	    						
-	    					</div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a>퍼스널컬러</a></h2>
-	    							<h2 class="mb-4"><a>얼굴 분석을 통한</a></h2>
-	    							<h2 class="mb-4"><a>남성 맞춤형 스타일</a></h2>
-	    							<h2 class="mb-4"><a>개선 서비스</a></h2>
-	    							<p>Color types help stylize makeup, fashion. have you ever thought about your personal colors that perfectly suit your image?</p>
-	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary" style="
-									    width: 526px;
-									    height: 164px;
-									    font-size:100px;
-									"> 진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-
-	    		</div>
-	    	</div>
 	    </section>
+
+<section
+				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+				<div class="container">
+					<div class="panel panel-default">
+						<div class="panel-heading"><h2>자유게시판</h2></div>
+						<div class="panel-body">
+
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th scope="col">번호</th>
+										<th scope="col">제목</th>
+										<th scope="col">내용</th>
+										<th scope="col">조회수</th>
+										<th scope="col">작성일</th>
+										<th scope="col">작성자</th>						
+									</tr>
+								</thead>
+								<tbody>
+									<c:forEach var="vo" items="${list}">
+										<tr class="table-active">
+											<th scope="row"><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_idx}</a></th>
+											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_title}</td>
+											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_contents}</a></td>
+											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_count}</a></td>
+											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_indate}</a></td>
+											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.user_id}</a></td>											
+										</tr>
+									</c:forEach>
+								</tbody>
+							</table>
+							<div>
+								<form>
+									<table class="table">
+										<tr>
+											<td><select name="part" class="form-control">
+													<option value="title">제목</option>
+													<option value="writer">작성자</option>
+													<option value="contents">내용</option>
+											</select></td>
+											<td><input type="text" name="keyword"
+												class="form-control"></td>
+											<td><button type="submit" class="btn">검색</button></td>
+											<td><button class="btn" onclick="goWrite()">글쓰기</button></td>
+										</tr>
+									</table>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
       
       <footer class="ftco-footer ftco-section img">
@@ -121,8 +149,8 @@
 	        <div class="row mb-5">
 	          <div class="col-lg-3">
 	            <div class="ftco-footer-widget mb-4">
-	              <h2 class="ftco-heading-2 logo"><a href="index.html">PALETTE</a></h2>
-	              <p>Color types help stylize makeup, fashion. have you ever thought about your personal colors that perfectly suit your image?</p>
+	              <h2 class="ftco-heading-2 logo"><a href="index.html">Erase</a></h2>
+	              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 	              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -134,7 +162,7 @@
 	            <div class="ftco-footer-widget mb-4">
 	              <h2 class="ftco-heading-2">Recent Blog</h2>
 	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);"></a>
+	                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
 	                <div class="text">
 	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
 	                  <div class="meta">
@@ -145,7 +173,7 @@
 	                </div>
 	              </div>
 	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_2.jpg);"></a>
+	                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
 	                <div class="text">
 	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
 	                  <div class="meta">
@@ -174,9 +202,9 @@
 	            	<h2 class="ftco-heading-2">Have a Questions?</h2>
 	            	<div class="block-23 mb-3">
 		              <ul>
-		                <li><span class="icon icon-map-marker"></span><span class="text">3rd floor 31-15, Yesul-gil, Dong-gu, Gwangju, Republic of Korea</span></li>
-		                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+81 10 5315 6111</span></a></li>
-		                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">dkdk9998@naver.com</span></a></li>
+		                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+		                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+		                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
 		              </ul>
 		            </div>
 	            </div>
@@ -186,7 +214,7 @@
 	          <div class="col-md-12 text-center">
 
 	            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Why is this working
+	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 	          </div>
 	        </div>

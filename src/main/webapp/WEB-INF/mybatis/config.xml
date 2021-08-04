@@ -4,6 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <!-- <typeAlias type="kr.smhrd.domain.BoardVO" alias="boardVO"/> -->
+        <typeAlias type="kr.pcolor.domain.BoardVO" alias="boardVO"/>
+        <typeAlias type="kr.pcolor.domain.SearchVO" alias="SearchVO"/>
     </typeAliases>
 </configuration> 
