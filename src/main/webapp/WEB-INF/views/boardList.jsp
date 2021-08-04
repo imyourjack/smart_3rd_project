@@ -109,12 +109,12 @@
 								<tbody>
 									<c:forEach var="vo" items="${list}">
 										<tr class="table-active">
-											<th scope="row"><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_idx}</a></th>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_title}</td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_contents}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_count}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_indate}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.user_id}</a></td>											
+											<th scope="row"><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_idx}</a></th>
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_title}</td>
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_contents}</a></td>
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_count}</a></td>
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_indate}</a></td>
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.user_id}</a></td>											
 										</tr>
 									</c:forEach>
 								</tbody>

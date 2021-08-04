@@ -44,7 +44,7 @@
 		    	var user_id=$("#user_id").val();
 		    	var user_password=$("#user_password").val();
 		    	$.ajax({
-		    		url : "login.do",
+		    		url : "pcolor.do",
 		    	    data : {"user_id":user_id,"user_password":user_password},
 		    	    success : function(data){
 		    	    	if(data=="NO"){
