@@ -50,11 +50,7 @@
               	<jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="2" />
                 </jsp:include>
-              	
-                <!-- <li><a href="index.html"><span>Home</span></a></li>
-                <li><a href="about.html"><span>About</span></a></li>
-                <li class="active"><a href="blog.html"><span>Blog</span></a></li>
-                <li><a href="contact.html"><span>Contact</span></a></li> -->
+              
                 
               </ul>
             </div>

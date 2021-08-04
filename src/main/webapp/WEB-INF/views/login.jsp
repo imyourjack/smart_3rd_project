@@ -37,9 +37,35 @@
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-		function goWrite() {
-			location.href = "${cpath}/boardForm.do";			
-		}			
+			function gosignupFn() {
+				location.href = "${cpath}/signup.do";			
+			}		
+		    function loginFn(){
+		    	var user_id=$("#user_id").val();
+		    	var user_password=$("#user_password").val();
+		    	$.ajax({
+		    		url : "login.do",
+		    	    data : {"user_id":user_id,"user_password":user_password},
+		    	    success : function(data){
+		    	    	if(data=="NO"){
+		    	    		alert("회원인증에 실패했습니다.");
+		    	    	}else{
+		    	    		alert("환영합니다.")
+		    	    	}	 
+		    	    },	    
+		    	    error : function(){alert("error");}	   		
+		    	});	
+		    }
+		    function logoutFn(){
+		    	   $.ajax({
+		    	      url: "logout.do",
+		    	      type:"get",
+		    	      success:function(){ 
+		    	         location.href="login.do"
+		    	      },
+		    	     error:function(){alert("error");}	      
+		    	   });	   
+		    	}		 			
 	</script>
 </head>
   <body>
@@ -55,7 +81,7 @@
               <h1 class="mb-4"><a href="index.html" class="logo">Erase</a></h1>
               <ul>
                 <jsp:include page="menu.jsp">
-                   <jsp:param name="pageSelection" value="4" />
+                   <jsp:param name="pageSelection" value="5" />
                 </jsp:include>
               </ul>
             </div>
@@ -92,51 +118,25 @@
 				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 				<div class="container">
 					<div class="panel panel-default">
-						<div class="panel-heading"><h2>자유게시판</h2></div>
+						<div class="panel-heading"><h2>로그인</h2></div>
 						<div class="panel-body">
+							<form method="post" class="loginForm">
+								<h2>Login</h2>
+								<div class="idForm">
+									<input type="text" class="id" placeholder="ID" id="user_id"
+										name="user_id">
+								</div>
+								<div class="passForm">
+									<input type="password" class="pw" placeholder="PW"
+										id="user_password" name="user_password">
+								</div>
+								<button type="button" class="btn" onclick="loginFn()">
+									LOG IN</button>
 
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th scope="col">번호</th>
-										<th scope="col">제목</th>
-										<th scope="col">내용</th>
-										<th scope="col">조회수</th>
-										<th scope="col">작성일</th>
-										<th scope="col">작성자</th>						
-									</tr>
-								</thead>
-								<tbody>
-									<c:forEach var="vo" items="${list}">
-										<tr class="table-active">
-											<th scope="row"><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_idx}</a></th>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_title}</td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_contents}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_count}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_indate}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.user_id}</a></td>											
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-							<div>
-								<form action="${cpath}/boardSearch.do" method="post">
-									<table class="table">
-										<tr>
-											<td>
-												<select name="part" class="form-control">
-													<option value="board_title">제목</option>
-													<option value="user_id">작성자</option>
-													<option value="board_contents">내용</option>
-												</select>
-											</td>
-											<td><input type="text" name="keyword" class="form-control"></td>
-											<td><button type="submit" class="btn">검색</button></td>																						
-										</tr>
-									</table>
-								</form>
-								<button class="btn" onclick="goWrite()">글쓰기</button>
-							</div>
+								<div class="bottomText">
+									아이디가 없으신가요? <a type="button" onclick="gosignupFn()">회원가입</a>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>

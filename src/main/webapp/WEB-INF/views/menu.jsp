@@ -18,3 +18,23 @@
       <% } %>
    >personal color</a>
 </li>
+
+<li>
+   <a href="boardList.do"
+      <%
+         if(num.equals("4")){
+      %>
+         style="color:#f8b500;"
+      <% } %>
+   >게시판</a>
+</li>
+
+<li>
+   <a href="login.do"
+      <%
+         if(num.equals("5")){
+      %>
+         style="color:#f8b500;"
+      <% } %>
+   >로그인</a>
+</li>

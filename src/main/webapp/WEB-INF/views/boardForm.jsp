@@ -95,16 +95,16 @@
 							<form id="frm" method="post" action="${cpath}/boardInsert.do">
 								<div class="form-group">
 									<label>제목: </label> <input type="text" class="form-control"
-										id="title" name="title">
+										id="board_title" name="board_title">
 								</div>
 								<div class="form-group">
 									<label>내용:</label>
-									<textarea class="form-control" rows="5" id=contents
-										name="contents"></textarea>
+									<textarea class="form-control" rows="5" id=board_contents
+										name="board_contents"></textarea>
 								</div>
 								<div class="form-group">
 									<label>작성자: </label> <input type="text" class="form-control"
-										id="writer" name="writer">
+										id="user_id" name="user_id">
 								</div>
 								<input type="submit" class="btn btn-primary btn-sm" value="글쓰기">
 								<input type='reset' value='취소' class='btn btn-warning btn-sm'>

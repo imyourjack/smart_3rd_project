@@ -16,7 +16,7 @@ public interface BoardMapper {
     @Select("select * from tbl_board")
 	public List<BoardVO> boardList();
     
-    @Insert("insert into tbl_board values(#{board_title},#{board_contents},#{user_id})")
+    @Insert("insert into tbl_board (board_title,board_contents,user_id) values(#{board_title},#{board_contents},#{user_id})")
     public void boardInsert(BoardVO vo);
 
     @Select("select * from tbl_board where board_idx = #{board_idx}")

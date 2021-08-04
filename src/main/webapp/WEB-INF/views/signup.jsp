@@ -37,9 +37,62 @@
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-		function goWrite() {
-			location.href = "${cpath}/boardForm.do";			
-		}			
+	    function signupFn(){
+	        var signData= $("#srm").serialize();
+	         $.ajax({
+	            url: "signup.do",
+	            type:"post",
+	            data : signData,
+	            success:function(data){
+	              alert("회원가입완료")
+	              location.href="pcolor.do"; 
+	            },
+	           error:function(){alert("error");}         
+	         });         
+	      }
+		     
+	     $(function(){
+	        //아이디 중복체크
+	        $(".msg2").hide();
+	          $(".msg1").hide();
+	           $('#user_id').blur(function(){
+	                $.ajax({
+	                 url:"check.do",
+	                type:"post",            
+	                data:{ "user_id":$('#user_id').val()
+	               },
+	                success:function(data){   
+	                       if(parseInt(data)==1){
+	                          $(".msg2").show();
+	                          $(".msg1").hide();
+	                         }else{
+	                            $(".msg1").show();
+	                            $(".msg2").hide();
+	                       }
+	                    },
+	                    error:function(){alert("error");}   
+	               });
+	             });
+	        });
+	       	
+	      $(function(){
+	        //비밀번호 확인
+	        $(".pw1").hide();
+	        $(".pw2").hide();
+	           $("#user_password_check").keyup(function(){
+	              var user_password = $("#user_password").val() ;
+	              var user_password_check = $("#user_password_check").val();
+	              if(user_password != "" || user_password_check != ""){
+	                 if(user_password==user_password_check){
+	                     $(".pw1").show();
+	                     $(".pw2").hide();
+	                 }else{
+	                     $(".pw1").hide();
+	                     $(".pw2").show();
+	                 }               
+	              }                 
+	           });        
+	        }); 			
 	</script>
 </head>
   <body>
@@ -54,9 +107,10 @@
             <div class="col-md-12 text-center">
               <h1 class="mb-4"><a href="index.html" class="logo">Erase</a></h1>
               <ul>
-                <jsp:include page="menu.jsp">
-                   <jsp:param name="pageSelection" value="4" />
-                </jsp:include>
+                <li class="active"><a href="index.html"><span>Home</span></a></li>
+                <li><a href="about.html"><span>About</span></a></li>
+                <li><a href="blog.html"><span>Blog</span></a></li>
+                <li><a href="contact.html"><span>Contact</span></a></li>
               </ul>
             </div>
           </div>
@@ -88,61 +142,47 @@
 	      </div>
 	    </section>
 
-<section
+		<section
 				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 				<div class="container">
 					<div class="panel panel-default">
-						<div class="panel-heading"><h2>자유게시판</h2></div>
+						<div class="panel-heading"><h2>회원가입</h2></div>
 						<div class="panel-body">
-
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th scope="col">번호</th>
-										<th scope="col">제목</th>
-										<th scope="col">내용</th>
-										<th scope="col">조회수</th>
-										<th scope="col">작성일</th>
-										<th scope="col">작성자</th>						
-									</tr>
-								</thead>
-								<tbody>
-									<c:forEach var="vo" items="${list}">
-										<tr class="table-active">
-											<th scope="row"><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_idx}</a></th>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_title}</td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_contents}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_count}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_indate}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.user_id}</a></td>											
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-							<div>
-								<form action="${cpath}/boardSearch.do" method="post">
-									<table class="table">
-										<tr>
-											<td>
-												<select name="part" class="form-control">
-													<option value="board_title">제목</option>
-													<option value="user_id">작성자</option>
-													<option value="board_contents">내용</option>
-												</select>
-											</td>
-											<td><input type="text" name="keyword" class="form-control"></td>
-											<td><button type="submit" class="btn">검색</button></td>																						
-										</tr>
-									</table>
-								</form>
-								<button class="btn" onclick="goWrite()">글쓰기</button>
-							</div>
+							<form id="srm" name="srm" method="post" class="signForm" action="${cpath}/signup.do" method="post">
+								<div class="idForm">
+									<input type="text" class="id" placeholder="아이디"
+										name="user_id" id="user_id"> <span class="msg1">사용가능합니다.</span>
+									<span class="msg2">중복된 아이디 입니다.</span>
+								</div>
+								<div class="passForm">
+									<input type="password" class="pw" placeholder="비밀번호"
+										name="user_password" id="user_password">
+								</div>
+								<div class="passForm">
+									<input type="password" class="pw" placeholder="비밀번호확인"
+										name="user_password_check" id="user_password_check">
+									<span class="pw1">비밀번호가 일치합니다.</span> <span class="pw2">비밀번호가
+										일치하지 않습니다.</span>
+								</div>
+								<div class="nameForm">
+									<input type="text" class="name" placeholder="이름"
+										name="user_name">
+								</div>
+								<div class="ageForm">
+									<input type="text" class="age" placeholder="나이"
+										name="user_age">
+								</div>
+								<div class="genderForm">
+									<input type="text" class="gender" placeholder="성별"
+										name="user_gender">
+								</div>
+								<button type="button" class="btn" onclick="signupFn()">
+									회원등록</button>
+							</form>
 						</div>
 					</div>
 				</div>
-			</section>
-
-      
+			</section>      
       <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>
 	      <div class="container">
