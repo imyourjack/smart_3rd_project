@@ -50,7 +50,11 @@
               	<jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="2" />
                 </jsp:include>
-              
+              	
+                <!-- <li><a href="index.html"><span>Home</span></a></li>
+                <li><a href="about.html"><span>About</span></a></li>
+                <li class="active"><a href="blog.html"><span>Blog</span></a></li>
+                <li><a href="contact.html"><span>Contact</span></a></li> -->
                 
               </ul>
             </div>
@@ -63,7 +67,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">PALETTE</a>
+	          <a class="colorlib-logo" href="index.html">palette</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
@@ -92,15 +96,56 @@
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
 	    							<h2 class="mb-4"><a>퍼스널컬러</a></h2>
-	    							<h2 class="mb-4"><a>얼굴 분석을 통한</a></h2>
-	    							<h2 class="mb-4"><a>남성 맞춤형 스타일</a></h2>
-	    							<h2 class="mb-4"><a>개선 서비스</a></h2>
+	    							<h2 class="mb-4"><a>당신은 ??? 톤의 컬러입니다</a></h2>
 	    							<p>Color types help stylize makeup, fashion. have you ever thought about your personal colors that perfectly suit your image?</p>
-	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary" style="
-									    width: 526px;
-									    height: 164px;
-									    font-size:100px;
-									"> 진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/spring.jpg);">
+	    						
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html">???톤의 컬러 팔레트</a></h2>
+	    							<p>설명</p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap bg-darken">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 d-flex justify-content-center align-items-center order-md-last js-fullheight">
+	    						<div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_4.jpg);"></div>
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html">헤어 컬러</a></h2>
+	    							<p> 설명 </p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_5.jpg);"></div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html"> 연예인 </a></h2>
+	    							<p> 설명 </p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_6.jpg);"></div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html"> 향수 </a></h2>
+	    							<p> 설명 </p>
 	    						</div>
 	    					</div>
 	    				</div>
@@ -117,8 +162,8 @@
 	        <div class="row mb-5">
 	          <div class="col-lg-3">
 	            <div class="ftco-footer-widget mb-4">
-	              <h2 class="ftco-heading-2 logo"><a href="index.html">PALETTE</a></h2>
-	              <p>Color types help stylize makeup, fashion. have you ever thought about your personal colors that perfectly suit your image?</p>
+	              <h2 class="ftco-heading-2 logo"><a href="index.html">Erase</a></h2>
+	              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 	              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -170,9 +215,9 @@
 	            	<h2 class="ftco-heading-2">Have a Questions?</h2>
 	            	<div class="block-23 mb-3">
 		              <ul>
-		                <li><span class="icon icon-map-marker"></span><span class="text">3rd floor 31-15, Yesul-gil, Dong-gu, Gwangju, Republic of Korea</span></li>
-		                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+81 10 5315 6111</span></a></li>
-		                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">dkdk9998@naver.com</span></a></li>
+		                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+		                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+		                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
 		              </ul>
 		            </div>
 	            </div>
@@ -182,7 +227,7 @@
 	          <div class="col-md-12 text-center">
 
 	            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Why is this working
+	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 	          </div>
 	        </div>

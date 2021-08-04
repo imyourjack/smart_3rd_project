@@ -16,6 +16,7 @@
       %>
          style="color:#f8b500;"
       <% } %>
+
    >퍼스널 컬러 진단</a>
 </li>
 
@@ -27,4 +28,27 @@
          style="color:#f8b500;"
       <% } %>
    >의상 색상 적합도 진단</a>
+
+   >personal color</a>
+</li>
+
+<li>
+   <a href="boardList.do"
+      <%
+         if(num.equals("4")){
+      %>
+         style="color:#f8b500;"
+      <% } %>
+   >게시판</a>
+</li>
+
+<li>
+   <a href="login.do"
+      <%
+         if(num.equals("5")){
+      %>
+         style="color:#f8b500;"
+      <% } %>
+   >로그인</a>
+
 </li>

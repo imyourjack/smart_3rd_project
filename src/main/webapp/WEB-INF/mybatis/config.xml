@@ -6,5 +6,6 @@
     <typeAliases>
         <typeAlias type="kr.pcolor.domain.BoardVO" alias="boardVO"/>
         <typeAlias type="kr.pcolor.domain.SearchVO" alias="SearchVO"/>
+        <typeAlias type="kr.pcolor.domain.UserVO" alias="UserVO"/>
     </typeAliases>
 </configuration> 
