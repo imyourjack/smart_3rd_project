@@ -28,8 +28,6 @@
          style="color:#f8b500;"
       <% } %>
    >의상 색상 적합도 진단</a>
-
-   >personal color</a>
 </li>
 
 <li>
