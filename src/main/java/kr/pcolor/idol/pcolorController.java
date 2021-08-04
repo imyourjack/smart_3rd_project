@@ -9,4 +9,8 @@ public class pcolorController {
 	@RequestMapping("/pcolor.do")
 	public void pcolor() {
 	}
+	
+	@RequestMapping("/home.do")
+	public void home() {
+	}
 }
