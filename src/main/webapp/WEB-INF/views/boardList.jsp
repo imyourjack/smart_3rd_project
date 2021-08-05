@@ -88,8 +88,7 @@
 	      </div>
 	    </section>
 
-<section
-				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 				<div class="container">
 					<div class="panel panel-default">
 						<div class="panel-heading"><h2>자유게시판</h2></div>

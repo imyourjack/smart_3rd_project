@@ -13,4 +13,8 @@ public class pcolorController {
 	@RequestMapping("/home.do")
 	public void home() {
 	}
+	
+	@RequestMapping("/mypage.do")
+	public void mypage() {
+	}
 }

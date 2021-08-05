@@ -39,8 +39,7 @@
 
     <div class="page">
     <nav id="colorlib-main-nav" role="navigation">
-      <a href="#" class="js-colorlib-nav-toggle colorlib-na
-      v-toggle active"><i></i></a>
+      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
         <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">

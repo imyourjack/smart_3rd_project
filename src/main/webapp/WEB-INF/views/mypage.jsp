@@ -29,17 +29,13 @@
     
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
-	    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-	<link rel="stylesheet"
-		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<script type="text/javascript">	
-	</script>
-</head>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+  </head>
   <body>
+  
 
     <div class="page">
     <nav id="colorlib-main-nav" role="navigation">
@@ -49,11 +45,13 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
+              <h1 class="mb-4"><a href="home.do" class="logo">palette</a></h1>
               <ul>
-                <jsp:include page="menu.jsp">
-                   <jsp:param name="pageSelection" value="4" />
+              	
+              	<jsp:include page="menu.jsp">
+                   <jsp:param name="pageSelection" value="5" />
                 </jsp:include>
+                
               </ul>
             </div>
           </div>
@@ -71,55 +69,66 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
-	        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	          	<div class="desc">
-	          		<span class="subheading">IDOL</span>
-		            <h1 style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);">PALETTE</h1>
-		            <span class="subheading-2">KR Edition</span>
-	            </div>
+	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
+	            <h1 class="bread">mypage</h1>
 	          </div>
 	        </div>
 	      </div>
-	    </section>
+      </section>
 
-			<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+	    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 				<div class="container">
-					<h2>Panel Heading</h2>
 					<div class="panel panel-default">
-						<div class="panel-heading">Panel Heading</div>
-						<div class="panel-body">
-							<form id="frm" method="post" action="${cpath}/boardInsert.do">
-								<div class="form-group">
-									<label>제목: </label> <input type="text" class="form-control"
-										id="board_title" name="board_title">
-								</div>
-								<div class="form-group">
-									<label>내용:</label>
-									<textarea class="form-control" rows="5" id=board_contents
-										name="board_contents"></textarea>
-								</div>
-								<div class="form-group">
-									<label>작성자: </label> <input type="text" class="form-control"
-										id="user_id" name="user_id">
-								</div>
-								<input type="submit" class="btn btn-primary btn-sm" value="글쓰기">
-								<input type='reset' value='취소' class='btn btn-warning btn-sm'>
-							</form>
-						</div>
+					
+					<!-- 폼 넣을 곳 -->
+					
+						<form>
+						  <fieldset>
+						    <legend>회원정보</legend>
+						    <div class="form-group row">
+						      <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
+						      <div class="col-sm-10">
+						        <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="${sessionScope.userVO.user_id}">
+						      </div>
+						    </div>
+						    <div class="form-group">
+						      <label for="exampleInputPassword1">Password</label>
+						      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						      <small id="emailHelp" class="form-text text-muted">변경할 비밀번호 입력</small>
+						    </div>
+						    <div class="form-group">
+						      <label for="exampleInputEmail1">name</label>
+						      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+						    </div>
+						    <div class="form-group">
+						      <label for="exampleInputEmail1">age</label>
+						      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter age">
+						    </div>
+						    <div class="form-group">
+						      <label for="exampleInputEmail1">gender</label>
+						      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter gender">
+						    </div>
+						    
+						  </fieldset>
+						</form>
 					</div>
 				</div>
-			</section>      
+			</section>
+
+      
       <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>
 	      <div class="container">
 	        <div class="row mb-5">
 	          <div class="col-lg-3">
 	            <div class="ftco-footer-widget mb-4">
-	              <h2 class="ftco-heading-2 logo"><a href="index.html">Erase</a></h2>
-	              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	              <h2 class="ftco-heading-2 logo"><a href="index.html">PALETTE</a></h2>
+	              <p>Color types help stylize makeup, fashion. have you ever thought about your personal colors that perfectly suit your image?</p>
 	              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -131,7 +140,7 @@
 	            <div class="ftco-footer-widget mb-4">
 	              <h2 class="ftco-heading-2">Recent Blog</h2>
 	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);"></a>
 	                <div class="text">
 	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
 	                  <div class="meta">
@@ -142,7 +151,7 @@
 	                </div>
 	              </div>
 	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_2.jpg);"></a>
 	                <div class="text">
 	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
 	                  <div class="meta">
@@ -171,9 +180,9 @@
 	            	<h2 class="ftco-heading-2">Have a Questions?</h2>
 	            	<div class="block-23 mb-3">
 		              <ul>
-		                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-		                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-		                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+		                <li><span class="icon icon-map-marker"></span><span class="text">3rd floor 31-15, Yesul-gil, Dong-gu, Gwangju, Republic of Korea</span></li>
+		                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+81 10 5315 6111</span></a></li>
+		                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">dkdk9998@naver.com</span></a></li>
 		              </ul>
 		            </div>
 	            </div>
@@ -183,7 +192,7 @@
 	          <div class="col-md-12 text-center">
 
 	            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Why is this working
 	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 	          </div>
 	        </div>
