@@ -90,11 +90,10 @@
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a>퍼스널컬러</a></h2>
-	    							<h2 class="mb-4"><a>얼굴 분석을 통한</a></h2>
-	    							<h2 class="mb-4"><a>남성 맞춤형 스타일</a></h2>
-	    							<h2 class="mb-4"><a>개선 서비스</a></h2>
-	    							<p>Color types help stylize makeup, fashion. have you ever thought about your personal colors that perfectly suit your image?</p>
+	    							<h2 class="mb-4"><a>퍼스널컬러 얼굴 분석을 통한</a></h2>
+	    							<h2 class="mb-4"><a>남성 맞춤형 스타일 개선 서비스</a></h2>
+	    							<p>Color types help stylize makeup, fashion. </p>
+	    							<p>have you ever thought about your personal colors that perfectly suit your image?</p>
 	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary" style="
 									    width: 526px;
 									    height: 164px;
