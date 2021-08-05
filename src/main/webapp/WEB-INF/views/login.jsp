@@ -78,10 +78,10 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Erase</a></h1>
+              <h1 class="mb-4"><a href="index.html" class="logo">PALETTE</a></h1>
               <ul>
                 <jsp:include page="menu.jsp">
-                   <jsp:param name="pageSelection" value="5" />
+                   <jsp:param name="pageSelection" value="6" />
                 </jsp:include>
               </ul>
             </div>
@@ -94,7 +94,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">Erase</a>
+	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
@@ -105,9 +105,9 @@
 	        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
 	          	<div class="desc">
-	          		<span class="subheading">Magazine</span>
-		            <h1 style="background-image: url(images/bg_1.jpg);">Erase</h1>
-		            <span class="subheading-2">UK Edition</span>
+	          		<span class="subheading">IDOL</span>
+		            <h1 style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);">PALETTE</h1>
+		            <span class="subheading-2">KR Edition</span>
 	            </div>
 	          </div>
 	        </div>
