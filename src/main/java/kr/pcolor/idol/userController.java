@@ -28,15 +28,21 @@ public class userController {
 	public void signup() {		
 	}
 	
-	@RequestMapping("/update.do")
+	@RequestMapping("/userInsert.do")
+	public String insertUser(UserVO vo) {
+		userMapper.insertUser(vo);
+		return "redirect:/pcolor.do";
+	}
+	
+	@RequestMapping("/userUpdate.do")
 	public void updateUser(UserVO vo) {
 		userMapper.updateUser(vo);
 	}
-	@RequestMapping("/delete.do")
+	@RequestMapping("/userDelete.do")
 	public void deleteUser(String user_id) {
 		userMapper.deleteUser(user_id);		
 	}
-	@RequestMapping("check.do")
+	@RequestMapping("userCheck.do")
 	public void checkUser(String user_id) {
 		userMapper.checkUser(user_id);
 	}

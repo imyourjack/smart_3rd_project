@@ -64,7 +64,7 @@
 <li>
    <a href="login.do"
       <%
-         if(num.equals("6")){
+         if(num.equals("6")){       	 
       %>
          style="color:#f8b500;"
       <% } %>

@@ -51,6 +51,7 @@
 		    	    		alert("회원인증에 실패했습니다.");
 		    	    	}else{
 		    	    		alert("환영합니다.")
+		    	    		location.href="pcolor.do"
 		    	    	}	 
 		    	    },	    
 		    	    error : function(){alert("error");}	   		
@@ -100,21 +101,19 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
-	        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	          	<div class="desc">
-	          		<span class="subheading">IDOL</span>
-		            <h1 style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);">PALETTE</h1>
-		            <span class="subheading-2">KR Edition</span>
-	            </div>
+	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
+	            <h1 class="bread">log in</h1>
 	          </div>
 	        </div>
 	      </div>
-	    </section>
+      </section>
 
-<section
+		<section
 				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 				<div class="container">
 					<div class="panel panel-default">
