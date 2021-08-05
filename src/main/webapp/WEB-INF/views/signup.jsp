@@ -36,7 +36,63 @@
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<script type="text/javascript">	
+	<script type="text/javascript">
+	    function signupFn(){
+	        var signData= $("#srm").serialize();
+	         $.ajax({
+	            url: "signup.do",
+	            type:"post",
+	            data : signData,
+	            success:function(data){
+	              alert("회원가입완료")
+	              location.href="pcolor.do"; 
+	            },
+	           error:function(){alert("error");}         
+	         });         
+	      }
+		     
+	     $(function(){
+	        //아이디 중복체크
+	        $(".msg2").hide();
+	          $(".msg1").hide();
+	           $('#user_id').blur(function(){
+	                $.ajax({
+	                 url:"check.do",
+	                type:"post",            
+	                data:{ "user_id":$('#user_id').val()
+	               },
+	                success:function(data){   
+	                       if(parseInt(data)==1){
+	                          $(".msg2").show();
+	                          $(".msg1").hide();
+	                         }else{
+	                            $(".msg1").show();
+	                            $(".msg2").hide();
+	                       }
+	                    },
+	                    error:function(){alert("error");}   
+	               });
+	             });
+	        });
+	       	
+	      $(function(){
+	        //비밀번호 확인
+	        $(".pw1").hide();
+	        $(".pw2").hide();
+	           $("#user_password_check").keyup(function(){
+	              var user_password = $("#user_password").val() ;
+	              var user_password_check = $("#user_password_check").val();
+	              if(user_password != "" || user_password_check != ""){
+	                 if(user_password==user_password_check){
+	                     $(".pw1").show();
+	                     $(".pw2").hide();
+	                 }else{
+	                     $(".pw1").hide();
+	                     $(".pw2").show();
+	                 }               
+	              }                 
+	           });        
+	        }); 			
 	</script>
 </head>
   <body>
@@ -45,15 +101,16 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath  }/resources/images/bg_3.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
+              <h1 class="mb-4"><a href="index.html" class="logo">Erase</a></h1>
               <ul>
-                <jsp:include page="menu.jsp">
-                   <jsp:param name="pageSelection" value="4" />
-                </jsp:include>
+                <li class="active"><a href="index.html"><span>Home</span></a></li>
+                <li><a href="about.html"><span>About</span></a></li>
+                <li><a href="blog.html"><span>Blog</span></a></li>
+                <li><a href="contact.html"><span>Contact</span></a></li>
               </ul>
             </div>
           </div>
@@ -65,7 +122,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">PALETTE</a>
+	          <a class="colorlib-logo" href="index.html">Erase</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
@@ -76,37 +133,51 @@
 	        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
 	          	<div class="desc">
-	          		<span class="subheading">IDOL</span>
-		            <h1 style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);">PALETTE</h1>
-		            <span class="subheading-2">KR Edition</span>
+	          		<span class="subheading">Magazine</span>
+		            <h1 style="background-image: url(images/bg_1.jpg);">Erase</h1>
+		            <span class="subheading-2">UK Edition</span>
 	            </div>
 	          </div>
 	        </div>
 	      </div>
 	    </section>
 
-			<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+		<section
+				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 				<div class="container">
-					<h2>Panel Heading</h2>
 					<div class="panel panel-default">
-						<div class="panel-heading">Panel Heading</div>
+						<div class="panel-heading"><h2>회원가입</h2></div>
 						<div class="panel-body">
-							<form id="frm" method="post" action="${cpath}/boardInsert.do">
-								<div class="form-group">
-									<label>제목: </label> <input type="text" class="form-control"
-										id="board_title" name="board_title">
+							<form id="srm" name="srm" method="post" class="signForm" action="${cpath}/signup.do" method="post">
+								<div class="idForm">
+									<input type="text" class="id" placeholder="아이디"
+										name="user_id" id="user_id"> <span class="msg1">사용가능합니다.</span>
+									<span class="msg2">중복된 아이디 입니다.</span>
 								</div>
-								<div class="form-group">
-									<label>내용:</label>
-									<textarea class="form-control" rows="5" id=board_contents
-										name="board_contents"></textarea>
+								<div class="passForm">
+									<input type="password" class="pw" placeholder="비밀번호"
+										name="user_password" id="user_password">
 								</div>
-								<div class="form-group">
-									<label>작성자: </label> <input type="text" class="form-control"
-										id="user_id" name="user_id">
+								<div class="passForm">
+									<input type="password" class="pw" placeholder="비밀번호확인"
+										name="user_password_check" id="user_password_check">
+									<span class="pw1">비밀번호가 일치합니다.</span> <span class="pw2">비밀번호가
+										일치하지 않습니다.</span>
 								</div>
-								<input type="submit" class="btn btn-primary btn-sm" value="글쓰기">
-								<input type='reset' value='취소' class='btn btn-warning btn-sm'>
+								<div class="nameForm">
+									<input type="text" class="name" placeholder="이름"
+										name="user_name">
+								</div>
+								<div class="ageForm">
+									<input type="text" class="age" placeholder="나이"
+										name="user_age">
+								</div>
+								<div class="genderForm">
+									<input type="text" class="gender" placeholder="성별"
+										name="user_gender">
+								</div>
+								<button type="button" class="btn" onclick="signupFn()">
+									회원등록</button>
 							</form>
 						</div>
 					</div>

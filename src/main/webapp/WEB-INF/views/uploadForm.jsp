@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="cpath" value="${pageContext.request.contextPath}"/>
+<c:set var ="cpath" value ="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,16 +29,8 @@
     
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
-	    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-	<link rel="stylesheet"
-		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<script type="text/javascript">	
-	</script>
-</head>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+  </head>
   <body>
 
     <div class="page">
@@ -49,10 +41,10 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
+              <h1 class="mb-4"><a href="home.do" class="logo">palette</a></h1>
               <ul>
                 <jsp:include page="menu.jsp">
-                   <jsp:param name="pageSelection" value="4" />
+                   <jsp:param name="pageSelection" value="3" />
                 </jsp:include>
               </ul>
             </div>
@@ -65,60 +57,66 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">PALETTE</a>
+	          <a class="colorlib-logo" href="index.html">palette</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
-	        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	        <div class="row no-gutters text js-fullheight align-items-end justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	          	<div class="desc">
-	          		<span class="subheading">IDOL</span>
-		            <h1 style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);">PALETTE</h1>
-		            <span class="subheading-2">KR Edition</span>
-	            </div>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About us</span></p>
+	            <h1 class="bread">About us</h1>
 	          </div>
 	        </div>
 	      </div>
-	    </section>
+      </section>
 
-			<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
-				<div class="container">
-					<h2>Panel Heading</h2>
-					<div class="panel panel-default">
-						<div class="panel-heading">Panel Heading</div>
-						<div class="panel-body">
-							<form id="frm" method="post" action="${cpath}/boardInsert.do">
-								<div class="form-group">
-									<label>제목: </label> <input type="text" class="form-control"
-										id="board_title" name="board_title">
-								</div>
-								<div class="form-group">
-									<label>내용:</label>
-									<textarea class="form-control" rows="5" id=board_contents
-										name="board_contents"></textarea>
-								</div>
-								<div class="form-group">
-									<label>작성자: </label> <input type="text" class="form-control"
-										id="user_id" name="user_id">
-								</div>
-								<input type="submit" class="btn btn-primary btn-sm" value="글쓰기">
-								<input type='reset' value='취소' class='btn btn-warning btn-sm'>
-							</form>
-						</div>
-					</div>
-				</div>
-			</section>      
+	    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+	    	<div class="container">
+		    	<div class="row no-gutters d-flex">
+	    			<div class="col-md-12 col-lg-6 d-flex align-items-stretch">
+	    				<div class="img-about img d-flex align-items-stretch">
+		    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(${pageContext.request.contextPath}/resources/images/about.jpg); height: 700px;">
+		    				</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 col-lg-6 pl-lg-5 py-5 d-flex align-items-center">
+	    				<div class="p-0 px-lg-5 p-lg-0">
+		    				<div class="row justify-content-start pb-3">
+				          <div class="col-md-15 heading-section ftco-animate">
+				            <h2 class="mb-4" style="width: 600px;">의상 컬러 적합도 진단</h2>
+				            <p>진단받은 퍼스널 컬러와 내 의상 컬러는 몇 % 어울릴까요?</p>
+				          </div>
+				        </div>
+				        <div class="row">
+				        	<div class="col-md-6">
+				        		<div class="media block-6 services d-block ftco-animate">
+				           	     <form action="${cpath}/uploadFormAction.do" method="post" enctype="multipart/form-data">
+									<input type="file" name="uploadFile" multiple="multiple">
+									<button>파일 업로드</button>
+								</form>
+				        	</div>
+				        	<div class="col-md-6">
+				        </div>
+			          <div class="counter-wrap mb-0 ftco-animate d-flex mt-md-3">
+			          </div>
+		          </div>
+		        </div>
+	        </div>
+	      </div>
+	    </section>
+      
       <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>
 	      <div class="container">
 	        <div class="row mb-5">
 	          <div class="col-lg-3">
 	            <div class="ftco-footer-widget mb-4">
-	              <h2 class="ftco-heading-2 logo"><a href="index.html">Erase</a></h2>
+	              <h2 class="ftco-heading-2 logo"><a href="home.do">palette</a></h2>
 	              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 	              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>

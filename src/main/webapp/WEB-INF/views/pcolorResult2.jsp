@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Erase - Free Bootstrap 4 Template by Colorlib</title>
+    <title>PALETTE</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -29,16 +29,11 @@
     
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
-	    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-	<link rel="stylesheet"
-		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<script type="text/javascript">	
-	</script>
-</head>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+  </head>
   <body>
 
     <div class="page">
@@ -49,11 +44,18 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
+              <h1 class="mb-4"><a href="index.html" class="logo">palette</a></h1>
               <ul>
-                <jsp:include page="menu.jsp">
-                   <jsp:param name="pageSelection" value="4" />
+              	
+              	<jsp:include page="menu.jsp">
+                   <jsp:param name="pageSelection" value="2" />
                 </jsp:include>
+              	
+                <!-- <li><a href="index.html"><span>Home</span></a></li>
+                <li><a href="about.html"><span>About</span></a></li>
+                <li class="active"><a href="blog.html"><span>Blog</span></a></li>
+                <li><a href="contact.html"><span>Contact</span></a></li> -->
+                
               </ul>
             </div>
           </div>
@@ -65,53 +67,81 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">PALETTE</a>
+	          <a class="colorlib-logo" href="index.html">palette</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
-	        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	          	<div class="desc">
-	          		<span class="subheading">IDOL</span>
-		            <h1 style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);">PALETTE</h1>
-		            <span class="subheading-2">KR Edition</span>
-	            </div>
+	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
+	            <h1 class="bread">personal color</h1>
 	          </div>
 	        </div>
 	      </div>
+      </section>
+
+	    <section class="ftco-section ftco-no-pb ftco-no-pt">
+	    	<div class="container-fluid px-0">
+	    		<div class="row no-gutters">
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/spring.jpg);">
+	    						
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html">???톤의 컬러 팔레트</a></h2>
+	    							<p>설명</p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap bg-darken">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 d-flex justify-content-center align-items-center order-md-last js-fullheight">
+	    						<div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_4.jpg);"></div>
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html">헤어 컬러</a></h2>
+	    							<p> 설명 </p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_5.jpg);"></div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html"> 연예인 </a></h2>
+	    							<p> 설명 </p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_6.jpg);"></div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html"> 향수 </a></h2>
+	    							<p> 설명 </p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+
+	    		</div>
+	    	</div>
 	    </section>
 
-			<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
-				<div class="container">
-					<h2>Panel Heading</h2>
-					<div class="panel panel-default">
-						<div class="panel-heading">Panel Heading</div>
-						<div class="panel-body">
-							<form id="frm" method="post" action="${cpath}/boardInsert.do">
-								<div class="form-group">
-									<label>제목: </label> <input type="text" class="form-control"
-										id="board_title" name="board_title">
-								</div>
-								<div class="form-group">
-									<label>내용:</label>
-									<textarea class="form-control" rows="5" id=board_contents
-										name="board_contents"></textarea>
-								</div>
-								<div class="form-group">
-									<label>작성자: </label> <input type="text" class="form-control"
-										id="user_id" name="user_id">
-								</div>
-								<input type="submit" class="btn btn-primary btn-sm" value="글쓰기">
-								<input type='reset' value='취소' class='btn btn-warning btn-sm'>
-							</form>
-						</div>
-					</div>
-				</div>
-			</section>      
+      
       <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>
 	      <div class="container">
@@ -131,7 +161,7 @@
 	            <div class="ftco-footer-widget mb-4">
 	              <h2 class="ftco-heading-2">Recent Blog</h2>
 	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);"></a>
 	                <div class="text">
 	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
 	                  <div class="meta">
@@ -142,7 +172,7 @@
 	                </div>
 	              </div>
 	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_2.jpg);"></a>
 	                <div class="text">
 	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
 	                  <div class="meta">

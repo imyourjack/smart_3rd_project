@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+  
   <body>
 
     <div class="page">
@@ -58,7 +59,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">Erase</a>
+	          <a class="colorlib-logo" href="index.html">IDOL</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
@@ -69,9 +70,9 @@
 	        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
 	          	<div class="desc">
-	          		<span class="subheading">Magazine</span>
-		            <h1 style="background-image: url(images/bg_1.jpg);">Erase</h1>
-		            <span class="subheading-2">UK Edition</span>
+	          		<span class="subheading">Personal Color</span>
+		            <h1 style="background-image: url(images/bg_1.jpg);">palette</h1>
+		            <span class="subheading-2">Do you know your harmonic color?</span>
 	            </div>
 	          </div>
 	        </div>
@@ -83,42 +84,20 @@
 	    		<div class="row no-gutters">
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(images/image_1.jpg);">
-	    						
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(images/main4.JPG);">	
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
 	    							<div class="icon d-flex align-items-center mb-5">
-	    								<div class="img" style="background-image: url(images/person_1.jpg);"></div>
-	    								<div class="position pl-3">
-	    									<h4 class="mb-0">Jamie Jonson</h4>
-	    									<span>fashion.com</span>
-	    								</div>
 	    							</div>
-	    							<h2 class="mb-4"><a href="blog-single.html">Make Peace With Your Broken Pieces</a></h2>
-	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">Read more <span class="ion-ios-arrow-forward"></span></a></p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(images/image_2.jpg);">
-	    						
-	    					</div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<div class="icon d-flex align-items-center mb-5">
-	    								<div class="img" style="background-image: url(images/person_2.jpg);"></div>
-	    								<div class="position pl-3">
-	    									<h4 class="mb-0">Jamie Jonson</h4>
-	    									<span>fashion.com</span>
-	    								</div>
-	    							</div>
-	    							<h2 class="mb-4"><a href="blog-single.html">Make Peace With Your Broken Pieces</a></h2>
-	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">Read more <span class="ion-ios-arrow-forward"></span></a></p>
+	    							<h2 class="mb-4"><a href="blog-single.html">좋은 첫인상을 위한 
+	    							<br>나만의 '퍼스널 컬러'와 '스타일링'</a></h2>
+	    							<p>모든 만남은 첫인상이 중요합니다.
+	    							<br>특히 취업 최종 관문인 면접에서 결정적인 역할을 하곤 하죠.
+	    							<br>긍정적인 첫인상을 남기기 위해서 여러가지 준비할 것이 많은데,
+	    							<br>그 중 내게 어울리는 색을 찾는 '퍼스널 컬러'의 중요성이 더 커지고 있습니다.
+	    							<br>면접을 앞둔 취준생은 물론 나만의 색을 찾아 보다 멋진 스타일링을 원하는 분을 위한 퍼스널 컬러 진단을 하러 가볼까요?</p>
+	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
 	    						</div>
 	    					</div>
 	    				</div>
@@ -126,20 +105,18 @@
 	    			<div class="col-md-12 blog-wrap bg-darken">
 	    				<div class="row no-gutters align-items-center">
 	    					<div class="col-md-6 d-flex justify-content-center align-items-center order-md-last js-fullheight">
-	    						<div class="img" style="background-image: url(images/image_4.jpg);"></div>
+	    						<div class="img" style="background-image: url(images/color2.jpg);"></div>
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<div class="icon d-flex align-items-center mb-5">
-	    								<div class="img" style="background-image: url(images/person_2.jpg);"></div>
-	    								<div class="position pl-3">
-	    									<h4 class="mb-0">Jamie Jonson</h4>
-	    									<span>fashion.com</span>
-	    								</div>
-	    							</div>
-	    							<h2 class="mb-4"><a href="blog-single.html">Make Peace With Your Broken Pieces</a></h2>
-	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">Read more <span class="ion-ios-arrow-forward"></span></a></p>
+	    							<h2 class="mb-4"><a href="blog-single.html">좋은 첫인상을 위한 
+	    							<br>나만의 '퍼스널 컬러'와 '스타일링'</a></h2>
+	    							<p>모든 만남은 첫인상이 중요합니다.
+	    							<br>특히 취업 최종 관문인 면접에서 결정적인 역할을 하곤 하죠.
+	    							<br>긍정적인 첫인상을 남기기 위해서 여러가지 준비할 것이 많은데,
+	    							<br>그 중 내게 어울리는 색을 찾는 '퍼스널 컬러'의 중요성이 더 커지고 있습니다.
+	    							<br>면접을 앞둔 취준생은 물론 나만의 색을 찾아 보다 멋진 스타일링을 원하는 분을 위한 퍼스널 컬러 진단을 하러 가볼까요?</p>
+	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
 	    						</div>
 	    					</div>
 	    				</div>
@@ -152,15 +129,17 @@
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
 	    							<div class="icon d-flex align-items-center mb-5">
-	    								<div class="img" style="background-image: url(images/person_2.jpg);"></div>
 	    								<div class="position pl-3">
-	    									<h4 class="mb-0">Jamie Jonson</h4>
-	    									<span>fashion.com</span>
+	    									<h4 class="mb-0">App에서의 퍼스널 컬러 진단 방법</h4>
 	    								</div>
 	    							</div>
-	    							<h2 class="mb-4"><a href="blog-single.html">Make Peace With Your Broken Pieces</a></h2>
-	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">Read more <span class="ion-ios-arrow-forward"></span></a></p>
+	    							<h2 class="mb-4"><a href="blog-single.html">퍼스널 컬러 진단방법</a></h2>
+	    							<p>정확한 진단이 되기 위해서
+	    							<br>컬러 카드와 함께 얼굴 정면이 나오도록 찍어주세요. 
+									<br>밝은 곳에서 촬영해주세요. (역광은 금물! 빛을 바라보고 찍어 주세요.) 
+									<br>참고사항 : 개인정보는 앱 내 저장 되지 않으며, 다른 용도로 절대 사용되지 않습니다. 
+									<br>주변 환경과 조건에 따라 다소 오차가 발생할 수 있습니다.</p>
+	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
 	    						</div>
 	    					</div>
 	    				</div>

@@ -39,7 +39,7 @@
 	<script type="text/javascript">
 		function goWrite() {
 			location.href = "${cpath}/boardForm.do";			
-		}		
+		}			
 	</script>
 </head>
   <body>
@@ -48,16 +48,15 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath  }/resources/images/bg_3.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Erase</a></h1>
+              <h1 class="mb-4"><a href="home.do" class="logo">palette</a></h1>
               <ul>
-                <li class="active"><a href="index.html"><span>Home</span></a></li>
-                <li><a href="about.html"><span>About</span></a></li>
-                <li><a href="blog.html"><span>Blog</span></a></li>
-                <li><a href="contact.html"><span>Contact</span></a></li>
+                <jsp:include page="menu.jsp">
+                   <jsp:param name="pageSelection" value="4" />
+                </jsp:include>
               </ul>
             </div>
           </div>
@@ -69,7 +68,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">Erase</a>
+	          <a class="colorlib-logo" href="index.html">PALETTE</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
@@ -80,9 +79,9 @@
 	        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
 	          	<div class="desc">
-	          		<span class="subheading">Magazine</span>
-		            <h1 style="background-image: url(images/bg_1.jpg);">Erase</h1>
-		            <span class="subheading-2">UK Edition</span>
+	          		<span class="subheading">IDOL</span>
+		            <h1 style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);">PALETTE</h1>
+		            <span class="subheading-2">KR Edition</span>
 	            </div>
 	          </div>
 	        </div>
@@ -110,32 +109,33 @@
 								<tbody>
 									<c:forEach var="vo" items="${list}">
 										<tr class="table-active">
-											<th scope="row"><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_idx}</a></th>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_title}</td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_contents}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_count}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.board_indate}</a></td>
-											<td><a href="${cpath}/boardContent.do?idx=${vo.board_idx}">${vo.user_id}</a></td>											
+											<th scope="row"><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_idx}</a></th>
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_title}</td>
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_contents}</a></td>
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_count}</a></td>
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_indate}</a></td>
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.user_id}</a></td>											
 										</tr>
 									</c:forEach>
 								</tbody>
 							</table>
 							<div>
-								<form>
+								<form action="${cpath}/boardSearch.do" method="post">
 									<table class="table">
 										<tr>
-											<td><select name="part" class="form-control">
-													<option value="title">제목</option>
-													<option value="writer">작성자</option>
-													<option value="contents">내용</option>
-											</select></td>
-											<td><input type="text" name="keyword"
-												class="form-control"></td>
-											<td><button type="submit" class="btn">검색</button></td>
-											<td><button class="btn" onclick="goWrite()">글쓰기</button></td>
+											<td>
+												<select name="part" class="form-control">
+													<option value="board_title">제목</option>
+													<option value="user_id">작성자</option>
+													<option value="board_contents">내용</option>
+												</select>
+											</td>
+											<td><input type="text" name="keyword" class="form-control"></td>
+											<td><button type="submit" class="btn">검색</button></td>																						
 										</tr>
 									</table>
 								</form>
+								<button class="btn" onclick="goWrite()">글쓰기</button>
 							</div>
 						</div>
 					</div>

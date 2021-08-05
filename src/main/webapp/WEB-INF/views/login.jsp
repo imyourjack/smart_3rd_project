@@ -36,7 +36,36 @@
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<script type="text/javascript">	
+	<script type="text/javascript">
+			function gosignupFn() {
+				location.href = "${cpath}/signup.do";			
+			}		
+		    function loginFn(){
+		    	var user_id=$("#user_id").val();
+		    	var user_password=$("#user_password").val();
+		    	$.ajax({
+		    		url : "pcolor.do",
+		    	    data : {"user_id":user_id,"user_password":user_password},
+		    	    success : function(data){
+		    	    	if(data=="NO"){
+		    	    		alert("회원인증에 실패했습니다.");
+		    	    	}else{
+		    	    		alert("환영합니다.")
+		    	    	}	 
+		    	    },	    
+		    	    error : function(){alert("error");}	   		
+		    	});	
+		    }
+		    function logoutFn(){
+		    	   $.ajax({
+		    	      url: "logout.do",
+		    	      type:"get",
+		    	      success:function(){ 
+		    	         location.href="login.do"
+		    	      },
+		    	     error:function(){alert("error");}	      
+		    	   });	   
+		    	}		 			
 	</script>
 </head>
   <body>
@@ -45,14 +74,14 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath  }/resources/images/bg_3.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
+              <h1 class="mb-4"><a href="index.html" class="logo">PALETTE</a></h1>
               <ul>
                 <jsp:include page="menu.jsp">
-                   <jsp:param name="pageSelection" value="4" />
+                   <jsp:param name="pageSelection" value="6" />
                 </jsp:include>
               </ul>
             </div>
@@ -65,7 +94,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">PALETTE</a>
+	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
@@ -85,33 +114,35 @@
 	      </div>
 	    </section>
 
-			<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+<section
+				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 				<div class="container">
-					<h2>Panel Heading</h2>
 					<div class="panel panel-default">
-						<div class="panel-heading">Panel Heading</div>
+						<div class="panel-heading"><h2>로그인</h2></div>
 						<div class="panel-body">
-							<form id="frm" method="post" action="${cpath}/boardInsert.do">
-								<div class="form-group">
-									<label>제목: </label> <input type="text" class="form-control"
-										id="board_title" name="board_title">
+							<form method="post" class="loginForm">
+								<h2>Login</h2>
+								<div class="idForm">
+									<input type="text" class="id" placeholder="ID" id="user_id"
+										name="user_id">
 								</div>
-								<div class="form-group">
-									<label>내용:</label>
-									<textarea class="form-control" rows="5" id=board_contents
-										name="board_contents"></textarea>
+								<div class="passForm">
+									<input type="password" class="pw" placeholder="PW"
+										id="user_password" name="user_password">
 								</div>
-								<div class="form-group">
-									<label>작성자: </label> <input type="text" class="form-control"
-										id="user_id" name="user_id">
+								<button type="button" class="btn" onclick="loginFn()">
+									LOG IN</button>
+
+								<div class="bottomText">
+									아이디가 없으신가요? <a type="button" onclick="gosignupFn()">회원가입</a>
 								</div>
-								<input type="submit" class="btn btn-primary btn-sm" value="글쓰기">
-								<input type='reset' value='취소' class='btn btn-warning btn-sm'>
 							</form>
 						</div>
 					</div>
 				</div>
-			</section>      
+			</section>
+
+      
       <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>
 	      <div class="container">
