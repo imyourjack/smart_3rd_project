@@ -79,7 +79,7 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">PALETTE</a></h1>
+              <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
               <ul>
                 <jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="6" />

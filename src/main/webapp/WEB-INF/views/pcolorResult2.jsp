@@ -90,7 +90,7 @@
 	    		<div class="row no-gutters">
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/spring.jpg);">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/summer.jpg);">
 	    						
 	    					</div>
 	    					<div class="col-md-6">

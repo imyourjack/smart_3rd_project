@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Erase - Free Bootstrap 4 Template by Colorlib</title>
+    <title>PALETTE</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -57,7 +57,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">palette</a>
+	          <a class="colorlib-logo" href="home.do">palette</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
@@ -68,8 +68,8 @@
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text js-fullheight align-items-end justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About us</span></p>
-	            <h1 class="bread">About us</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="home.do">Main</a></span> <span><a href="login.do">Login</a></span> </p>
+	            <h1 class="bread">Costume Color</h1>
 	          </div>
 	        </div>
 	      </div>
@@ -101,12 +101,16 @@
 								</form>
 				        	</div>
 				        	<div class="col-md-6">
+				        	
+				       		 </div>
+			         		 <div class="counter-wrap mb-0 ftco-animate d-flex mt-md-3">
+			         		 
+			          		</div>
+			     		    </div>
 				        </div>
-			          <div class="counter-wrap mb-0 ftco-animate d-flex mt-md-3">
-			          </div>
-		          </div>
-		        </div>
-	        </div>
+				        </div>
+			      </div>
+		      </div>
 	      </div>
 	    </section>
       
@@ -129,7 +133,7 @@
 	            <div class="ftco-footer-widget mb-4">
 	              <h2 class="ftco-heading-2">Recent Blog</h2>
 	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);"></a>
 	                <div class="text">
 	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
 	                  <div class="meta">
@@ -140,7 +144,7 @@
 	                </div>
 	              </div>
 	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_2.jpg);"></a>
 	                <div class="text">
 	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
 	                  <div class="meta">

@@ -63,7 +63,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">PALETTE</a>
+	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
@@ -130,7 +130,7 @@
 	        <div class="row mb-5">
 	          <div class="col-lg-3">
 	            <div class="ftco-footer-widget mb-4">
-	              <h2 class="ftco-heading-2 logo"><a href="index.html">PALETTE</a></h2>
+	              <h2 class="ftco-heading-2 logo"><a href="home.do">PALETTE</a></h2>
 	              <p>Color types help stylize makeup, fashion. have you ever thought about your personal colors that perfectly suit your image?</p>
 	              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
