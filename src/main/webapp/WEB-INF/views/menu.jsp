@@ -27,9 +27,9 @@
       %>
          style="color:#f8b500;"
       <% } %>
+      
    >의상 색상 적합도 진단</a>
 
-   >personal color</a>
 </li>
 
 <li>
@@ -49,6 +49,7 @@
       %>
          style="color:#f8b500;"
       <% } %>
+      
    >로그인</a>
 
 </li>
