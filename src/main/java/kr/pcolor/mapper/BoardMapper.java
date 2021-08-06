@@ -23,7 +23,7 @@ public interface BoardMapper {
     public BoardVO boardContent(int board_idx); 
     
     @Delete("delete from tbl_board where board_idx=#{board_idx}")
-    public int boardDelete(int board_idx);
+    public void boardDelete(int board_idx);
   
     @Update("update tbl_board set board_title = #{board_title}, board_contents = #{board_contents} where board_idx = #{board_idx}")
     public void boardUpdate(BoardVO vo);

@@ -40,7 +40,7 @@
 	    function signupFn(){
 	        var signData= $("#srm").serialize();
 	         $.ajax({
-	            url: "signup.do",
+	            url: "userInsert.do",
 	            type:"post",
 	            data : signData,
 	            success:function(data){
@@ -50,30 +50,6 @@
 	           error:function(){alert("error");}         
 	         });         
 	      }
-		     
-	     $(function(){
-	        //아이디 중복체크
-	        $(".msg2").hide();
-	          $(".msg1").hide();
-	           $('#user_id').blur(function(){
-	                $.ajax({
-	                 url:"check.do",
-	                type:"post",            
-	                data:{ "user_id":$('#user_id').val()
-	               },
-	                success:function(data){   
-	                       if(parseInt(data)==1){
-	                          $(".msg2").show();
-	                          $(".msg1").hide();
-	                         }else{
-	                            $(".msg1").show();
-	                            $(".msg2").hide();
-	                       }
-	                    },
-	                    error:function(){alert("error");}   
-	               });
-	             });
-	        });
 	       	
 	      $(function(){
 	        //비밀번호 확인
@@ -128,60 +104,65 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
-	        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	          	<div class="desc">
-	          		<span class="subheading">Magazine</span>
-		            <h1 style="background-image: url(images/bg_1.jpg);">Erase</h1>
-		            <span class="subheading-2">UK Edition</span>
-	            </div>
+	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
+	            <h1 class="bread">JOIN</h1>
 	          </div>
 	        </div>
 	      </div>
-	    </section>
+      </section>
 
 		<section
 				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+				<br>
+				<br>
 				<div class="container">
 					<div class="panel panel-default">
 						<div class="panel-heading"><h2>회원가입</h2></div>
 						<div class="panel-body">
-							<form id="srm" name="srm" method="post" class="signForm" action="${cpath}/signup.do" method="post">
+							<form id="srm" name="srm" method="post" class="signForm">
 								<div class="idForm">
 									<input type="text" class="id" placeholder="아이디"
-										name="user_id" id="user_id"> <span class="msg1">사용가능합니다.</span>
-									<span class="msg2">중복된 아이디 입니다.</span>
+										name="user_id" id="user_id"> 
 								</div>
+								<br>
 								<div class="passForm">
 									<input type="password" class="pw" placeholder="비밀번호"
 										name="user_password" id="user_password">
 								</div>
+								<br>
 								<div class="passForm">
-									<input type="password" class="pw" placeholder="비밀번호확인"
+									<input type="password" class="pw" placeholder="비밀번호 확인"
 										name="user_password_check" id="user_password_check">
 									<span class="pw1">비밀번호가 일치합니다.</span> <span class="pw2">비밀번호가
 										일치하지 않습니다.</span>
 								</div>
+								<br>
 								<div class="nameForm">
 									<input type="text" class="name" placeholder="이름"
 										name="user_name">
 								</div>
+								<br>
 								<div class="ageForm">
 									<input type="text" class="age" placeholder="나이"
 										name="user_age">
 								</div>
+								<br>
 								<div class="genderForm">
 									<input type="text" class="gender" placeholder="성별"
 										name="user_gender">
 								</div>
-								<button type="button" class="btn" onclick="signupFn()">
-									회원등록</button>
+								<br>
+								<button type="button" class="btn btn-primary btn-sm" onclick="signupFn()">SIGN UP</button>
 							</form>
 						</div>
 					</div>
 				</div>
+				<br>
 			</section>      
       <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>

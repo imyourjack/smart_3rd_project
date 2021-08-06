@@ -10,6 +10,17 @@
 %>
 
 <li>
+   <a href="home.do"
+      <%
+         if(num.equals("1")){
+      %>
+         style="color:#f8b500;"
+      <% } %>
+
+   >메인</a>
+</li>
+
+<li>
    <a href="pcolor.do"
       <%
          if(num.equals("2")){
@@ -27,8 +38,8 @@
       %>
          style="color:#f8b500;"
       <% } %>
-      
-   >의상 색상 적합도 진단</a>
+
+   >의상 컬러 적합도 진단</a>
 
 </li>
 
@@ -39,17 +50,27 @@
       %>
          style="color:#f8b500;"
       <% } %>
-   >게시판</a>
+   >커뮤니티</a>
 </li>
 
 <li>
-   <a href="login.do"
+   <a href="mypage.do"
       <%
          if(num.equals("5")){
       %>
          style="color:#f8b500;"
       <% } %>
-      
+
+   >마이페이지</a>
+   
+<li>
+   <a href="login.do"
+      <%
+         if(num.equals("6")){       	 
+      %>
+         style="color:#f8b500;"
+      <% } %>
+
    >로그인</a>
 
 </li>

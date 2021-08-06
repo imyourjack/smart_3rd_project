@@ -37,8 +37,8 @@
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-	  	function goDel(idx){
-	  		location.href="${cpath}/boardDelete.do?idx="+idx;
+	  	function goDel(board_idx){
+	  		location.href="${cpath}/boardDelete.do?board_idx="+board_idx;
 	  	}
 	  
 	  	function goList(){
@@ -56,12 +56,11 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Erase</a></h1>
+              <h1 class="mb-4"><a href="index.html" class="logo">PALETTE</a></h1>
               <ul>
-                <li class="active"><a href="index.html"><span>Home</span></a></li>
-                <li><a href="about.html"><span>About</span></a></li>
-                <li><a href="blog.html"><span>Blog</span></a></li>
-                <li><a href="contact.html"><span>Contact</span></a></li>
+                <jsp:include page="menu.jsp">
+                   <jsp:param name="pageSelection" value="4" />
+                </jsp:include>
               </ul>
             </div>
           </div>
@@ -73,56 +72,55 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">Erase</a>
+	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
-	        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	          	<div class="desc">
-	          		<span class="subheading">Magazine</span>
-		            <h1 style="background-image: url(images/bg_1.jpg);">Erase</h1>
-		            <span class="subheading-2">UK Edition</span>
-	            </div>
+	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
+	            <h1 class="bread">community</h1>
 	          </div>
 	        </div>
 	      </div>
-	    </section>
+      </section>
 
 			<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+			<br>
+			<br>
 				<div class="container">					
 					<div class="panel panel-default">
-						<div class="panel-heading"><h2>자유게시판</h2></div>
+						<div class="panel-heading"><h3>자유게시판</h3></div>
 						<div class="panel-body">
 							<form id="frm" method="post" action="${cpath}/boardUpdate.do">
-								<input type="hidden" name="idx" value="${vo.board_idx}">
+								<input type="hidden" name="board_idx" value="${vo.board_idx}">
 								<div class="form-group">
-									<label>제목: </label> <input type="text" class="form-control"
-										id="title" name="title" value="${vo.board_title}">
+									<label>제목</label> <input type="text" class="form-control"
+										id="title" name="board_title" value="${vo.board_title}">
 								</div>
 								<div class="form-group">
-									<label>내용:</label>
+									<label>내용</label>
 									<textarea class="form-control" rows="5" id=contents
-										name="contents">${vo.board_contents}</textarea>
+										name="board_contents">${vo.board_contents}</textarea>
 								</div>
 								<div class="form-group">
-									<label>작성자: </label> <input type="text" class="form-control"
-										id="writer" name="writer" value="${vo.user_id}"
+									<label>작성자</label> <input type="text" class="form-control"
+										id="writer" name="user_id" value="${vo.user_id}"
 										readonly="readonly">
 								</div>
 								<input type="submit" value="수정" class="btn btn-primary btn-sm">
-								<input type='reset' value='취소' class='btn btn-warning btn-sm'>
-								<input type='button' value='삭제' class='btn btn-info btn-sm'
-									onclick="goDel(${vo.board_idx})"> <input type='button'
-									value='목록' class='btn btn-success btn-sm' onclick="goList()">
+								<input type='button' value='삭제' class='btn btn-primary btn-sm' onclick="goDel(${vo.board_idx})"> 
+								<input type='button' value='목록' class='btn btn-primary btn-sm' onclick="goList()">
 							</form>
 						</div>
 					</div>
 				</div>
+				<br>
 			</section>
 
       

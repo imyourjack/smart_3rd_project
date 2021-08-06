@@ -37,11 +37,11 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(images/bg_3.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Erase</a></h1>
+              <h1 class="mb-4"><a href="home.do" class="logo">palette</a></h1>
               <ul>
                 <jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="3" />
@@ -57,19 +57,19 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">Erase</a>
+	          <a class="colorlib-logo" href="index.html">palette</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(images/bg_3.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text js-fullheight align-items-end justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
 	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About us</span></p>
-	            <h1 class="bread">About us</h1>
+	            <h1 class="bread">의상 컬러 적합도 진단</h1>
 	          </div>
 	        </div>
 	      </div>
@@ -80,7 +80,7 @@
 		    	<div class="row no-gutters d-flex">
 	    			<div class="col-md-12 col-lg-6 d-flex align-items-stretch">
 	    				<div class="img-about img d-flex align-items-stretch">
-		    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/about.jpg); height: 700px;">
+		    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(${pageContext.request.contextPath}/resources/images/about.jpg); height: 700px;">
 		    				</div>
 	    				</div>
 	    			</div>
@@ -116,7 +116,7 @@
 	        <div class="row mb-5">
 	          <div class="col-lg-3">
 	            <div class="ftco-footer-widget mb-4">
-	              <h2 class="ftco-heading-2 logo"><a href="index.html">Erase</a></h2>
+	              <h2 class="ftco-heading-2 logo"><a href="home.do">palette</a></h2>
 	              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 	              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>

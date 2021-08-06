@@ -44,13 +44,14 @@
 		    	var user_id=$("#user_id").val();
 		    	var user_password=$("#user_password").val();
 		    	$.ajax({
-		    		url : "login.do",
+		    		url : "pcolor.do",
 		    	    data : {"user_id":user_id,"user_password":user_password},
 		    	    success : function(data){
 		    	    	if(data=="NO"){
 		    	    		alert("회원인증에 실패했습니다.");
 		    	    	}else{
 		    	    		alert("환영합니다.")
+		    	    		location.href="pcolor.do"
 		    	    	}	 
 		    	    },	    
 		    	    error : function(){alert("error");}	   		
@@ -78,10 +79,10 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Erase</a></h1>
+              <h1 class="mb-4"><a href="index.html" class="logo">PALETTE</a></h1>
               <ul>
                 <jsp:include page="menu.jsp">
-                   <jsp:param name="pageSelection" value="5" />
+                   <jsp:param name="pageSelection" value="6" />
                 </jsp:include>
               </ul>
             </div>
@@ -94,52 +95,54 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">Erase</a>
+	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
-	        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	          	<div class="desc">
-	          		<span class="subheading">Magazine</span>
-		            <h1 style="background-image: url(images/bg_1.jpg);">Erase</h1>
-		            <span class="subheading-2">UK Edition</span>
-	            </div>
+	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
+	            <h1 class="bread">login</h1>
 	          </div>
 	        </div>
 	      </div>
-	    </section>
+      </section>
 
-<section
+		<section
 				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+				<br>
+				<br>
 				<div class="container">
 					<div class="panel panel-default">
 						<div class="panel-heading"><h2>로그인</h2></div>
 						<div class="panel-body">
 							<form method="post" class="loginForm">
-								<h2>Login</h2>
 								<div class="idForm">
 									<input type="text" class="id" placeholder="ID" id="user_id"
 										name="user_id">
 								</div>
+								<br>
 								<div class="passForm">
 									<input type="password" class="pw" placeholder="PW"
 										id="user_password" name="user_password">
 								</div>
-								<button type="button" class="btn" onclick="loginFn()">
-									LOG IN</button>
-
+								<br>
+								<button type="button" class="btn btn-primary btn-sm" onclick="loginFn()">
+									LOGIN</button>
+								<button type="button" class="btn btn-primary btn-sm" onclick="gosignupFn()">
+									JOIN</button>
 								<div class="bottomText">
-									아이디가 없으신가요? <a type="button" onclick="gosignupFn()">회원가입</a>
 								</div>
 							</form>
 						</div>
 					</div>
 				</div>
+				<br>
 			</section>
 
       
