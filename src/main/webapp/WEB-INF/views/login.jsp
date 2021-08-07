@@ -41,32 +41,32 @@
 				location.href = "${cpath}/signup.do";			
 			}		
 		    function loginFn(){
-		    	var user_id=$("#user_id").val();
-		    	var user_password=$("#user_password").val();
-		    	$.ajax({
-		    		url : "pcolor.do",
-		    	    data : {"user_id":user_id,"user_password":user_password},
-		    	    success : function(data){
-		    	    	if(data=="NO"){
-		    	    		alert("회원인증에 실패했습니다.");
-		    	    	}else{
-		    	    		alert("환영합니다.")
-		    	    		location.href="pcolor.do"
-		    	    	}	 
-		    	    },	    
-		    	    error : function(){alert("error");}	   		
-		    	});	
-		    }
-		    function logoutFn(){
-		    	   $.ajax({
-		    	      url: "logout.do",
-		    	      type:"get",
-		    	      success:function(){ 
-		    	         location.href="login.do"
-		    	      },
-		    	     error:function(){alert("error");}	      
-		    	   });	   
-		    	}		 			
+	             var user_id=$("#user_id").val();
+	             var user_password=$("#user_password").val();
+	             $.ajax({
+	                url : "logincheck.do",
+	                 data : {"user_id":user_id,"user_password":user_password},
+	                 success : function(data){
+	                    if(data=="NO"){
+	                       alert("회원인증에 실패했습니다.");
+	                    }else{
+	                       alert("환영합니다.")
+	                       location.href="javascript:history.back()"; // 메인화면으로
+	                    }    
+	                 },       
+	                 error : function(){alert("error");}            
+	             });   
+	          }
+	          function logoutFn(){
+	                $.ajax({
+	                   url: "logout.do",
+	                   type:"get",
+	                   success:function(){ 
+	                      location.href="login.do"
+	                   },
+	                  error:function(){alert("error");}         
+	                });      
+	             }   
 	</script>
 </head>
   <body>
@@ -113,33 +113,38 @@
 	      </div>
       </section>
 
-		<section
-				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
-				<div class="container">
-					<div class="panel panel-default">
-						<div class="panel-heading"><h2>로그인</h2></div>
-						<div class="panel-body">
-							<form method="post" class="loginForm">
-								<h2>Login</h2>
-								<div class="idForm">
-									<input type="text" class="id" placeholder="ID" id="user_id"
-										name="user_id">
-								</div>
-								<div class="passForm">
-									<input type="password" class="pw" placeholder="PW"
-										id="user_password" name="user_password">
-								</div>
-								<button type="button" class="btn" onclick="loginFn()">
-									LOG IN</button>
+		 <section
+            class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+            <br>
+            <br>
+            <div class="container">
+               <div class="panel panel-default">
+                  <div class="panel-heading"><h2>로그인</h2></div>
+                  <div class="panel-body">
+                     <form method="post" class="loginForm">
+                        <div class="idForm">
+                           <input type="text" class="id" placeholder="ID" id="user_id"
+                              name="user_id">
+                        </div>
+                        <br>
+                        <div class="passForm">
+                           <input type="password" class="pw" placeholder="PW"
+                              id="user_password" name="user_password">
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="loginFn()">
+                           LOGIN</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="gosignupFn()">
+                           JOIN</button>
+                        <div class="bottomText">
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <br>
+         </section>
 
-								<div class="bottomText">
-									아이디가 없으신가요? <a type="button" onclick="gosignupFn()">회원가입</a>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</section>
 
       
       <footer class="ftco-footer ftco-section img">
