@@ -15,7 +15,7 @@
 		location.href="${cpath}/download.do?fileName="+encodeURIComponent(fileCallPath);
 		// location.href="${cpath}/download.do?fileName="+encodeURIComponent(fileCallPath);
 		// alert(fileCallPath);
-	}
+	}			 			
 </script>
 </head>
 <body>

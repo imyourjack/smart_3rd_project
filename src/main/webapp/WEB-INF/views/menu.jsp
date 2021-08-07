@@ -63,14 +63,3 @@
 
    >마이페이지</a>
    
-<li>
-   <a href="login.do"
-      <%
-         if(num.equals("6")){       	 
-      %>
-         style="color:#f8b500;"
-      <% } %>
-
-   >로그인</a>
-
-</li>

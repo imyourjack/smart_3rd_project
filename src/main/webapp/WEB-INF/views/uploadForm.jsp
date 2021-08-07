@@ -30,6 +30,18 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+    <script type="text/javascript">		
+		    function logoutFn(){
+		    	   $.ajax({
+		    	      url: "logout.do",
+		    	      type:"get",
+		    	      success:function(){ 
+		    	         location.href="home.do"
+		    	      },
+		    	     error:function(){alert("error");}	      
+		    	   });	   
+		    	}		 			
+	</script>
   </head>
   <body>
 
@@ -59,6 +71,17 @@
 	        <div class="colorlib-navbar-brand">
 	          <a class="colorlib-logo" href="home.do">palette</a>
 	        </div>
+	        <div method="post" action="${cpath}/login.do" class="loginForm">
+						<c:choose>
+							<c:when test="${sessionScope.userVO==null}">
+								<a href = "${cpath}/login.do">login</a>
+							</c:when>
+							<c:otherwise>
+								<button class="btn" color="white">${sessionScope.userVO.user_name}</button>
+								<input type="button" value="로그아웃" onclick="logoutFn()" class="btn btn-info btn-sm"> 
+							</c:otherwise>
+						</c:choose>
+					</div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>

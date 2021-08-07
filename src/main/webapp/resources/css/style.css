@@ -58,6 +58,13 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff; }
+  
+.loginForm{
+	color: #fff;
+    top: 40px;
+    right: 450px;
+    position: absolute;
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -8560,7 +8567,7 @@ header {
   position: relative; }
 
 .slider-text h1 {
-  font-size: 340px;
+  font-size: 260px;
   color: #fff;
   line-height: 1;
   font-weight: 900;
@@ -9729,3 +9736,4 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+    

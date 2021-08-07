@@ -88,13 +88,13 @@
 					<div class="colorlib-navbar-brand">
 						<a class="colorlib-logo" href="home.do">palette</a>
 					</div>
-					<div class="loginform" style="margin-bottom: 10px" method="post" action="${cpath}/login.do">
+					<div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
 								<a href = "${cpath}/login.do">login</a>
 							</c:when>
 							<c:otherwise>
-								<button class="btn">${sessionScope.userVO.user_name}</button>
+								<button class="btn" color="white">${sessionScope.userVO.user_name}</button>
 								<input type="button" value="로그아웃" onclick="logoutFn()" class="btn btn-info btn-sm"> 
 							</c:otherwise>
 						</c:choose>
