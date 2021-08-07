@@ -49,7 +49,7 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
+              <h1 class="mb-4"><a href="home.do" class="logo">palette</a></h1>
               <ul>
                 <jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="4" />
@@ -65,7 +65,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">PALETTE</a>
+	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
@@ -77,39 +77,42 @@
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
 	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
-	            <h1 class="bread">커뮤니티 공간</h1>
+	            <h1 class="bread">Community</h1>
 	          </div>
 	        </div>
 	      </div>
       </section>
 
 			<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+			<br>
+			<br>
 				<div class="container">
-					<h2>Panel Heading</h2>
 					<div class="panel panel-default">
-						<div class="panel-heading">Panel Heading</div>
+						<div class="panel-heading"><h3>게시물 작성</h3></div>
 						<div class="panel-body">
 							<form id="frm" method="post" action="${cpath}/boardInsert.do">
 								<div class="form-group">
-									<label>제목: </label> <input type="text" class="form-control"
+									<label>제목</label> <input type="text" class="form-control"
 										id="board_title" name="board_title">
 								</div>
 								<div class="form-group">
-									<label>내용:</label>
+									<label>내용</label>
 									<textarea class="form-control" rows="5" id=board_contents
 										name="board_contents"></textarea>
 								</div>
 								<div class="form-group">
-									<label>작성자: </label> <input type="text" class="form-control"
+									<label>작성자</label> <input type="text" class="form-control"
 										id="user_id" name="user_id">
 								</div>
 								<input type="submit" class="btn btn-primary btn-sm" value="글쓰기">
-								<input type='reset' value='취소' class='btn btn-warning btn-sm'>
+								<input type='reset' value='취소' class='btn btn-primary btn-sm'>
 							</form>
 						</div>
 					</div>
 				</div>
-			</section>      
+				<br>
+			</section>
+			      
       <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>
 	      <div class="container">

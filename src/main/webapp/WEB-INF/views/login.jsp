@@ -79,7 +79,7 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">PALETTE</a></h1>
+              <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
               <ul>
                 <jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="6" />
@@ -107,11 +107,12 @@
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
 	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
-	            <h1 class="bread">log in</h1>
+	            <h1 class="bread">login</h1>
 	          </div>
 	        </div>
 	      </div>
       </section>
+
 
 		 <section
             class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
@@ -144,8 +145,6 @@
             </div>
             <br>
          </section>
-
-
       
       <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>
