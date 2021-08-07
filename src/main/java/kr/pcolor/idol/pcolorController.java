@@ -23,6 +23,14 @@ public class pcolorController {
 	public void pcolorResult4() {
 	}
 	
+	@RequestMapping("/pcolorCheck.do")
+	public void pcolorCheck() {
+	}
+	
+	@RequestMapping("/pcolorCheck2.do")
+	public void pcolorCheck2() {
+	}
+	
 	@RequestMapping("/home.do")
 	public void home() {
 	}
