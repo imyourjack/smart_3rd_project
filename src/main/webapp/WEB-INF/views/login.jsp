@@ -123,7 +123,7 @@
 					<div class="panel panel-default" style="width: 180px; height: 350px; padding:10px; background-color:#C0C1D6; margin: 0 auto; width:300px; height: auto;">
 						<div class="panel-heading" style="width: 280px; text-align:center; color: white; background-color:transparent;"><h2>로그인</h2></div>
 						<div class="panel-body">
-							<form method="post" class="loginForm">
+							<form method="post">
 								<div class="idForm" style="text-align: center;">
 									<input type="text" class="id" placeholder="ID" id="user_id"
 										name="user_id">
