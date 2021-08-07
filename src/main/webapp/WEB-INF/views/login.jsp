@@ -114,39 +114,51 @@
       </section>
 
 		<section
-				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter" style="background-color: black;">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
 				<br>
 				<br>
 				<div class="container">
-					<div class="panel panel-default">
-						<div class="panel-heading"><h2>로그인</h2></div>
+					<div class="panel panel-default" style="width: 180px; height: 350px; padding:10px; background-color:#C0C1D6; margin: 0 auto; width:300px; height: auto;">
+						<div class="panel-heading" style="width: 280px; text-align:center; color: white; background-color:transparent;"><h2>로그인</h2></div>
 						<div class="panel-body">
 							<form method="post" class="loginForm">
-								<div class="idForm">
+								<div class="idForm" style="text-align: center;">
 									<input type="text" class="id" placeholder="ID" id="user_id"
 										name="user_id">
 								</div>
 								<br>
-								<div class="passForm">
-									<input type="password" class="pw" placeholder="PW"
-										id="user_password" name="user_password">
+								<div class="passForm" style="text-align: center;">
+									<input type="password" class="pw" placeholder="PW" id="user_password" name="user_password">
 								</div>
 								<br>
-								<button type="button" class="btn btn-primary btn-sm" onclick="loginFn()">
+								<br>
+								<div style="text-align: center;">
+								<button type="button" class="btn btn-primary btn-sm" style="width: 80px;height: 40px;" onclick="loginFn()">
 									LOGIN</button>
-								<button type="button" class="btn btn-primary btn-sm" onclick="gosignupFn()">
+								<button type="button" class="btn btn-primary btn-sm" style="width: 80px;height: 40px;" onclick="gosignupFn()">
 									JOIN</button>
 								<div class="bottomText">
 								</div>
+								</div>
+								<br>
+								<br>
 							</form>
 						</div>
 					</div>
 				</div>
 				<br>
+				<br>
+				<br>
+				<br>
 			</section>
 
       
-      <footer class="ftco-footer ftco-section img">
+      <footer class="ftco-footer ftco-section img" style="background-color: black;">
 	    	<div class="overlay"></div>
 	      <div class="container">
 	        <div class="row mb-5">
