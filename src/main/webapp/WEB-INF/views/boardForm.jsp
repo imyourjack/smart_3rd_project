@@ -49,7 +49,7 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
+              <h1 class="mb-4"><a href="home.do" class="logo">palette</a></h1>
               <ul>
                 <jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="4" />
@@ -65,7 +65,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">PALETTE</a>
+	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>

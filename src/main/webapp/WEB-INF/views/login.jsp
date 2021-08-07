@@ -41,32 +41,32 @@
 				location.href = "${cpath}/signup.do";			
 			}		
 		    function loginFn(){
-		    	var user_id=$("#user_id").val();
-		    	var user_password=$("#user_password").val();
-		    	$.ajax({
-		    		url : "pcolor.do",
-		    	    data : {"user_id":user_id,"user_password":user_password},
-		    	    success : function(data){
-		    	    	if(data=="NO"){
-		    	    		alert("회원인증에 실패했습니다.");
-		    	    	}else{
-		    	    		alert("환영합니다.")
-		    	    		location.href="pcolor.do"
-		    	    	}	 
-		    	    },	    
-		    	    error : function(){alert("error");}	   		
-		    	});	
-		    }
-		    function logoutFn(){
-		    	   $.ajax({
-		    	      url: "logout.do",
-		    	      type:"get",
-		    	      success:function(){ 
-		    	         location.href="login.do"
-		    	      },
-		    	     error:function(){alert("error");}	      
-		    	   });	   
-		    	}		 			
+	             var user_id=$("#user_id").val();
+	             var user_password=$("#user_password").val();
+	             $.ajax({
+	                url : "logincheck.do",
+	                 data : {"user_id":user_id,"user_password":user_password},
+	                 success : function(data){
+	                    if(data=="NO"){
+	                       alert("회원인증에 실패했습니다.");
+	                    }else{
+	                       alert("환영합니다.")
+	                       location.href="home.do"; // 메인화면으로
+	                    }    
+	                 },       
+	                 error : function(){alert("error");}            
+	             });   
+	          }
+	          function logoutFn(){
+	                $.ajax({
+	                   url: "logout.do",
+	                   type:"get",
+	                   success:function(){ 
+	                      location.href="login.do"
+	                   },
+	                  error:function(){alert("error");}         
+	                });      
+	             }   
 	</script>
 </head>
   <body>
@@ -79,7 +79,7 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">PALETTE</a></h1>
+              <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
               <ul>
                 <jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="6" />
@@ -157,7 +157,6 @@
 				<br>
 			</section>
 
-      
       <footer class="ftco-footer ftco-section img" style="background-color: black;">
 	    	<div class="overlay"></div>
 	      <div class="container">

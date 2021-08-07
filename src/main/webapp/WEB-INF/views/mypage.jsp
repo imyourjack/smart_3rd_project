@@ -63,7 +63,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">PALETTE</a>
+	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
@@ -87,33 +87,30 @@
 					
 					<!-- 폼 넣을 곳 -->
 					
-						<form>
+						<form id="frm" method="post" action="${cpath}/userUpdate.do">
 						  <fieldset>
 						    <legend>회원정보</legend>
-						    <div class="form-group row">
+						    <div class="form-group">
 						      <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
-						      <div class="col-sm-10">
-						        <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="${sessionScope.userVO.user_id}">
+						      <input type="text" class="form-control" readonly="readonly" name="user_id" value="${sessionScope.userVO.user_id}">     
 						      </div>
 						    </div>
 						    <div class="form-group">
 						      <label for="exampleInputPassword1">Password</label>
-						      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-						      <small id="emailHelp" class="form-text text-muted">변경할 비밀번호 입력</small>
+						      <input type="password" class="form-control" name="user_password" value="${sessionScope.userVO.user_password}">
 						    </div>
 						    <div class="form-group">
 						      <label for="exampleInputEmail1">name</label>
-						      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+						      <input type="text" class="form-control" name="user_name" value="${sessionScope.userVO.user_name}">
 						    </div>
 						    <div class="form-group">
 						      <label for="exampleInputEmail1">age</label>
-						      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter age">
+						      <input type="text" class="form-control" name="user_age" value="${sessionScope.userVO.user_age}">
 						    </div>
 						    <div class="form-group">
 						      <label for="exampleInputEmail1">gender</label>
-						      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter gender">
-						    </div>
-						    
+						      <input type="text" class="form-control" name="user_gender" value="${sessionScope.userVO.user_gender}">
+						    </div>			    
 						  </fieldset>
 						</form>
 						
@@ -130,7 +127,7 @@
 	        <div class="row mb-5">
 	          <div class="col-lg-3">
 	            <div class="ftco-footer-widget mb-4">
-	              <h2 class="ftco-heading-2 logo"><a href="index.html">PALETTE</a></h2>
+	              <h2 class="ftco-heading-2 logo"><a href="home.do">PALETTE</a></h2>
 	              <p>Color types help stylize makeup, fashion. have you ever thought about your personal colors that perfectly suit your image?</p>
 	              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
