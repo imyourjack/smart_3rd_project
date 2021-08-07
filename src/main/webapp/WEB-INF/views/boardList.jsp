@@ -97,7 +97,10 @@
 	      </div>
       </section>
 
-	    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter" style="background-color: black;">
+		<br>
+		<br>
+
 		<br>
 		<br>
 				<div class="container">
@@ -151,10 +154,12 @@
 					</div>
 				</div>
 				<br>
+				<br>
+				<br>
 			</section>
 
       
-      <footer class="ftco-footer ftco-section img">
+      <footer class="ftco-footer ftco-section img" style="background-color: black;">
 	    	<div class="overlay"></div>
 	      <div class="container">
 	        <div class="row mb-5">

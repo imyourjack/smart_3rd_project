@@ -81,6 +81,7 @@
 				</div>
 			</div>
 		</nav>
+		</div>
 
 		<div id="colorlib-page">
 			<header>
@@ -102,8 +103,9 @@
 					<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 				</div>
 			</header>
+		 </div>
 
-			<section class="hero-wrap js-fullheight">
+	    			<section class="hero-wrap js-fullheight">
 				<div class="container-fluid px-0">
 					<div
 						class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
@@ -120,6 +122,145 @@
 					</div>
 				</div>
 			</section>
+	    	<div class="container-fluid px-0">
+	    		<div class="row no-gutters">
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/main4.JPG);">	
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<div class="icon d-flex align-items-center mb-5">
+	    							</div>
+	    							<h2 class="mb-4"><a href="blog-single.html">좋은 첫인상을 위한 
+	    							<br>나만의 '퍼스널 컬러'와 '스타일링'</a></h2>
+	    							<p>모든 만남은 첫인상이 중요합니다.
+	    							<br>특히 취업 최종 관문인 면접에서 결정적인 역할을 하곤 하죠.
+	    							<br>긍정적인 첫인상을 남기기 위해서 여러가지 준비할 것이 많은데,
+	    							<br>그 중 내게 어울리는 색을 찾는 '퍼스널 컬러'의 중요성이 더 커지고 있습니다.
+	    							<br>면접을 앞둔 취준생은 물론 나만의 색을 찾아 보다 멋진 스타일링을 원하는 분을 위한 퍼스널 컬러 진단을 하러 가볼까요?</p>
+	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/clothes.jpg);">	
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<div class="icon d-flex align-items-center mb-5">
+	    							</div>
+	    							<h2 class="mb-4"><a href="blog-single.html">내 옷장에 옷들과 
+	    							<br>마이 '퍼스널 컬러' 매칭 적합도</a></h2>
+	    							<p>이미지 분석하여 진단한 내 퍼스널 컬러와
+	    							<br>내가 가지고 있는 옷들이 얼마나 어울릴까?
+	    							<br>
+	    							<br>적합도를 확인 및 베스트 매칭 컬러 아이템 추천 !</p>
+	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/perfume.jpg);">	
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html">'퍼스널 컬러'에 따른
+	    							<br>향수 추천 서비스 </a></h2>
+	    							<p>이미지 분석하여 진단한 퍼스널 컬러에 따라
+	    							<br>내 분위기와 어울리는 향수?
+									<br>
+									<br>톤별 어울리는 베스트 향수 추천 해드릴게요 :)</p>
+	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/hair1.jpg);">	
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<div class="icon d-flex align-items-center mb-5">
+	    							</div>
+	    							<h2 class="mb-4"><a href="blog-single.html">'퍼스널 컬러'에 따른
+	    							<br>헤어 컬러 추천 서비스 </a></h2>
+	    							<p>이미지 분석하여 진단한 퍼스널 컬러에 따라
+	    							<br>내 피부톤과 어울리는 헤어 컬러로 스타일 Up Up!</p>
+	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_7.jpg);">
+	    						
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<div class="icon d-flex align-items-center mb-5">
+	    								<div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/person_4.jpg);"></div>
+	    								<div class="position pl-3">
+	    									<h4 class="mb-0">Jamie Jonson</h4>
+	    									<span>fashion.com</span>
+	    								</div>
+	    							</div>
+	    							<h2 class="mb-4"><a href="blog-single.html">Make Peace With Your Broken Pieces</a></h2>
+	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">Read more <span class="ion-ios-arrow-forward"></span></a></p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_8.jpg);">
+	    						
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<div class="icon d-flex align-items-center mb-5">
+	    								<div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/person_3.jpg);"></div>
+	    								<div class="position pl-3">
+	    									<h4 class="mb-0">Jamie Jonson</h4>
+	    									<span>fashion.com</span>
+	    								</div>
+	    							</div>
+	    							<h2 class="mb-4"><a href="blog-single.html">Make Peace With Your Broken Pieces</a></h2>
+	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">Read more <span class="ion-ios-arrow-forward"></span></a></p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_9.jpg);">
+	    						
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<div class="icon d-flex align-items-center mb-5">
+	    								<div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/person_3.jpg);"></div>
+	    								<div class="position pl-3">
+	    									<h4 class="mb-0">Jamie Jonson</h4>
+	    									<span>fashion.com</span>
+	    								</div>
+	    							</div>
+	    							<h2 class="mb-4"><a href="blog-single.html">Make Peace With Your Broken Pieces</a></h2>
+	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">Read more <span class="ion-ios-arrow-forward"></span></a></p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+
 
 			<section class="ftco-section ftco-no-pb ftco-no-pt">
 				<div class="container-fluid px-0">
