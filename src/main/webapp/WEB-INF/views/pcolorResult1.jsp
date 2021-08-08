@@ -109,25 +109,27 @@
       </section>
 
 	    <section class="ftco-section ftco-no-pb ftco-no-pt">
+	    <br>
+	    <br>
 	    	<div class="container-fluid px-0">
 	    		<div class="row no-gutters">
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);">
-	    						
-	    					</div>
-	    					<div class="col-md-6">
+	    				<img class="sc-fXazdy UjHkE" data-src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/springColor.png" 
+	    				alt="봄 웜톤의 색상 특징" src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/springColor.png" style="width: 700px;height: 650px;">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a>퍼스널컬러</a></h2>
-	    							<h2 class="mb-4"><a>당신은 ??? 톤의 컬러입니다</a></h2>
-	    							<p>Color types help stylize makeup, fashion. have you ever thought about your personal colors that perfectly suit your image?</p>
+	    							<h2 class="mb-4"><a>당신의 퍼스널 컬러는</a></h2>
+	    							<h2 class="mb-4"><a>'SPRING 봄 웜톤' 입니다.</a></h2>
+	    							<p>Color types help stylize makeup, fashion. 
+	    							<br>have you ever thought about your personal colors that perfectly suit your image?</p>
 	    						</div>
 	    					</div>
 	    				</div>
 	    			</div>
+	    			</div>
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/spring.jpg);">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/springSpectrum1.png);">
 	    						
 	    					</div>
 	    					<div class="col-md-6">

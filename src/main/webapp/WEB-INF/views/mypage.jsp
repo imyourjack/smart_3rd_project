@@ -80,7 +80,7 @@
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do" style="color : white;">login</a>
+								<a href = "${cpath}/login.do" style="color : white;">Login</a>
 							</c:when>
 							<c:otherwise>
 								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>

@@ -74,7 +74,7 @@
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do" style="color : white;">login</a>
+								<a href = "${cpath}/login.do" style="color : white;">Login</a>
 							</c:when>
 							<c:otherwise>
 								<button class="btn" color="white" style="color : white;">${sessionScope.userVO.user_name}</button>
@@ -91,7 +91,6 @@
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text js-fullheight align-items-end justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	            <p class="breadcrumbs"><span class="mr-2"><a href="home.do">Main</a></span> <span><a href="login.do">Login</a></span> </p>
 	            <h1 class="bread">Costume Color</h1>
 	          </div>
 	        </div>

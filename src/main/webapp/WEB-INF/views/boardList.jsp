@@ -73,7 +73,7 @@
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do" style="color : white;">login</a>
+								<a href = "${cpath}/login.do" style="color : white;">Login</a>
 							</c:when>
 							<c:otherwise>
 								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
@@ -97,10 +97,7 @@
 	      </div>
       </section>
 
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter" style="background-color: black;">
-		<br>
-		<br>
-
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 		<br>
 		<br>
 				<div class="container">
@@ -133,7 +130,7 @@
 								</tbody>
 							</table>
 							<div>
-								<form action="${cpath}/boardSearch.do" method="post">
+								<form action="${cpath}/boardSearch.do" method="post" style="width: 1140px;">
 									<table class="table">
 										<tr>
 											<td>
@@ -143,13 +140,12 @@
 													<option value="board_contents">내용</option>
 												</select>
 											</td>
-											<td><input type="text" name="keyword" class="form-control"></td>
-											<td><button type="submit" class="btn btn-primary btn-sm" style="width: 92px; height: 52px;">검색</button>												
+											<td style="padding-left: 2px; padding-right: 2px;"><input type="text" name="keyword" class="form-control"></td>
+											<td align="right" style="padding-left: 0px; padding-right: 3px; width:110px"><button type="submit" class="btn btn-primary btn-sm" style="width: 92px; height: 52px;">검색</button></td>
+											<td align="left" style="padding-left: 3px; padding-right: 2px; width:110px"><a href="boardForm.do"><button type="button"  class="btn btn-primary btn-sm" style="width: 92px; height: 52px;">글쓰기</button></a></td>								
 										</tr>
 									</table>
 								</form>
-								<button class="btn btn-primary btn-sm" style="width: 92px; margin-left: 3px; height: 52px;" onclick="goWrite()">글쓰기</button></td>			
-							</div>
 						</div>
 					</div>
 				</div>

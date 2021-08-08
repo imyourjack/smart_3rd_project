@@ -92,7 +92,7 @@
 					<div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do" style="color:white;">login</a>
+								<a href = "${cpath}/login.do" style="color:white;">Login</a>
 							</c:when>
 							<c:otherwise>
 								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
@@ -115,8 +115,7 @@
 								<span class="subheading">Personal Color</span>
 								<h1
 									style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);">palette</h1>
-								<span class="subheading-2">Do you know your harmonic
-									color?</span>
+								<span class="subheading-2">Do you know your harmonic color?</span>
 							</div>
 						</div>
 					</div>

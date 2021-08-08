@@ -103,7 +103,7 @@
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do">login</a>
+								<a href = "${cpath}/login.do">Login</a>
 							</c:when>
 							<c:otherwise>
 								<button class="btn" color="white">${sessionScope.userVO.user_name}</button>
@@ -127,52 +127,61 @@
 	      </div>
       </section>
 
-		<section
-				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter" style="background-color: black;">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
 				<br>
 				<br>
 				<div class="container">
-					<div class="panel panel-default">
-						<div class="panel-heading"><h2>회원가입</h2></div>
+					<div class="panel panel-default" style="width: 180px; height: 350px; padding:10px; background-color:#C0C1D6; margin: 0 auto; width:300px; height: auto;">
+						<div class="panel-heading"  style="width: 280px; text-align:center; color: white; background-color:transparent;"><h2>회원가입</h2></div>
 						<div class="panel-body">
 							<form id="srm" name="srm" method="post" class="signForm">
-								<div class="idForm">
+								<div class="idForm" style="text-align: center;">
 									<input type="text" class="id" placeholder="아이디"
 										name="user_id" id="user_id"> 
 								</div>
 								<br>
-								<div class="passForm">
+								<div class="passForm" style="text-align: center;">
 									<input type="password" class="pw" placeholder="비밀번호"
 										name="user_password" id="user_password">
 								</div>
 								<br>
-								<div class="passForm">
+								<div class="passForm" style="text-align: center;">
 									<input type="password" class="pw" placeholder="비밀번호 확인"
 										name="user_password_check" id="user_password_check">
 									<span class="pw1">비밀번호가 일치합니다.</span> <span class="pw2">비밀번호가
 										일치하지 않습니다.</span>
 								</div>
 								<br>
-								<div class="nameForm">
+								<div class="nameForm" style="text-align: center;">
 									<input type="text" class="name" placeholder="이름"
 										name="user_name">
 								</div>
 								<br>
-								<div class="ageForm">
+								<div class="ageForm" style="text-align: center;">
 									<input type="text" class="age" placeholder="나이"
 										name="user_age">
 								</div>
 								<br>
-								<div class="genderForm">
+								<div class="genderForm" style="text-align: center;">
 									<input type="text" class="gender" placeholder="성별"
 										name="user_gender">
 								</div>
 								<br>
-								<button type="button" class="btn btn-primary btn-sm" onclick="signupFn()">SIGN UP</button>
+								<div style="text-align: center;">
+								<button style="text-align: center;" type="button" class="btn btn-primary btn-sm" onclick="signupFn()">SIGN UP</button>
 							</form>
+						</div>
 						</div>
 					</div>
 				</div>
+				<br>
+				<br>
+				<br>
 				<br>
 			</section>      
       <footer class="ftco-footer ftco-section img">
