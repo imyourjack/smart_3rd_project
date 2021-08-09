@@ -81,6 +81,9 @@
             <div class="col-md-12 text-center">
               <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
               <ul>
+               	<jsp:include page="menu.jsp">
+                  <jsp:param name="pageSelection" value="6" />
+                </jsp:include>
               </ul>
             </div>
           </div>
