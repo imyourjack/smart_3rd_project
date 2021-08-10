@@ -110,7 +110,7 @@
 
 	    <section class="ftco-section ftco-no-pb ftco-no-pt">
 	    	<br>
-	    <br>
+	   		 <br>
 	    	<div class="container-fluid px-0">
 	    		<div class="row no-gutters">
 	    			<div class="col-md-12 blog-wrap">
@@ -174,7 +174,6 @@
 	    					<div class="col-md-6 img js-fullheight">
  	    						<c:forEach var="vo" items="${list}" begin="9" end="11" step="1">
 	    						<img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
-	    						<br/>
  	    						</c:forEach>
 	    					</div>
 	    					
@@ -185,18 +184,14 @@
 		    							<h3 class="mb-4">${vo.item_name}</h3>
 		    							<p style=" font-size: 12px;">${vo.item_tag}</p>
 		    							<p style=" font-size: 15px;">${vo.item_explain}</p>
-		    							<a style=" font-size: 15px;">${vo.item_product_url}</a>
+		    							<a style=" font-size: 15px;" href="${vo.item_product_url}">${vo.item_product_url}</a>
 									</div>
-									<br>
 									<br>
 									</c:forEach>
 	    						</div>
 	    					</div>
 	    				</div>
 	    			</div>
-
-	    		</div>
-	    	</div>
 	    </section>
 
       

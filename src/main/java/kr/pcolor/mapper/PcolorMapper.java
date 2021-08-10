@@ -9,10 +9,12 @@ import kr.pcolor.domain.ItemVO;
 
 @Mapper
 public interface PcolorMapper {
-	/*
-	 * @Select("select * from tbl_item where pc_idx = #{pc_idx}") public ItemVO
-	 * pcolorResult1(int pc_idx);
-	 */
 	@Select("select * from tbl_item")
 	public List<ItemVO> pcolorResult1();
+	@Select("select * from tbl_item")
+	public List<ItemVO> pcolorResult2();
+	@Select("select * from tbl_item")
+	public List<ItemVO> pcolorResult3();
+	@Select("select * from tbl_item")
+	public List<ItemVO> pcolorResult4();
 }

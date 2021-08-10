@@ -161,14 +161,12 @@
 	    				<div class="row no-gutters align-items-center">
 	    					<div class="col-md-6 img js-fullheight">
  	    						<c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
-	    						<img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
-	    						<br/>
+	    							<img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
  	    						</c:forEach>
 	    					</div>
 	    					
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-
 	    							<c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
 	    							<div width="300" height="300">
 		    							<h3 class="mb-4">${vo.item_name}</h3>
@@ -177,13 +175,10 @@
 		    							<a style=" font-size: 15px;" href="${vo.item_product_url}">${vo.item_product_url}</a>
 									</div>
 									<br>
-									<br>
 									</c:forEach>
 	    						</div>
 	    					</div>
 	    				</div>
-	    			</div>
-	    			</div>
 	    			</div>
 	</section>
 

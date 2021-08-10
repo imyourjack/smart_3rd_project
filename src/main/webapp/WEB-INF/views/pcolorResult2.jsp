@@ -127,57 +127,56 @@
 									<br>핑크빛과 붉은빛이 감도는 혈색 좋은 피부 톤을 가지고 있습니다.
 									<br>지적이고 세련되며 우아한 인상이 여름 타입의 특징입니다.</p>
 	    						</div>
-	    					</div>
 	    				</div>
 	    			</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerSpectrum1.png);">
-	    					</div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html">'여름 쿨톤'의 컬러 팔레트</a></h2>
-	    							<p>흰색과 파란색을 머금고 있는 여름 컬러들은
-	    							<br>소프트하고 밝은 컬러, 그레이쉬한 컬러들로 이루어져 있어 시원하고 화려한 인상을 줍니다.
-	    							<br>여름 쿨톤의 컬러들은 블루 베이스로 이루어져 있고 난색이어도 차가운 느낌을 가집니다.
-									<br>여름 타입에게 잘 어울리는 컬러는 
-									<br>화이트, 그레이, 네이비 등의 컬러를 기본색으로 그레이쉬한 파스텔톤과 함께 사용할 수 있는데
-									<br>대표적인 컬러는 연핑크, 민트, 연보라, 파스텔블루 등 
-									<br>안개가 낀 듯 뿌옇고 부드럽게 보이는 게 특징입니다.
-									<br>여름의 컬러는 시원함과 시크함, 세련된 느낌의 이미지를 보여줍니다.</p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerhair2.jpg);"></div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html"> 헤어컬러 </a></h2>
-	    							<p> 애쉬 계열의 블론드, 브라운 컬러나 붉은 계열의 쿨 브라운, 와인 브라운 등이 블루 베이스의 여름 쿨톤에게 가장 어울리는 컬러예요.<br> 웜톤과는 달리 노란 계열은 어울리지 않는답니다. <br>헤어스타일은 스트레이트, 자연스러운 웨이브, 본연의 색, 애쉬 염색을 추천합니다.  </p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerstar2.jpg);"></div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html">유사톤 연예인 </a></h2>
-	    							
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
+	    		</div>
+	    	</div>
+   			<div class="col-md-12 blog-wrap">
+   				<div class="row no-gutters align-items-center">
+   					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerSpectrum1.png);">
+   					</div>
+   					<div class="col-md-6">
+   						<div class="text p-md-5 p-4 ftco-animate">
+   							<h2 class="mb-4"><a href="blog-single.html">'여름 쿨톤'의 컬러 팔레트</a></h2>
+   							<p>흰색과 파란색을 머금고 있는 여름 컬러들은
+   							<br>소프트하고 밝은 컬러, 그레이쉬한 컬러들로 이루어져 있어 시원하고 화려한 인상을 줍니다.
+   							<br>여름 쿨톤의 컬러들은 블루 베이스로 이루어져 있고 난색이어도 차가운 느낌을 가집니다.
+							<br>여름 타입에게 잘 어울리는 컬러는 
+							<br>화이트, 그레이, 네이비 등의 컬러를 기본색으로 그레이쉬한 파스텔톤과 함께 사용할 수 있는데
+							<br>대표적인 컬러는 연핑크, 민트, 연보라, 파스텔블루 등 
+							<br>안개가 낀 듯 뿌옇고 부드럽게 보이는 게 특징입니다.
+							<br>여름의 컬러는 시원함과 시크함, 세련된 느낌의 이미지를 보여줍니다.</p>
+   						</div>
+   					</div>
+   				</div>
+   			</div>
+   			<div class="col-md-12 blog-wrap">
+   				<div class="row no-gutters align-items-center">
+   					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerhair2.jpg);"></div>
+   					<div class="col-md-6">
+   						<div class="text p-md-5 p-4 ftco-animate">
+   							<h2 class="mb-4"><a href="blog-single.html"> 헤어컬러 </a></h2>
+   							<p> 애쉬 계열의 블론드, 브라운 컬러나 붉은 계열의 쿨 브라운, 와인 브라운 등이 블루 베이스의 여름 쿨톤에게 가장 어울리는 컬러예요.<br> 웜톤과는 달리 노란 계열은 어울리지 않는답니다. <br>헤어스타일은 스트레이트, 자연스러운 웨이브, 본연의 색, 애쉬 염색을 추천합니다.  </p>
+   						</div>
+   					</div>
+   				</div>
+   			</div>
+   			<div class="col-md-12 blog-wrap">
+   				<div class="row no-gutters align-items-center">
+   					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerstar2.jpg);"></div>
+   					<div class="col-md-6">
+   						<div class="text p-md-5 p-4 ftco-animate">
+   							<h2 class="mb-4"><a href="blog-single.html">유사톤 연예인 </a></h2>
+   							
+   						</div>
+   					</div>
+   				</div>
+   			</div>
+   			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
 	    					<div class="col-md-6 img js-fullheight">
  	    						<c:forEach var="vo" items="${list}" begin="3" end="5" step="1">
-	    						<img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
-	    						<br/>
+	    							<img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
  	    						</c:forEach>
 	    					</div>
 	    					
@@ -188,18 +187,14 @@
 		    							<h3 class="mb-4">${vo.item_name}</h3>
 		    							<p style=" font-size: 12px;">${vo.item_tag}</p>
 		    							<p style=" font-size: 15px;">${vo.item_explain}</p>
-		    							<a style=" font-size: 15px;">${vo.item_product_url}</a>
+		    							<a style=" font-size: 15px;" href="${vo.item_product_url}">${vo.item_product_url}</a>
 									</div>
-									<br>
 									<br>
 									</c:forEach>
 	    						</div>
 	    					</div>
 	    				</div>
 	    			</div>
-
-	    		</div>
-	    	</div>
 	    </section>
 
       
