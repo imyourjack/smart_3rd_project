@@ -44,7 +44,7 @@
 	            type:"post",
 	            data : signData,
 	            success:function(data){
-	              alert("회원가입완료")
+	              alert("회원가입 완료")
 	              location.href="pcolor.do"; 
 	            },
 	           error:function(){alert("error");}         
@@ -107,7 +107,7 @@
 							</c:when>
 							<c:otherwise>
 								<button class="btn" color="white">${sessionScope.userVO.user_name}</button>
-								<input type="button" value="로그아웃" onclick="logoutFn()" class="btn btn-info btn-sm"> 
+								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a>
 							</c:otherwise>
 						</c:choose>
 					</div>

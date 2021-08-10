@@ -77,7 +77,7 @@
 							</c:when>
 							<c:otherwise>
 								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-								<input type="button" value="로그아웃" onclick="logoutFn()" class="btn btn-info btn-sm"> 
+								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
 							</c:otherwise>
 						</c:choose>
 					</div>
@@ -102,9 +102,8 @@
 		<br>
 				<div class="container">
 					<div class="panel panel-default">
-						<div class="panel-heading"><h3>자유게시판</h3></div>
-						<div class="panel-body">
-
+						<div class="panel-body" >
+							<br>
 							<table class="table table-hover">
 								<thead>
 									<tr>
@@ -148,6 +147,7 @@
 								</form>
 						</div>
 					</div>
+				</div>
 				</div>
 				<br>
 				<br>
@@ -238,7 +238,6 @@
 
       </div>
     </div>
-
 
     <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>

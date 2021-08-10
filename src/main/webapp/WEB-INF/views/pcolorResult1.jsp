@@ -52,7 +52,7 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/main2.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
@@ -62,11 +62,6 @@
               	<jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="2" />
                 </jsp:include>
-              	
-                <!-- <li><a href="index.html"><span>Home</span></a></li>
-                <li><a href="about.html"><span>About</span></a></li>
-                <li class="active"><a href="blog.html"><span>Blog</span></a></li>
-                <li><a href="contact.html"><span>Contact</span></a></li> -->
                 
               </ul>
             </div>
@@ -84,11 +79,11 @@
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do">login</a>
+								<a href="${cpath}/login.do">login</a>
 							</c:when>
 							<c:otherwise>
 								<button class="btn" color="white">${sessionScope.userVO.user_name}</button>
-								<input type="button" value="로그아웃" onclick="logoutFn()" class="btn btn-info btn-sm"> 
+								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
 							</c:otherwise>
 						</c:choose>
 					</div>
@@ -119,9 +114,11 @@
 	    				alt="봄 웜톤의 색상 특징" src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/springColor.png" style="width: 700px;height: 650px;">
 	    						<div class="text p-md-5 p-4 ftco-animate">
 	    							<h2 class="mb-4"><a>당신의 퍼스널 컬러는</a></h2>
-	    							<h2 class="mb-4"><a>'SPRING 봄 웜톤' 입니다.</a></h2>
-	    							<p>Color types help stylize makeup, fashion. 
-	    							<br>have you ever thought about your personal colors that perfectly suit your image?</p>
+	    							<h2 class="mb-4"><a>'봄 웜톤' 입니다.</a></h2>
+	    							<p>한국인의 많은 사람이 봄 웜톤의 피부색을 가지고 있습니다.
+	    							<br>봄 웜톤인 사람은 봄의 느낌처럼 밝고 노란빛의 피부를 가지고 있습니다.
+									<br>봄 타입은 노란색을 지닌 따듯한 유형으로 선명 하고 밝은 톤과 엷은 톤으로 생동감과 에너지를 느끼게 합니다.
+									<br>피부는 밝으면서 매끄럽고 투명한 분들이 많고 피부가 얇아서 주근깨 같은 잡티가 있는 경우도 있습니다.</p>
 	    						</div>
 	    					</div>
 	    				</div>
@@ -130,12 +127,17 @@
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
 	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/springSpectrum1.png);">
-	    						
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html">???톤의 컬러 팔레트</a></h2>
-	    							<p>설명</p>
+	    							<h2 class="mb-4"><a href="blog-single.html">'봄 웜톤'의 컬러 팔레트</a></h2>
+	    							<p>봄 컬러들은 전체적으로 노란색을 가지고 있는 그룹으로 
+	    							<br>밝고 따뜻한 색이 이루어져 있어 활기찬 느낌이 나는 탄력 있는 팔레트입니다.
+	    							<br>따라서 봄의 맑은 이미지를 생각하며 스타일링 하는 것을 추천합니다.
+									<br>봄 타입에게 잘 어울리는 컬러는 
+									<br>아이보리 베이지와 같은 밝은 톤과 알록달록한 선명한 컬러를 사용할 수 있는데 
+									<br>대표적인 컬러는 복숭아 핑크, 오렌지 레드, 옐로우, 그린, 퍼플 등
+									<br>싱그러운 과일이나 햇살을 듬뿍 머금은 선명한 컬러입니다.</p>
 	    						</div>
 	    					</div>
 	    				</div>
@@ -170,7 +172,7 @@
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
 	    							<h2 class="mb-4"><a href="blog-single.html"> 향수 </a></h2>
-	    							<p> 설명 </p>
+	    							<p>설명</p>
 	    						</div>
 	    					</div>
 	    				</div>
@@ -204,9 +206,9 @@
 	                <div class="text">
 	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
 	                  <div class="meta">
-	                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-	                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-	                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+	                    <div><a href="#"><span class="icon-calendar"></span>July 12, 2018</a></div>
+	                    <div><a href="#"><span class="icon-person"></span>Admin</a></div>
+	                    <div><a href="#"><span class="icon-chat"></span>19</a></div>
 	                  </div>
 	                </div>
 	              </div>
@@ -215,9 +217,9 @@
 	                <div class="text">
 	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
 	                  <div class="meta">
-	                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-	                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-	                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+	                    <div><a href="#"><span class="icon-calendar"></span>July 12, 2018</a></div>
+	                    <div><a href="#"><span class="icon-person"></span>Admin</a></div>
+	                    <div><a href="#"><span class="icon-chat"></span>19</a></div>
 	                  </div>
 	                </div>
 	              </div>
@@ -264,8 +266,7 @@
 
       </div>
     </div>
-
-
+    
     <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>

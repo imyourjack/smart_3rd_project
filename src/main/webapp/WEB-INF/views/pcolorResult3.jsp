@@ -52,7 +52,7 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/main2.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
@@ -88,7 +88,7 @@
 							</c:when>
 							<c:otherwise>
 								<button class="btn" color="white">${sessionScope.userVO.user_name}</button>
-								<input type="button" value="로그아웃" onclick="logoutFn()" class="btn btn-info btn-sm"> 
+								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a>  
 							</c:otherwise>
 						</c:choose>
 					</div>
@@ -109,17 +109,42 @@
       </section>
 
 	    <section class="ftco-section ftco-no-pb ftco-no-pt">
+	    	<br>
+	    <br>
 	    	<div class="container-fluid px-0">
 	    		<div class="row no-gutters">
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/fall.jpg);">
-	    						
+	    				<img class="sc-fXazdy UjHkE" data-src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/fallColor.png" 
+	    				alt="봄 웜톤의 색상 특징" src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/springColor.png" style="width: 700px;height: 650px;">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a>당신의 퍼스널 컬러는</a></h2>
+	    							<h2 class="mb-4"><a>'가을 웜톤' 입니다.</a></h2>
+	    							<p>가을 웜톤인 사람은 클래식하고 깊고 풍성한 느낌을 가집니다. 
+	    							<br>또한 포근하고 부드러우며 차분하고 원숙한 이미지를 지니고 있습니다.
+	    							<br>상대방에게 친근함과 편안함을 느끼게 하는 이미지입니다.
+									<br>가을 타입은 황색을 지닌 따듯한 유형으로 강한 톤, 깊은 톤, 중후한 톤으로 
+									<br>편안함과 고급스러운 이미지를 느끼게 합니다.
+									<br>가을 타입은 누르스름한 피부 톤에 혈색이 있습니다.
+									<br>믿음직스럽고 그윽함이 특징입니다.</p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/fallSpectrum1.png);">
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html">???톤의 컬러 팔레트</a></h2>
-	    							<p>설명</p>
+	    							<h2 class="mb-4"><a href="blog-single.html">'가을 웜톤'의 컬러 팔레트</a></h2>
+	    							<p>가을 컬러들은 노란색보다 짙은 황색을 지니고 있는 색의 그룹으로 
+	    							<br>깊고 강하면서 고급스럽고 편안한 컬러들이 주를 이루며 차분한 이미지를 가지고 있는 팔레트입니다.
+									<br>가을 타입에게 잘 어울리는 컬러는
+									<br>아이보리 베이지, 브라운과 같은 진한 톤에서 어두운 톤까지 많은 영역의 컬러를 사용할 수 있습니다.
+									<br>대표적인 컬러는 살색, 골드 등 가을의 자연에서 흔히 볼 수 있는 컬러입니다.
+									<br>가을의 컬러는 따듯함과 안정감 편안한 이미지를 줍니다.</p>
 	    						</div>
 	    					</div>
 	    				</div>

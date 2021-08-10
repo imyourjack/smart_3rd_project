@@ -78,7 +78,7 @@
 							</c:when>
 							<c:otherwise>
 								<button class="btn" color="white" style="color : white;">${sessionScope.userVO.user_name}</button>
-								<input type="button" value="로그아웃" onclick="logoutFn()" class="btn btn-info btn-sm"> 
+								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
 							</c:otherwise>
 						</c:choose>
 					</div>

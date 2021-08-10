@@ -52,7 +52,7 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/main2.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
@@ -88,7 +88,7 @@
 							</c:when>
 							<c:otherwise>
 								<button class="btn" color="white">${sessionScope.userVO.user_name}</button>
-								<input type="button" value="로그아웃" onclick="logoutFn()" class="btn btn-info btn-sm"> 
+								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
 							</c:otherwise>
 						</c:choose>
 					</div>
@@ -109,17 +109,40 @@
       </section>
 
 	    <section class="ftco-section ftco-no-pb ftco-no-pt">
+	    	<br>
+	    <br>
 	    	<div class="container-fluid px-0">
 	    		<div class="row no-gutters">
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/winter.jpg);">
-	    						
+	    				<img class="sc-fXazdy UjHkE" data-src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/winterColor.png" 
+	    				alt="봄 웜톤의 색상 특징" src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/springColor.png" style="width: 700px;height: 650px;">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a>당신의 퍼스널 컬러는</a></h2>
+	    							<h2 class="mb-4"><a>'겨울 쿨톤' 입니다.</a></h2>
+	    							<p>겨울 쿨톤인 사람은 카리스마 있고 세련된 이미지를 지니는 사람이 많습니다.
+	    							<br>전형적인 모던한 스타일로 선명하고 액티브한 이미지를 지니고 있어 도시적인 느낌을 지닌 유형입니다.
+									<br>겨울 타입은 파랑과 흰색 검정을 지닌 차가운 유형으로 선명 하고 엷은 톤, 어두운 톤의 모던하며 도시적인 강렬함을 느끼게 합니다.
+									<br>겨울 타입은 핏기가 없어 보일 정도의 투명한 피부 톤을 가집니다.
+									<br>눈동자는 푸른빛, 갈색빛으로 강렬하고 개성 있으며 카리스마가 있습니다.</p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/winterSpectrum1.png);">
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html">???톤의 컬러 팔레트</a></h2>
-	    							<p>설명</p>
+	    							<h2 class="mb-4"><a href="blog-single.html">'겨울 쿨톤'의 컬러 팔레트</a></h2>
+	    							<p>겨울 컬러들은 파란색, 흰색, 검정을 내포하고 있는 차갑고 강렬한 컬러들의 그룹입니다.
+	    							<br>선명하고 강한  컬러들이 속해 모던하고 도회적인 이미지를 가지고 있는 팔레트입니다.
+									<br>겨울 타입에게 잘 어울리는 컬러는 
+									<br>화이트 블랙과 같은 모노톤과 차갑고 선명한 색을 사용할 수 있습니다.
+									<br>대표적인 컬러는  블루, 핫핑크, 레드, 레몬옐로우, 그린 등  차갑고 강한 컬러들입니다. 
+									<br>겨울의 컬러는 차가움과 모던함 카리스마 있는 이미지를 줍니다.</p>
 	    						</div>
 	    					</div>
 	    				</div>
