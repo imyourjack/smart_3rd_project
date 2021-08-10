@@ -32,18 +32,6 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">		
-		    function logoutFn(){
-		    	   $.ajax({
-		    	      url: "logout.do",
-		    	      type:"get",
-		    	      success:function(){ 
-		    	         location.href="home.do"
-		    	      },
-		    	     error:function(){alert("error");}	      
-		    	   });	   
-		    	}		 			
-	</script>
     
   </head>
   <body>
@@ -62,7 +50,7 @@
               	<jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="2" />
                 </jsp:include>
-                
+
               </ul>
             </div>
           </div>
@@ -74,16 +62,20 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">palette</a>
+	          <a class="colorlib-logo" href="home.do">palette</a>
 	        </div>
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
-								<a href="${cpath}/login.do">login</a>
+
+								<a href = "${cpath}/login.do" style="color: white;">Login</a>
+
 							</c:when>
 							<c:otherwise>
+							
 								<button class="btn" color="white">${sessionScope.userVO.user_name}</button>
 								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+
 							</c:otherwise>
 						</c:choose>
 					</div>
@@ -103,9 +95,7 @@
 	      </div>
       </section>
 
-	    <section class="ftco-section ftco-no-pb ftco-no-pt">
-	    <br>
-	    <br>
+	<section class="ftco-section ftco-no-pb ftco-no-pt">
 	    	<div class="container-fluid px-0">
 	    		<div class="row no-gutters">
 	    			<div class="col-md-12 blog-wrap">
@@ -168,19 +158,31 @@
 	    			</div>
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_6.jpg);"></div>
+	    					<div class="col-md-6 img js-fullheight">
+ 	    						<c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
+	    						<img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
+	    						<br/>
+ 	    						</c:forEach>
+	    					</div>
+	    					
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html"> 향수 </a></h2>
-	    							<p>설명</p>
+
+	    							<c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
+	    							<div width="300" height="300">
+		    							<h3 class="mb-4">${vo.item_name}</h3>
+		    							<p style=" font-size: 12px;">${vo.item_tag}</p>
+		    							<p style=" font-size: 15px;">${vo.item_explain}</p>
+		    							<a style=" font-size: 15px;">${vo.item_product_url}</a>
+									</div>
+									<br>
+									<br>
+									</c:forEach>
 	    						</div>
 	    					</div>
 	    				</div>
 	    			</div>
-
-	    		</div>
-	    	</div>
-	    </section>
+	</section>
 
       
       <footer class="ftco-footer ftco-section img">
@@ -282,6 +284,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="${pageContext.request.contextPath}/resources/js/google-map.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/script.js"></script>
     
   </body>
 </html>

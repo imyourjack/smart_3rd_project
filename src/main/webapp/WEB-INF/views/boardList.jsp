@@ -112,7 +112,7 @@
 										<th scope="col">내용</th>
 										<th scope="col">조회수</th>
 										<th scope="col">작성일</th>
-										<th scope="col">작성자</th>						
+										<th scope="col">작성자</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -123,7 +123,7 @@
 											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_contents}</a></td>
 											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_count}</a></td>
 											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_indate}</a></td>
-											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.user_id}</a></td>											
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.user_id}</a></td>									
 										</tr>
 									</c:forEach>
 								</tbody>
