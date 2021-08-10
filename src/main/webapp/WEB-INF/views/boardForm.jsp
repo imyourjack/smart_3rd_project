@@ -83,11 +83,11 @@
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do" style="color : white;">login</a>
+								<a href = "${cpath}/login.do" style="color : white;">Login</a>
 							</c:when>
 							<c:otherwise>
 								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-								<input type="button" value="로그아웃" onclick="logoutFn()" class="btn btn-info btn-sm"> 
+								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a>
 							</c:otherwise>
 						</c:choose>
 					</div>
@@ -112,24 +112,27 @@
 			<br>
 				<div class="container">
 					<div class="panel panel-default">
-						<div class="panel-heading"><h3>게시물 작성</h3></div>
 						<div class="panel-body">
 							<form id="frm" method="post" action="${cpath}/boardInsert.do">
 								<div class="form-group">
 									<label>제목</label> <input type="text" class="form-control"
 										id="board_title" name="board_title">
 								</div>
-								<div class="form-group">
+								<div class="form-group" style="height: 470px;">
 									<label>내용</label>
 									<textarea class="form-control" rows="5" id=board_contents
 										name="board_contents"></textarea>
 								</div>
 								<div class="form-group">
+								<br>
 									<label>작성자</label> <input type="text" class="form-control"
 										id="user_id" name="user_id">
+										<br>
 								</div>
-								<input type="submit" class="btn btn-primary btn-sm" value="글쓰기">
-								<input type='reset' value='취소' class='btn btn-primary btn-sm'>
+								<input type="submit" class="btn btn-primary btn-sm" style="width: 80px; height: 52px;" value="작성">
+								<input type='reset' value='취소' style="width: 80px; height: 52px;" class='btn btn-primary btn-sm'>
+								<br>
+								<br>
 							</form>
 						</div>
 					</div>

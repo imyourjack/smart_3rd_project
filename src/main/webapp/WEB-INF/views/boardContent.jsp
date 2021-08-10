@@ -87,11 +87,11 @@
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do" style="color : white;">login</a>
+								<a href = "${cpath}/login.do" style="color : white;">Login</a>
 							</c:when>
 							<c:otherwise>
 								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-								<input type="button" value="로그아웃" onclick="logoutFn()" class="btn btn-info btn-sm"> 
+								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a>
 							</c:otherwise>
 						</c:choose>
 					</div>
@@ -113,28 +113,33 @@
 
 	    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 			<br>
-			<br>
 				<div class="container">					
 					<div class="panel panel-default">
-						<div class="panel-heading"><h3>자유게시판</h3></div>
+						<br>
 						<div class="panel-body">
 							<form id="frm" method="post" action="${cpath}/boardUpdate.do">
 								<input type="hidden" name="board_idx" value="${vo.board_idx}">
 								<div class="form-group">
-									<label>제목: </label> 
+									<label>제목</label> 
 									<input type="text" class="form-control" id="title" name="board_title" value="${vo.board_title}">
 								</div>
-								<div class="form-group">
-									<label>내용:</label>
+								<div class="form-group" style="height: 470px;">
+									<label>내용</label>
 									<textarea class="form-control" rows="5" id=contents name="board_contents">${vo.board_contents}</textarea>
+									<br>
 								</div>
 								<div class="form-group">
-									<label>작성자: </label> 
+								<br>
+									<label>작성자</label> 
 									<input type="text" class="form-control" id="writer" name="user_id" value="${vo.user_id}" readonly="readonly">
 								</div>
-								<input type="submit" value="수정" class="btn btn-primary btn-sm">
-								<input type='button' value='삭제' class='btn btn-info btn-sm' onclick="goDel(${vo.board_idx})"> 
-								<input type='button' value='목록' class='btn btn-success btn-sm' onclick="goList()">
+								<br>
+								<input type="submit" value="수정" class="btn btn-primary btn-sm" style="width: 80px; height: 52px;">
+								<input type='button' value='삭제' class='btn btn-primary btn-sm' style="width: 80px; height: 52px;"
+									onclick="goDel(${vo.board_idx})"> <input type='button'
+									value='목록' class='btn btn-primary btn-sm' style="width: 80px; height: 52px;" onclick="goList()">
+									<br>
+									<br>
 							</form>
 						</div>
 					</div>

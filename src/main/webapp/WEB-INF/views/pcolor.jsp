@@ -33,7 +33,8 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">		
-		    function logoutFn(){
+    
+    function logoutFn(){
 		    	   $.ajax({
 		    	      url: "logout.do",
 		    	      type:"get",
@@ -79,11 +80,11 @@
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do" style="color : white;">login</a>
+								<a href = "${cpath}/login.do" style="color : white;">Login</a>
 							</c:when>
 							<c:otherwise>
 								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-								<input type="button" value="로그아웃" onclick="logoutFn()" class="btn btn-info btn-sm"> 
+								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
 							</c:otherwise>
 						</c:choose>
 					</div>
@@ -96,7 +97,6 @@
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	            <p class="breadcrumbs"><span class="mr-2"><a href="home.do">Main</a></span> <span><a href="login.do">Login</a></span> </p>
 	            <h1 class="bread">personal color</h1>
 	          </div>
 	        </div>
@@ -117,11 +117,8 @@
 	    							<h2 class="mb-4"><a>남성 맞춤형 스타일 개선 서비스</a></h2>
 	    							<p>Color types help stylize makeup, fashion. </p>
 	    							<p>have you ever thought about your personal colors that perfectly suit your image?</p>
-	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary" style="
-									    width: 526px;
-									    height: 164px;
-									    font-size:100px;
-									"> 진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
+	    							<p class="mb-0 mt-4"><button class="btn btn-primary btn-sm" style="width: 92px; height: 52px;"
+									"> 진단하기 <span class="ion-ios-arrow-forward"></button></a></p>
 	    						</div>
 	    					</div>
 	    				</div>

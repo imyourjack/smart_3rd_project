@@ -10,7 +10,7 @@
 %>
 
 <li>
-   <a href="home.do"
+   <a class=menuFont href="home.do"
       <%
          if(num.equals("1")){
       %>
@@ -21,7 +21,7 @@
 </li>
 
 <li>
-   <a href="pcolor.do"
+   <a class=menuFont href="pcolor.do"
       <%
          if(num.equals("2")){
       %>
@@ -32,7 +32,7 @@
 </li>
 
 <li>
-   <a href="uploadForm.do"
+   <a class=menuFont href="uploadForm.do"
       <%
          if(num.equals("3")){
       %>
@@ -44,7 +44,7 @@
 </li>
 
 <li>
-   <a href="boardList.do"
+   <a class=menuFont href="boardList.do"
       <%
          if(num.equals("4")){
       %>
@@ -54,7 +54,7 @@
 </li>
 
 <li>
-   <a href="mypage.do"
+   <a class=menuFont href="mypage.do"
       <%
          if(num.equals("5")){
       %>
@@ -62,4 +62,13 @@
       <% } %>
 
    >마이페이지</a>
+<li>
+   <a class=menuFont href="login.do"
+      <%
+         if(num.equals("6")){
+      %>
+         style="color:#f8b500;"
+      <% } %>
+
+   >로그인</a>
    

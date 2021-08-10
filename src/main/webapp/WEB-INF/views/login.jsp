@@ -81,6 +81,9 @@
             <div class="col-md-12 text-center">
               <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
               <ul>
+               	<jsp:include page="menu.jsp">
+                  <jsp:param name="pageSelection" value="6" />
+                </jsp:include>
               </ul>
             </div>
           </div>
@@ -104,14 +107,13 @@
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
 	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
-	            <h1 class="bread">login</h1>
+	            <h1 class="bread">Login</h1>
 	          </div>
 	        </div>
 	      </div>
       </section>
 
-		<section
-				class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter" style="background-color: black;">
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter" style="background-color: black;">
 				<br>
 				<br>
 				<br>
