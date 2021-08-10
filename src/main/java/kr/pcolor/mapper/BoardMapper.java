@@ -20,7 +20,7 @@ public interface BoardMapper {
     public void boardInsert(BoardVO vo);
 
     @Select("select * from tbl_board where board_idx = #{board_idx}")
-    public BoardVO boardContent(int board_idx); 
+    public BoardVO boardContent(int board_idx);
     
     @Delete("delete from tbl_board where board_idx=#{board_idx}")
     public void boardDelete(int board_idx);

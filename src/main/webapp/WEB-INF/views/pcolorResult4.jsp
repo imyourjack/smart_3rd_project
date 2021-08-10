@@ -150,11 +150,25 @@
 	    			</div>
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_6.jpg);"></div>
+	    					<div class="col-md-6 img js-fullheight">
+ 	    						<c:forEach var="vo" items="${list}" begin="9" end="11" step="1">
+	    						<img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
+	    						<br/>
+ 	    						</c:forEach>
+	    					</div>
+	    					
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html"> 향수 </a></h2>
-	    							<p> 설명 </p>
+	    							<c:forEach var="vo" items="${list}" begin="9" end="11" step="1">
+	    							<div width="300" height="300">
+		    							<h3 class="mb-4">${vo.item_name}</h3>
+		    							<p style=" font-size: 12px;">${vo.item_tag}</p>
+		    							<p style=" font-size: 15px;">${vo.item_explain}</p>
+		    							<a style=" font-size: 15px;">${vo.item_product_url}</a>
+									</div>
+									<br>
+									<br>
+									</c:forEach>
 	    						</div>
 	    					</div>
 	    				</div>
