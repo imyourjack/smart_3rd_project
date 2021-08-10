@@ -79,7 +79,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">palette</a>
+	          <a class="colorlib-logo" href="home.do">palette</a>
 	        </div>
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
@@ -124,26 +124,24 @@
 	    					</div>
 	    				</div>
 	    			</div>
-	    			<div class="col-md-12 blog-wrap bg-darken">
+	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 d-flex justify-content-center align-items-center order-md-last js-fullheight">
-	    						<div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_4.jpg);"></div>
-	    					</div>
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerhair2.jpg);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html">헤어 컬러</a></h2>
-	    							<p> 설명 </p>
+	    							<h2 class="mb-4"><a href="blog-single.html"> 헤어컬러 </a></h2>
+	    							<p> 애쉬 계열의 블론드, 브라운 컬러나 붉은 계열의 쿨 브라운, 와인 브라운 등이 블루 베이스의 여름 쿨톤에게 가장 어울리는 컬러예요.<br> 웜톤과는 달리 노란 계열은 어울리지 않는답니다. <br>헤어스타일은 스트레이트, 자연스러운 웨이브, 본연의 색, 애쉬 염색을 추천합니다.  </p>
 	    						</div>
 	    					</div>
 	    				</div>
 	    			</div>
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_5.jpg);"></div>
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerstar2.jpg);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html"> 연예인 </a></h2>
-	    							<p> 설명 </p>
+	    							<h2 class="mb-4"><a href="blog-single.html">유사톤 연예인 </a></h2>
+	    							
 	    						</div>
 	    					</div>
 	    				</div>

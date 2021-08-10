@@ -79,7 +79,7 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">palette</a>
+	          <a class="colorlib-logo" href="home.do">palette</a>
 	        </div>
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
@@ -124,26 +124,24 @@
 	    					</div>
 	    				</div>
 	    			</div>
-	    			<div class="col-md-12 blog-wrap bg-darken">
+	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 d-flex justify-content-center align-items-center order-md-last js-fullheight">
-	    						<div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_4.jpg);"></div>
-	    					</div>
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/winterhair2.jpg);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html">헤어 컬러</a></h2>
-	    							<p> 설명 </p>
+	    							<h2 class="mb-4"><a href="blog-single.html"> 헤어컬러 </a></h2>
+	    							<p> 블루 베이스의 겨울 쿨톤은 블랙 컬러와 같이 진하고 어두운 컬러가 잘 어울려 본인의 헤어 컬러 그대로를 유지하는 것이 좋지만,<br> 다른 컬러로 염색을 한다면 어떤 컬러든지 전체적으로 톤을 낮춰서 하는 것이 좋습니다.<br> 또한 와인 계열의 염색이 잘 어울립니다. </p>
 	    						</div>
 	    					</div>
 	    				</div>
 	    			</div>
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_5.jpg);"></div>
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/winterstar2.jpg);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html"> 연예인 </a></h2>
-	    							<p> 설명 </p>
+	    							<h2 class="mb-4"><a href="blog-single.html"> 유사톤 연예인 </a></h2>
+	    							
 	    						</div>
 	    					</div>
 	    				</div>

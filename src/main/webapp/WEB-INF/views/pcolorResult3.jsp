@@ -56,7 +56,7 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">palette</a></h1>
+              <h1 class="mb-4"><a class="logo" href="home.do">palette</a></h1>
               <ul>
               	
               	<jsp:include page="menu.jsp">
@@ -124,26 +124,24 @@
 	    					</div>
 	    				</div>
 	    			</div>
-	    			<div class="col-md-12 blog-wrap bg-darken">
+	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 d-flex justify-content-center align-items-center order-md-last js-fullheight">
-	    						<div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_4.jpg);"></div>
-	    					</div>
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/autumnhair2.jpg);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html">헤어 컬러</a></h2>
-	    							<p> 설명 </p>
+	    							<h2 class="mb-4"><a href="blog-single.html"> 헤어컬러 </a></h2>
+	    							<p> 골드 색상을 기본으로 한 골드 브라운, 갈색 컬러인 미디움, 다크 브라운 등 봄 웜톤보다는 어두운 계열 브라운의 컬러를 추천해요.<br> 붉은 계열의 버건디나 마르살라는 피하는 것이 좋습니다.<br> 풍성한 웨이브, 갈색, 황색 베이스 염색을 추천합니다. </p>
 	    						</div>
 	    					</div>
 	    				</div>
 	    			</div>
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_5.jpg);"></div>
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/autumnstar2.jpg);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html"> 연예인 </a></h2>
-	    							<p> 설명 </p>
+	    							<h2 class="mb-4"><a href="blog-single.html"> 유사톤 연예인 </a></h2>
+	    							
 	    						</div>
 	    					</div>
 	    				</div>

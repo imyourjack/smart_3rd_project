@@ -133,9 +133,8 @@
 									<input type="text" class="form-control" id="writer" name="user_id" value="${vo.user_id}" readonly="readonly">
 								</div>
 								<input type="submit" value="수정" class="btn btn-primary btn-sm">
-								<input type='button' value='삭제' class='btn btn-info btn-sm'
-									onclick="goDel(${vo.board_idx})"> <input type='button'
-									value='목록' class='btn btn-success btn-sm' onclick="goList()">
+								<input type='button' value='삭제' class='btn btn-info btn-sm' onclick="goDel(${vo.board_idx})"> 
+								<input type='button' value='목록' class='btn btn-success btn-sm' onclick="goList()">
 							</form>
 						</div>
 					</div>

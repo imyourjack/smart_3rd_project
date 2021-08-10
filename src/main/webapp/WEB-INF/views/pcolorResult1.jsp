@@ -108,56 +108,62 @@
 	      </div>
       </section>
 
-	    <section class="ftco-section ftco-no-pb ftco-no-pt">
-	    	<div class="container-fluid px-0">
-	    		<div class="row no-gutters">
+	     <section class="ftco-section ftco-no-pb ftco-no-pt">
+       <br>
+       <br>
+          <div class="container-fluid px-0">
+             <div class="row no-gutters">
+                <div class="col-md-12 blog-wrap">
+                   <div class="row no-gutters align-items-center">
+                   <img class="sc-fXazdy UjHkE" data-src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/springColor.png" 
+                   alt="봄 웜톤의 색상 특징" src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/springColor.png" style="width: 700px;height: 650px;">
+                         <div class="text p-md-5 p-4 ftco-animate">
+                            <h2 class="mb-4"><a>당신의 퍼스널 컬러는</a></h2>
+                            <h2 class="mb-4"><a>'봄 웜톤' 입니다.</a></h2>
+                            <p>한국인의 많은 사람이 봄 웜톤의 피부색을 가지고 있습니다.
+                            <br>봄 웜톤인 사람은 사랑스럽고 귀여운 이미지로 어려 보이고 생동감이 있으며 활기가 넘칩니다.
+                            <br>로맨틱하면서 경쾌한 이미지가 많으며 사람들에게 인기가 많은 편입니다.
+                           <br>봄 타입은 노란색을 지닌 따듯한 유형으로 선명 하고 밝은 톤과 엷은 톤으로 화사하며 생동감과 에너지를 느끼게 합니다.</p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                </div>
+                <div class="col-md-12 blog-wrap">
+                   <div class="row no-gutters align-items-center">
+                      <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/springSpectrum1.png);">
+                      </div>
+                      <div class="col-md-6">
+                         <div class="text p-md-5 p-4 ftco-animate">
+                            <h2 class="mb-4"><a href="blog-single.html">'봄 웜톤'의 컬러 팔레트</a></h2>
+                            <p>봄 컬러들은 전체적으로 노란색을 가지고 있는 그룹으로 밝고 선명하고 파스텔톤으로 이루어져 있어 화사하면서 활기찬 느낌이 나는 탄력 있는 팔레트입니다.
+                            <br>따라서 새싹과 꽃이 피어나는 봄의 맑은 이미지를 생각하며 스타일링 하는 것을 추천합니다.
+                           <br>봄 타입에게 잘 어울리는 컬러는 
+                           <br>아이보리,베이지와 같은 밝은 톤과 알록달록 캔디처럼 선명한 컬러를 사용할 수 있는데 
+                           <br>대표적인 컬러는 복숭아 핑크, 오렌지 레드, 해바라기 노란색, 새싹의 초록, 팬지꽃의 퍼플 등 싱그러운 과일이나 햇살을 듬뿍 머금은 선명한 컬러입니다.</p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/springhair3.jpg);"></div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html"> 헤어컬러 </a></h2>
+	    							<p> 골드 브라운, 밀크 브라운 등 옐로 계열의 컬러를 추천해요.<br> 톤 다운을 고민하는 분들이라면 검정 머리보다는 어두운 브라운 계열이 자연스럽게 이쁘답니다.<br> 반대로 블루 블랙 등 푸른 빛이 도는 컬러는 비추천합니다.<br>
+	    							곡선의 귀여운 스타일, 옐로우 베이스 염색을 추천해요. </p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/springstar2.jpg);"></div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html">유사톤 연예인 </a></h2>
 	    						
-	    					</div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a>퍼스널컬러</a></h2>
-	    							<h2 class="mb-4"><a>당신은 ??? 톤의 컬러입니다</a></h2>
-	    							<p>Color types help stylize makeup, fashion. have you ever thought about your personal colors that perfectly suit your image?</p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/spring.jpg);">
-	    						
-	    					</div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html">???톤의 컬러 팔레트</a></h2>
-	    							<p>설명</p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap bg-darken">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 d-flex justify-content-center align-items-center order-md-last js-fullheight">
-	    						<div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_4.jpg);"></div>
-	    					</div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html">헤어 컬러</a></h2>
-	    							<p> 설명 </p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_5.jpg);"></div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html"> 연예인 </a></h2>
-	    							<p> 설명 </p>
 	    						</div>
 	    					</div>
 	    				</div>

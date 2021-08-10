@@ -42,9 +42,33 @@
 		    	      },
 		    	     error:function(){alert("error");}	      
 		    	   });	   
-		    	}		 			
-	</script>
-    
+		    	}		    
+		    function goDel(){
+		    	var user_id=$("#user_id").val();
+	             $.ajax({
+	                url : "userDelete.do",
+	                 data : {"user_id":user_id},
+	                 success : function(data){
+	                       location.href="home.do"; 
+	                 },       
+	                 error : function(){alert("error");}            
+	             });
+		  	}
+		    function updateFn(){
+	             var user_password=$("#user_password").val();
+	             var user_name=$("#user_name").val();
+	             var user_age=$("#user_age").val();
+	             var user_=$("#user_password").val();
+	             $.ajax({
+	                url : "userUpdate.do",
+	                 data : {"user_password":user_password,"user_name":user_name,"user_age":user_age,"user_gender":user_gender},
+	                 success : function(data){
+	                       location.href="mypage.do"; 
+	                 },       
+	                 error : function(){alert("error");}            
+	             });   
+	          }
+	</script>    
   </head>
   <body>
   
@@ -115,25 +139,27 @@
 						    <legend>회원정보</legend>
 						    <div class="form-group">
 						      <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
-						      <input type="text" class="form-control" readonly="readonly" name="user_id" value="${sessionScope.userVO.user_id}">     
+						      <input type="text" class="form-control" readonly="readonly" name="user_id" id="user_id" value="${sessionScope.userVO.user_id}">     
 						      </div>
 						    </div>
 						    <div class="form-group">
 						      <label for="exampleInputPassword1">Password</label>
-						      <input type="password" class="form-control" name="user_password" value="${sessionScope.userVO.user_password}">
+						      <input type="password" class="form-control" name="user_password" id="user_password" value="${sessionScope.userVO.user_password}">
 						    </div>
 						    <div class="form-group">
 						      <label for="exampleInputEmail1">name</label>
-						      <input type="text" class="form-control" name="user_name" value="${sessionScope.userVO.user_name}">
+						      <input type="text" class="form-control" name="user_name" id="user_name" value="${sessionScope.userVO.user_name}">
 						    </div>
 						    <div class="form-group">
 						      <label for="exampleInputEmail1">age</label>
-						      <input type="text" class="form-control" name="user_age" value="${sessionScope.userVO.user_age}">
+						      <input type="text" class="form-control" name="user_age" id="user_age" value="${sessionScope.userVO.user_age}">
 						    </div>
 						    <div class="form-group">
 						      <label for="exampleInputEmail1">gender</label>
-						      <input type="text" class="form-control" name="user_gender" value="${sessionScope.userVO.user_gender}">
-						    </div>			    
+						      <input type="text" class="form-control" name="user_gender" id="user_gender" value="${sessionScope.userVO.user_gender}">
+						    </div>
+						    <input type="submit" value="수정" class="btn btn-primary btn-sm" onclick="updateFn()">
+							<input type='button' value='삭제' class='btn btn-info btn-sm' onclick="goDel()">			    
 						  </fieldset>
 						</form>
 						
