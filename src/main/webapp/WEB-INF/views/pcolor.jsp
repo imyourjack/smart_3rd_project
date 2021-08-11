@@ -117,8 +117,9 @@
 	    							<h2 class="mb-4"><a>남성 맞춤형 스타일 개선 서비스</a></h2>
 	    							<p>Color types help stylize makeup, fashion. </p>
 	    							<p>have you ever thought about your personal colors that perfectly suit your image?</p>
-	    							<p class="mb-0 mt-4"><button class="btn btn-primary btn-sm" style="width: 92px; height: 52px;"
-									"> 진단하기 <span class="ion-ios-arrow-forward"></button></a></p>
+	    							<!-- <p class="mb-0 mt-4"><button class="btn btn-primary btn-sm" style="width: 92px; height: 52px;"
+									> 진단하기 <span class="ion-ios-arrow-forward"></span></button></p> -->
+									<p class="mb-0 mt-4"><a href="pcolorCheck2.do" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
 	    						</div>
 	    					</div>
 	    				</div>
