@@ -97,7 +97,7 @@
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text js-fullheight align-items-end justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	            <h1 class="bread">Costume Color</h1>
+	            <h1 class="bread">Fashion Color</h1>
 	          </div>
 	        </div>
 	      </div>
