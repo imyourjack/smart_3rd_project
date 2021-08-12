@@ -2,6 +2,12 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var ="cpath" value ="${pageContext.request.contextPath}"/>
+
+<%
+   response.setCharacterEncoding("utf-8");
+   String result = request.getParameter("result");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -120,6 +126,7 @@
 				           	     <form action="${cpath}/uploadFormAction.do" method="post" enctype="multipart/form-data">
 									<input type="file" name="uploadFile" multiple="multiple">
 									<button>파일 업로드</button>
+									<input type="text" id="imgdata" value = "<%=result%>">
 								</form>
 				        	</div>
 				        	<div class="col-md-6">
