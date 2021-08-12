@@ -134,12 +134,13 @@
 									<input type="text" class="form-control" id="writer" name="user_id" value="${vo.user_id}" readonly="readonly">
 								</div>
 								<br>
+								<div>
 								<input type="submit" value="수정" class="btn btn-primary btn-sm" style="width: 80px; height: 52px;">
-								<input type='button' value='삭제' class='btn btn-primary btn-sm' style="width: 80px; height: 52px;"
-									onclick="goDel(${vo.board_idx})"> <input type='button'
-									value='목록' class='btn btn-primary btn-sm' style="width: 80px; height: 52px;" onclick="goList()">
-									<br>
-									<br>
+								<input type='button' value='삭제' class='btn btn-primary btn-sm' style="width: 80px; height: 52px;" onclick="goDel(${vo.board_idx})"> 
+								<input type='button' value='목록' class='btn btn-primary btn-sm' style="width: 80px; height: 52px;" onclick="goList()">
+								</div>
+								<br>
+								<br>
 							</form>
 						</div>
 					</div>

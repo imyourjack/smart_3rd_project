@@ -81,12 +81,11 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Erase</a></h1>
+              <h1 class="mb-4"><a href="home.do" class="logo">PALETTE</a></h1>
               <ul>
-                <li class="active"><a href="index.html"><span>Home</span></a></li>
-                <li><a href="about.html"><span>About</span></a></li>
-                <li><a href="blog.html"><span>Blog</span></a></li>
-                <li><a href="contact.html"><span>Contact</span></a></li>
+               	<jsp:include page="menu.jsp">
+                  <jsp:param name="pageSelection" value="6" />
+                </jsp:include>
               </ul>
             </div>
           </div>
@@ -94,23 +93,12 @@
       </div>
     </nav>
     
-    <div id="colorlib-page">
+     <div id="colorlib-page">
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="index.html">Erase</a>
+	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
-	        <div method="post" action="${cpath}/login.do" class="loginForm">
-						<c:choose>
-							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do">Login</a>
-							</c:when>
-							<c:otherwise>
-								<button class="btn" color="white">${sessionScope.userVO.user_name}</button>
-								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a>
-							</c:otherwise>
-						</c:choose>
-					</div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
@@ -127,18 +115,8 @@
 	      </div>
       </section>
 
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter" style="background-color: black;">
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<div class="container">
-					<div class="panel panel-default" style="width: 180px; height: 350px; padding:10px; background-color:#C0C1D6; margin: 0 auto; width:300px; height: auto;">
-						<div class="panel-heading"  style="width: 280px; text-align:center; color: white; background-color:transparent;"><h2>회원가입</h2></div>
-						<div class="panel-body">
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter" style="background-color: black;" >
+				<div style="height:150px;"></div>
 							<form id="srm" name="srm" method="post" class="signForm">
 								<div class="idForm" style="text-align: center;">
 									<input type="text" class="id" placeholder="아이디"
@@ -153,7 +131,8 @@
 								<div class="passForm" style="text-align: center;">
 									<input type="password" class="pw" placeholder="비밀번호 확인"
 										name="user_password_check" id="user_password_check">
-									<span class="pw1">비밀번호가 일치합니다.</span> <span class="pw2">비밀번호가
+										<br>
+										<span class="pw1">비밀번호가 일치합니다.</span> <span class="pw2">비밀번호가
 										일치하지 않습니다.</span>
 								</div>
 								<br>
@@ -172,18 +151,17 @@
 										name="user_gender">
 								</div>
 								<br>
+								<br>
 								<div style="text-align: center;">
-								<button style="text-align: center;" type="button" class="btn btn-primary btn-sm" onclick="signupFn()">SIGN UP</button>
+								<button type="button" class="btn btn-primary btn-sm" style="text-align: center;width: 100px;height: 40px;" onclick="signupFn()">SIGN UP</button>
+								<div style="height:150px;"></div>
 							</form>
 						</div>
 						</div>
 					</div>
 				</div>
-				<br>
-				<br>
-				<br>
-				<br>
 			</section>      
+			
       <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>
 	      <div class="container">

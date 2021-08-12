@@ -128,10 +128,11 @@
 	      </div>
       </section>
 
-	    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+	    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter" style="width: 2000px;height: 800px;">
 				<div class="container">
 					<div class="panel panel-default">
-					
+					<br>
+					<br>
 					<!-- 폼 넣을 곳 -->
 					
 						<form id="frm" method="post" action="${cpath}/userUpdate.do">
@@ -139,7 +140,7 @@
 						    <legend>회원정보</legend>
 						    <div class="form-group">
 						      <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
-						      <input type="text" class="form-control" readonly="readonly" name="user_id" id="user_id" value="${sessionScope.userVO.user_id}">     
+						      <input type="text" class="form-control" readonly="readonly" name="user_id" id="user_id" style="width: 326px height: 44px;" value="${sessionScope.userVO.user_id}">     
 						      </div>
 						    </div>
 						    <div class="form-group">
@@ -157,9 +158,10 @@
 						    <div class="form-group">
 						      <label for="exampleInputEmail1">gender</label>
 						      <input type="text" class="form-control" name="user_gender" id="user_gender" value="${sessionScope.userVO.user_gender}">
-						    </div>
-						    <input type="submit" value="수정" class="btn btn-primary btn-sm" onclick="updateFn()">
-							<input type='button' value='삭제' class='btn btn-info btn-sm' onclick="goDel()">			    
+						      <br>
+						    </div> 
+						    <input type="submit" value="수정" class="btn btn-primary btn-sm" style="width: 60px; height: 42px;"onclick="updateFn()">
+							<input type='button' value='삭제' class="btn btn-primary btn-sm" style="width: 60px; height: 42px;" onclick="goDel()">			    
 						  </fieldset>
 						</form>
 						
