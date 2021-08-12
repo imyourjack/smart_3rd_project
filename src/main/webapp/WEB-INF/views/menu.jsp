@@ -10,7 +10,7 @@
 %>
 
 <li>
-   <a class=menuFont href="home.do"
+   <a class=menuFont href="home.do?user_id=${sessionScope.userVO.user_id}"
       <%
          if(num.equals("1")){
       %>
@@ -21,7 +21,7 @@
 </li>
 
 <li>
-   <a class=menuFont href="pcolor.do"
+   <a class=menuFont href="pcolor.do?user_id=${sessionScope.userVO.user_id}"
       <%
          if(num.equals("2")){
       %>
@@ -32,7 +32,7 @@
 </li>
 
 <li>
-   <a class=menuFont href="uploadForm.do"
+   <a class=menuFont href="uploadForm.do?user_id=${sessionScope.userVO.user_id}"
       <%
          if(num.equals("3")){
       %>
@@ -44,7 +44,7 @@
 </li>
 
 <li>
-   <a class=menuFont href="boardList.do"
+   <a class=menuFont href="boardList.do?user_id=${sessionScope.userVO.user_id}"
       <%
          if(num.equals("4")){
       %>
@@ -54,7 +54,7 @@
 </li>
 
 <li>
-   <a class=menuFont href="mypage.do"
+   <a class=menuFont href="${cpath}/mypage.do?user_id=${sessionScope.userVO.user_id}"
       <%
          if(num.equals("5")){
       %>
