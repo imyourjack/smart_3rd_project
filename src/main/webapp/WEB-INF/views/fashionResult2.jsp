@@ -106,7 +106,7 @@
 	    <section class="ftco-section ftco-no-pb ftco-no-pt">
 	    	<div class="container-fluid px-0">
 	    		<div class="row no-gutters">
-	    		<!-- 작업공간 -->
+	    		
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
 	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);"></div>
@@ -121,32 +121,48 @@
 	    					</div>
 	    				</div>
 	    			</div>
-		   			<div class="col-md-12 blog-wrap">
-		   				<div class="row no-gutters align-items-center">
-		   					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);"></div>
-		   					<div class="col-md-6">
-		   						<div class="text p-md-5 p-4 ftco-animate">
-		   							<h2 class="mb-4"><a href="#">의상 추천 공간</a></h2>
-		   							<p>의상 추천 공간</p>
-		   						</div>
-		   					</div>
-		   				</div>
-		   			</div>
+	    			
+	    			<!-- 작업공간 -->
+		   			
 	    			<div class="col-md-12 blog-wrap">
 		   				<div class="row no-gutters align-items-center">
-		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);"></div>
-		   					<div class="col-md-6">
-		   						<div class="text p-md-5 p-4 ftco-animate">
-		   							<h2 class="mb-4"><a href="#">의상 추천 공간</a></h2>
-		   							<p>의상 추천 공간</p>
-
-		   						</div>
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);">
+		   					<!-- 왼쪽 공간 -->
+		   					
 		   					</div>
-		   				</div>
-		   			</div>
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);">
+		   					<!-- 오른쪽 공간 -->
+		   					
+		   					</div>
+	   					</div>
+	   				</div>
+	    			<div class="col-md-12 blog-wrap">
+		   				<div class="row no-gutters align-items-center">
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);">
+		   					<!-- 왼쪽 공간 -->
+		   					
+		   					</div>
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);">
+		   					<!-- 오른쪽 공간 -->
+		   					
+		   					</div>
+	   					</div>
+	   				</div>
+	    			<div class="col-md-12 blog-wrap">
+		   				<div class="row no-gutters align-items-center">
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);">
+		   					<!-- 왼쪽 공간 -->
+		   					
+		   					</div>
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);">
+		   					<!-- 오른쪽 공간 -->
+		   					
+		   					</div>
+	   					</div>
+	   				</div>
 				<!-- 작업공간 -->
+		   			</div>
 	    		</div>
-	    	</div>
 	    </section>
 
       
