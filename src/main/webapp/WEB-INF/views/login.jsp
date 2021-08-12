@@ -114,17 +114,8 @@
       </section>
 
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter" style="background-color: black;">
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
+				<div style="height:150px;"></div>
 				<div class="container">
-					<div class="panel panel-default" style="width: 180px; height: 350px; padding:10px; background-color:#C0C1D6; margin: 0 auto; width:300px; height: auto;">
-						<div class="panel-heading" style="width: 280px; text-align:center; color: white; background-color:transparent;"><h2>로그인</h2></div>
-						<div class="panel-body">
 							<form method="post">
 								<div class="idForm" style="text-align: center;">
 									<input type="text" class="id" placeholder="ID" id="user_id"
@@ -150,10 +141,6 @@
 						</div>
 					</div>
 				</div>
-				<br>
-				<br>
-				<br>
-				<br>
 			</section>
 
       <footer class="ftco-footer ftco-section img" style="background-color: black;">
