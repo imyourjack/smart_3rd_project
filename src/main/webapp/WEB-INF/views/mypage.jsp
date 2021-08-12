@@ -140,8 +140,8 @@
 						    <div class="form-group">
 						      <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
 						      <input type="text" class="form-control" readonly="readonly" name="user_id" id="user_id" value="${sessionScope.userVO.user_id}">     
-						      </div>
-						    </div>
+						     </div>
+						    
 						    <div class="form-group">
 						      <label for="exampleInputPassword1">Password</label>
 						      <input type="password" class="form-control" name="user_password" id="user_password" value="${sessionScope.userVO.user_password}">
@@ -169,7 +169,6 @@
 				</div>
 			</section>
 
-      
       <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>
 	      <div class="container">
