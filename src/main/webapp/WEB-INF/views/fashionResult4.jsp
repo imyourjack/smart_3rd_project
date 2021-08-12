@@ -33,7 +33,8 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">		
-		    function logoutFn(){
+    
+    function logoutFn(){
 		    	   $.ajax({
 		    	      url: "logout.do",
 		    	      type:"get",
@@ -52,21 +53,16 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/main2.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/back2.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">palette</a></h1>
+              <h1 class="mb-4"><a href="home.do" class="logo">palette</a></h1>
               <ul>
               	
               	<jsp:include page="menu.jsp">
-                   <jsp:param name="pageSelection" value="2" />
+                   <jsp:param name="pageSelection" value="3" />
                 </jsp:include>
-              	
-                <!-- <li><a href="index.html"><span>Home</span></a></li>
-                <li><a href="about.html"><span>About</span></a></li>
-                <li class="active"><a href="blog.html"><span>Blog</span></a></li>
-                <li><a href="contact.html"><span>Contact</span></a></li> -->
                 
               </ul>
             </div>
@@ -79,15 +75,15 @@
       <header>
       	<div class="container">
 	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="home.do">palette</a>
+	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do">login</a>
+								<a href = "${cpath}/login.do" style="color : white;">Login</a>
 							</c:when>
 							<c:otherwise>
-								<button class="btn" color="white">${sessionScope.userVO.user_name}</button>
+								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
 								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
 							</c:otherwise>
 						</c:choose>
@@ -96,104 +92,61 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/back1.jpg);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
-	            <h1 class="bread">personal color</h1>
+	            <h1 class="bread">fashion color</h1>
 	          </div>
 	        </div>
 	      </div>
       </section>
 
 	    <section class="ftco-section ftco-no-pb ftco-no-pt">
-	    	<br>
-	    	<br>
 	    	<div class="container-fluid px-0">
 	    		<div class="row no-gutters">
+	    		<!-- 작업공간 -->
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    				<img class="sc-fXazdy UjHkE"src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/summerColor.png" style="width: 700px;height: 650px;">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a>당신의 퍼스널 컬러는</a></h2>
-	    							<h2 class="mb-4"><a>'여름 쿨톤' 입니다.</a></h2>
-	    							<p>여름 쿨톤인 사람은 대체적으로 깨끗한 이미지를 가지고 있습니다.
-	    							<br>또한 여름 타입은 시원하고 부드러운 스타일이 주로 많습니다.
-									<br>여름 타입은 흰색과 파랑을 지닌 차가운 유형으로 
-									<br>연한 톤과 밝은 잿빛 톤의 시원스럽고 화려함을 느끼게 합니다.
-									<br>핑크빛과 붉은빛이 감도는 혈색 좋은 피부 톤을 가지고 있습니다.
-									<br>지적이고 세련되며 우아한 인상이 여름 타입의 특징입니다.</p>
-	    						</div>
-	    				</div>
-	    			</div>
-	    		</div>
-	    	</div>
-   			<div class="col-md-12 blog-wrap">
-   				<div class="row no-gutters align-items-center">
-   					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerSpectrum1.png);">
-   					</div>
-   					<div class="col-md-6">
-   						<div class="text p-md-5 p-4 ftco-animate">
-   							<h2 class="mb-4"><a href="blog-single.html">'여름 쿨톤'의 컬러 팔레트</a></h2>
-   							<p>흰색과 파란색을 머금고 있는 여름 컬러들은
-   							<br>소프트하고 밝은 컬러, 그레이쉬한 컬러들로 이루어져 있어 시원하고 화려한 인상을 줍니다.
-   							<br>여름 쿨톤의 컬러들은 블루 베이스로 이루어져 있고 난색이어도 차가운 느낌을 가집니다.
-							<br>여름 타입에게 잘 어울리는 컬러는 
-							<br>화이트, 그레이, 네이비 등의 컬러를 기본색으로 그레이쉬한 파스텔톤과 함께 사용할 수 있는데
-							<br>대표적인 컬러는 연핑크, 민트, 연보라, 파스텔블루 등 
-							<br>안개가 낀 듯 뿌옇고 부드럽게 보이는 게 특징입니다.
-							<br>여름의 컬러는 시원함과 시크함, 세련된 느낌의 이미지를 보여줍니다.</p>
-   						</div>
-   					</div>
-   				</div>
-   			</div>
-   			<div class="col-md-12 blog-wrap">
-   				<div class="row no-gutters align-items-center">
-   					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerhair2.jpg);"></div>
-   					<div class="col-md-6">
-   						<div class="text p-md-5 p-4 ftco-animate">
-   							<h2 class="mb-4"><a href="blog-single.html"> 헤어컬러 </a></h2>
-   							<p> 애쉬 계열의 블론드, 브라운 컬러나 붉은 계열의 쿨 브라운, 와인 브라운 등이 블루 베이스의 여름 쿨톤에게 가장 어울리는 컬러예요.<br> 웜톤과는 달리 노란 계열은 어울리지 않는답니다. <br>헤어스타일은 스트레이트, 자연스러운 웨이브, 본연의 색, 애쉬 염색을 추천합니다.  </p>
-   						</div>
-   					</div>
-   				</div>
-   			</div>
-   			<div class="col-md-12 blog-wrap">
-   				<div class="row no-gutters align-items-center">
-   					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerstar2.jpg);"></div>
-   					<div class="col-md-6">
-   						<div class="text p-md-5 p-4 ftco-animate">
-   							<h2 class="mb-4"><a href="blog-single.html">유사톤 연예인 </a></h2>
-   							
-   						</div>
-   					</div>
-   				</div>
-   			</div>
-   			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight">
- 	    						<c:forEach var="vo" items="${list}" begin="3" end="5" step="1">
-	    							<img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
- 	    						</c:forEach>
-	    					</div>
-	    					
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<c:forEach var="vo" items="${list}" begin="3" end="5" step="1">
-	    							<div width="300" height="300">
-		    							<h3 class="mb-4">${vo.item_name}</h3>
-		    							<p style=" font-size: 12px;">${vo.item_tag}</p>
-		    							<p style=" font-size: 15px;">${vo.item_explain}</p>
-		    							<a style=" font-size: 15px;" href="${vo.item_product_url}">${vo.item_product_url}</a>
-									</div>
-									<br>
-									</c:forEach>
+	    							<h2 class="mb-4"><a>퍼스널컬러 분석 기반</a></h2>
+	    							<h2 class="mb-4"><a>남성 패션 개선 서비스</a></h2>
+	    							<p>Color types help stylize makeup, fashion. </p>
+	    							<p>have you ever thought about your personal colors that perfectly suit your image?</p>
+									<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">버튼 <span class="ion-ios-arrow-forward"></span></a></p>
 	    						</div>
 	    					</div>
 	    				</div>
 	    			</div>
+		   			<div class="col-md-12 blog-wrap">
+		   				<div class="row no-gutters align-items-center">
+		   					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);"></div>
+		   					<div class="col-md-6">
+		   						<div class="text p-md-5 p-4 ftco-animate">
+		   							<h2 class="mb-4"><a href="#">의상 추천 공간</a></h2>
+		   							<p>의상 추천 공간</p>
+		   						</div>
+		   					</div>
+		   				</div>
+		   			</div>
+	    			<div class="col-md-12 blog-wrap">
+		   				<div class="row no-gutters align-items-center">
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);"></div>
+		   					<div class="col-md-6">
+		   						<div class="text p-md-5 p-4 ftco-animate">
+		   							<h2 class="mb-4"><a href="#">의상 추천 공간</a></h2>
+		   							<p>의상 추천 공간</p>
+
+		   						</div>
+		   					</div>
+		   				</div>
+		   			</div>
+				<!-- 작업공간 -->
+	    		</div>
+	    	</div>
 	    </section>
 
       
@@ -203,8 +156,8 @@
 	        <div class="row mb-5">
 	          <div class="col-lg-3">
 	            <div class="ftco-footer-widget mb-4">
-	              <h2 class="ftco-heading-2 logo"><a href="index.html">Erase</a></h2>
-	              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	              <h2 class="ftco-heading-2 logo"><a href="index.html">PALETTE</a></h2>
+	              <p>Color types help stylize makeup, fashion. have you ever thought about your personal colors that perfectly suit your image?</p>
 	              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -243,11 +196,12 @@
 	             <div class="ftco-footer-widget mb-4 ml-md-4">
 	              <h2 class="ftco-heading-2">Site Links</h2>
 	              <ul class="list-unstyled">
-	                <li><a href="#" class="py-2 d-block">Home</a></li>
-	                <li><a href="#" class="py-2 d-block">About</a></li>
-	                <li><a href="#" class="py-2 d-block">Model</a></li>
-	                <li><a href="#" class="py-2 d-block">Services</a></li>
-	                <li><a href="#" class="py-2 d-block">Blog</a></li>
+	                <li><a href="home.do" class="py-2 d-block">main</a></li>
+	                <li><a href="pcolor.do" class="py-2 d-block">personal color</a></li>
+	                <li><a href="uploadForm.do" class="py-2 d-block">costume color</a></li>
+	                <li><a href="boardList.do" class="py-2 d-block">community</a></li>
+	                <li><a href="mypage.do" class="py-2 d-block">mypage</a></li>
+	                <li><a href="login.do" class="py-2 d-block">login</a></li>
 	              </ul>
 	            </div>
 	          </div>
@@ -256,9 +210,9 @@
 	            	<h2 class="ftco-heading-2">Have a Questions?</h2>
 	            	<div class="block-23 mb-3">
 		              <ul>
-		                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-		                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-		                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+		                <li><span class="icon icon-map-marker"></span><span class="text">3rd floor 31-15, Yesul-gil, Dong-gu, Gwangju, Republic of Korea</span></li>
+		                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+81 10 5315 6111</span></a></li>
+		                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">dkdk9998@naver.com</span></a></li>
 		              </ul>
 		            </div>
 	            </div>
@@ -268,7 +222,7 @@
 	          <div class="col-md-12 text-center">
 
 	            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Why is this working
 	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 	          </div>
 	        </div>

@@ -31,13 +31,19 @@ public class pcolorController {
 		model.addAttribute("list", list);
 	}
 	@RequestMapping("/pcolorResult2.do")
-	public void pcolorResult2() {
+	public void pcolorResult2(Model model) {
+		List<ItemVO> list = pcolorMapper.pcolorResult2();
+		model.addAttribute("list", list);
 	}
 	@RequestMapping("/pcolorResult3.do")
-	public void pcolorResult3() {
+	public void pcolorResult3(Model model) {
+		List<ItemVO> list = pcolorMapper.pcolorResult3();
+		model.addAttribute("list", list);
 	}
 	@RequestMapping("/pcolorResult4.do")
-	public void pcolorResult4() {
+	public void pcolorResult4(Model model) {
+		List<ItemVO> list = pcolorMapper.pcolorResult4();
+		model.addAttribute("list", list);
 	}
 	
 	@RequestMapping("/pcolorCheck.do")
@@ -50,6 +56,18 @@ public class pcolorController {
 	
 	@RequestMapping("/home.do")
 	public void home() {
+	}
+	@RequestMapping("/fashionResult1.do")
+	public void fashionResult1() {
+	}
+	@RequestMapping("/fashionResult2.do")
+	public void fashionResult2() {
+	}
+	@RequestMapping("/fashionResult3.do")
+	public void fashionResult3() {
+	}
+	@RequestMapping("/fashionResult4.do")
+	public void fashionResult4() {
 	}
 
 }

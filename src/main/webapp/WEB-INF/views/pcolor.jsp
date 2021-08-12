@@ -106,24 +106,22 @@
 	    <section class="ftco-section ftco-no-pb ftco-no-pt">
 	    	<div class="container-fluid px-0">
 	    		<div class="row no-gutters">
+	    		<!-- 작업공간 -->
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);">
-	    						
-	    					</div>
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
 	    							<h2 class="mb-4"><a>퍼스널컬러 얼굴 분석을 통한</a></h2>
 	    							<h2 class="mb-4"><a>남성 맞춤형 스타일 개선 서비스</a></h2>
 	    							<p>Color types help stylize makeup, fashion. </p>
 	    							<p>have you ever thought about your personal colors that perfectly suit your image?</p>
-	    							<p class="mb-0 mt-4"><button class="btn btn-primary btn-sm" style="width: 92px; height: 52px;"
-									"> 진단하기 <span class="ion-ios-arrow-forward"></button></a></p>
+									<p class="mb-0 mt-4"><a href="pcolorCheck2.do" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
 	    						</div>
 	    					</div>
 	    				</div>
 	    			</div>
-
+				<!-- 작업공간 -->
 	    		</div>
 	    	</div>
 	    </section>
@@ -175,11 +173,12 @@
 	             <div class="ftco-footer-widget mb-4 ml-md-4">
 	              <h2 class="ftco-heading-2">Site Links</h2>
 	              <ul class="list-unstyled">
-	                <li><a href="#" class="py-2 d-block">Home</a></li>
-	                <li><a href="#" class="py-2 d-block">About</a></li>
-	                <li><a href="#" class="py-2 d-block">Model</a></li>
-	                <li><a href="#" class="py-2 d-block">Services</a></li>
-	                <li><a href="#" class="py-2 d-block">Blog</a></li>
+	                <li><a href="home.do" class="py-2 d-block">main</a></li>
+	                <li><a href="pcolor.do" class="py-2 d-block">personal color</a></li>
+	                <li><a href="uploadForm.do" class="py-2 d-block">costume color</a></li>
+	                <li><a href="boardList.do" class="py-2 d-block">community</a></li>
+	                <li><a href="mypage.do" class="py-2 d-block">mypage</a></li>
+	                <li><a href="login.do" class="py-2 d-block">login</a></li>
 	              </ul>
 	            </div>
 	          </div>
