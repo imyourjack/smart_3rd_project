@@ -31,7 +31,10 @@ public interface BoardMapper {
     public void boardUpdate(BoardVO vo);
     
     @Select("select * from tbl_board where ${part} like concat('%',#{keyword},'%')")
-    public List<BoardVO> boardSearch(SearchVO vo); 
+    public List<BoardVO> boardSearch(SearchVO vo);
+    
+    @Update("update tbl_board set board_count = board_count + 1 where board_idx = #{board_idx}")
+    public int updatecnt(int board_idx);
     
     @Select("select * from tbl_reply where board_idx=#{board_idx} ")
     public List<ReplyVO> replyList(int board_idx);
@@ -42,4 +45,5 @@ public interface BoardMapper {
     @Delete("delete from tbl_reply where reply_idx=#{reply_idx}")
     public void replyDelete(int reply_idx);
     
+
 }
