@@ -91,7 +91,7 @@ public class UploadController {
       // model.addAttribute("list", list);
       
       /*String flaskUrl = "http://localhost:5000?imgurl="+filename;*/
-      String flaskUrl = "http://192.168.184.37:5000?imgurl="+filename;
+      String flaskUrl = "http://192.168.177.37:5000?imgurl="+filename;
       
       return "redirect:" + flaskUrl;
       
