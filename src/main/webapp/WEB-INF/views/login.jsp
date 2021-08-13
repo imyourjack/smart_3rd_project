@@ -112,36 +112,58 @@
 	        </div>
 	      </div>
       </section>
-
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter" style="background-color: black;">
-				<div style="height:150px;"></div>
-				<div class="container">
-							<form method="post">
-								<div class="idForm" style="text-align: center;">
-									<input type="text" class="id" placeholder="ID" id="user_id"
-										name="user_id">
-								</div>
-								<br>
-								<div class="passForm" style="text-align: center;">
-									<input type="password" class="pw" placeholder="PW" id="user_password" name="user_password">
-								</div>
-								<br>
-								<br>
-								<div style="text-align: center;">
-								<button type="button" class="btn btn-primary btn-sm" style="width: 80px;height: 40px;" onclick="loginFn()">
-									LOGIN</button>
-								<button type="button" class="btn btn-primary btn-sm" style="width: 80px;height: 40px;" onclick="gosignupFn()">
-									JOIN</button>
-								<div class="bottomText">
-								</div>
-								</div>
-								<br>
-								<br>
-							</form>
-						</div>
-					</div>
-				</div>
+		<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+	
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+				<div class="container" style="width: 600px; text-align:left;">
+					
+					<!-- 폼 넣을 곳 -->
+						
+						<form method="post">
+						  <fieldset>
+						    <legend>로그인</legend>
+						    <div class="form-group">
+						      <label for="staticEmail">ID</label>
+						      <input type="text" class="form-control" name="user_id" id="user_id" placeholder="ID">     
+						      </div>
+						    
+						    <div class="form-group">
+						      <label for="exampleInputPassword1">Password</label>
+						      <input type="password" class="form-control" name="user_password" id="user_password" placeholder="PW">
+						    </div>
+						    <br>
+						    <div align="center">
+						    <button type="button" class="btn btn-dark" style="width: 80px;height: 40px;" onclick="loginFn()">LOGIN</button>
+							<button type="button" class="btn btn-dark" style="width: 80px;height: 40px;" onclick="gosignupFn()">JOIN</button>	
+							</div>	    
+						  </fieldset>
+						</form>
+						<!-- 폼 넣을 곳 -->	
+					</div>				
 			</section>
+			<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				
+		
+		
 
       <footer class="ftco-footer ftco-section img" style="background-color: black;">
 	    	<div class="overlay"></div>

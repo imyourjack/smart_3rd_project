@@ -46,7 +46,7 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
@@ -70,13 +70,13 @@
 	        <div class="colorlib-navbar-brand">
 	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
-	        <div method="post" action="${cpath}/login.do" class="loginForm">
+	        <div method="post" action="${cpath}/loginCheck.do" class="loginForm">
 						<c:choose>
-							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do" style="color : white;">Login</a>
+							<c:when test="${userVO==null}">
+								<a href = "${cpath}/login.do" style="color:white;">Login</a>
 							</c:when>
 							<c:otherwise>
-								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
+								<button class="btn" style="color : white;">${userVO.user_name}</button>
 								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
 							</c:otherwise>
 						</c:choose>
@@ -85,7 +85,7 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_10.jsp);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
@@ -117,7 +117,7 @@
 								</thead>
 								<tbody>
 									<c:forEach var="vo" items="${list}">
-										<tr class="table-active">
+										<tr class="table-light">
 											<th scope="row"><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_idx}</a></th>
 											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_title}</td>
 											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_contents}</a></td>
@@ -149,7 +149,9 @@
 					</div>
 				</div>
 				</div>
-				<div style="height:100px;"></div>
+				<br>
+				<br>
+				<br>
 			</section>
 
       
