@@ -32,21 +32,28 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">
-		function goWrite() {
-			location.href = "${cpath}/boardForm.do";			
-		}	
-	
+    <script type="text/javascript">		
+    
+    function logoutFn(){
+		    	   $.ajax({
+		    	      url: "logout.do",
+		    	      type:"get",
+		    	      success:function(){ 
+		    	         location.href="home.do"
+		    	      },
+		    	     error:function(){alert("error");}	      
+		    	   });	   
+		    	}		 			
 	</script>
+    
   </head>
   <body>
-  
 
     <div class="page">
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/back2.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
@@ -54,7 +61,7 @@
               <ul>
               	
               	<jsp:include page="menu.jsp">
-                   <jsp:param name="pageSelection" value="4" />
+                   <jsp:param name="pageSelection" value="3" />
                 </jsp:include>
                 
               </ul>
@@ -85,81 +92,87 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/back1.jpg);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
-	            <h1 class="bread">Community</h1>
+	            <h1 class="bread">fashion color</h1>
 	          </div>
 	        </div>
 	      </div>
       </section>
 
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
-		<br>
-		<br>
-				<div class="container">
-					<div class="panel panel-default">
-						<div class="panel-body" >
-							<br>
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th scope="col">번호</th>
-										<th scope="col">제목</th>
-										<th scope="col">내용</th>
-										<th scope="col">조회수</th>
-										<th scope="col">작성일</th>
-										<th scope="col">작성자</th>
-									</tr>
-								</thead>
-								<tbody>
-									<c:forEach var="vo" items="${list}">
-										<tr class="table-active">
-											<th scope="row"><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_idx}</a></th>
-											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_title}</td>
-											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_contents}</a></td>
-											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_count}</a></td>
-											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_indate}</a></td>
-											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.user_id}</a></td>									
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-							<div>
-								<form action="${cpath}/boardSearch.do" method="post" style="width: 1140px;">
-									<table class="table">
-										<tr>
-											<td>
-												<select name="part" class="form-control">
-													<option value="board_title">제목</option>
-													<option value="user_id">작성자</option>
-													<option value="board_contents">내용</option>
-												</select>
-											</td>
-											<td style="padding-left: 2px; padding-right: 2px;"><input type="text" name="keyword" class="form-control"></td>
-											<td align="right" style="padding-left: 0px; padding-right: 3px; width:110px"><button type="submit" class="btn btn-primary btn-sm" style="width: 92px; height: 52px;">검색</button></td>
-											<td align="left" style="padding-left: 3px; padding-right: 2px; width:110px"><a href="boardForm.do"><button type="button"  class="btn btn-primary btn-sm" style="width: 92px; height: 52px;">글쓰기</button></a></td>								
-										</tr>
-									</table>
-								</form>
-						</div>
-					</div>
-				</div>
-				</div>
-				<div style="height:100px;"></div>
-			</section>
+	    <section class="ftco-section ftco-no-pb ftco-no-pt">
+	    	<div class="container-fluid px-0">
+	    		<div class="row no-gutters">
+	    		
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);"></div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a>퍼스널컬러 분석 기반</a></h2>
+	    							<h2 class="mb-4"><a>남성 패션 개선 서비스</a></h2>
+	    							<p>Color types help stylize makeup, fashion. </p>
+	    							<p>have you ever thought about your personal colors that perfectly suit your image?</p>
+									<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">버튼 <span class="ion-ios-arrow-forward"></span></a></p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			
+	    			<!-- 작업공간 -->
+		   			
+	    			<div class="col-md-12 blog-wrap">
+		   				<div class="row no-gutters align-items-center">
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);">
+		   					<!-- 왼쪽 공간 -->
+		   					
+		   					</div>
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);">
+		   					<!-- 오른쪽 공간 -->
+		   					
+		   					</div>
+	   					</div>
+	   				</div>
+	    			<div class="col-md-12 blog-wrap">
+		   				<div class="row no-gutters align-items-center">
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);">
+		   					<!-- 왼쪽 공간 -->
+		   					
+		   					</div>
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);">
+		   					<!-- 오른쪽 공간 -->
+		   					
+		   					</div>
+	   					</div>
+	   				</div>
+	    			<div class="col-md-12 blog-wrap">
+		   				<div class="row no-gutters align-items-center">
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);">
+		   					<!-- 왼쪽 공간 -->
+		   					
+		   					</div>
+		   					<div class="col-md-6 img js-fullheight" style="background-image: url(https://image.msscdn.net/images/goods_img/20210111/1742321/1742321_1_500.jpg);">
+		   					<!-- 오른쪽 공간 -->
+		   					
+		   					</div>
+	   					</div>
+	   				</div>
+				<!-- 작업공간 -->
+		   			</div>
+	    		</div>
+	    </section>
 
       
-      <footer class="ftco-footer ftco-section img" style="background-color: black;">
+      <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>
 	      <div class="container">
 	        <div class="row mb-5">
 	          <div class="col-lg-3">
 	            <div class="ftco-footer-widget mb-4">
-	              <h2 class="ftco-heading-2 logo"><a href="home.do">PALETTE</a></h2>
+	              <h2 class="ftco-heading-2 logo"><a href="index.html">PALETTE</a></h2>
 	              <p>Color types help stylize makeup, fashion. have you ever thought about your personal colors that perfectly suit your image?</p>
 	              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -199,11 +212,12 @@
 	             <div class="ftco-footer-widget mb-4 ml-md-4">
 	              <h2 class="ftco-heading-2">Site Links</h2>
 	              <ul class="list-unstyled">
-	                <li><a href="#" class="py-2 d-block">Home</a></li>
-	                <li><a href="#" class="py-2 d-block">About</a></li>
-	                <li><a href="#" class="py-2 d-block">Model</a></li>
-	                <li><a href="#" class="py-2 d-block">Services</a></li>
-	                <li><a href="#" class="py-2 d-block">Blog</a></li>
+	                <li><a href="home.do" class="py-2 d-block">main</a></li>
+	                <li><a href="pcolor.do" class="py-2 d-block">personal color</a></li>
+	                <li><a href="uploadForm.do" class="py-2 d-block">costume color</a></li>
+	                <li><a href="boardList.do" class="py-2 d-block">community</a></li>
+	                <li><a href="mypage.do" class="py-2 d-block">mypage</a></li>
+	                <li><a href="login.do" class="py-2 d-block">login</a></li>
 	              </ul>
 	            </div>
 	          </div>
@@ -237,6 +251,7 @@
       </div>
     </div>
 
+
     <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
@@ -252,7 +267,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="${pageContext.request.contextPath}/resources/js/google-map.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/script.js"></script>
     
   </body>
 </html>

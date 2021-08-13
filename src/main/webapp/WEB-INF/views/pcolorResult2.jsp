@@ -115,8 +115,7 @@
 	    		<div class="row no-gutters">
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    				<img class="sc-fXazdy UjHkE" data-src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/springColor.png" 
-	    				alt="봄 웜톤의 색상 특징" src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/summerColor.png" style="width: 700px;height: 650px;">
+	    				<img class="sc-fXazdy UjHkE"src="https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/summerColor.png" style="width: 700px;height: 650px;">
 	    						<div class="text p-md-5 p-4 ftco-animate">
 	    							<h2 class="mb-4"><a>당신의 퍼스널 컬러는</a></h2>
 	    							<h2 class="mb-4"><a>'여름 쿨톤' 입니다.</a></h2>

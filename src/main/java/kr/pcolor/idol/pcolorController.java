@@ -57,5 +57,17 @@ public class pcolorController {
 	@RequestMapping("/home.do")
 	public void home() {
 	}
+	@RequestMapping("/fashionResult1.do")
+	public void fashionResult1() {
+	}
+	@RequestMapping("/fashionResult2.do")
+	public void fashionResult2() {
+	}
+	@RequestMapping("/fashionResult3.do")
+	public void fashionResult3() {
+	}
+	@RequestMapping("/fashionResult4.do")
+	public void fashionResult4() {
+	}
 
 }
