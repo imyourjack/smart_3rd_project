@@ -6,7 +6,6 @@
 
 <%
    String num = request.getParameter("pageSelection");
-   System.out.println(num);
 %>
 
 <li>
@@ -62,6 +61,8 @@
       <% } %>
 
    >마이페이지</a>
+</li>
+
 <li>
    <a class=menuFont href="login.do"
       <%
@@ -71,4 +72,4 @@
       <% } %>
 
    >로그인</a>
-   
+</li>
