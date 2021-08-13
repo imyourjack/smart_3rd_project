@@ -104,7 +104,7 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_9.gif);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation.jpg);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
@@ -117,14 +117,19 @@
       </section>
 
 	    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
-				<div class="container">
+	    <br>
+	    <br>
+				<div class="container" style="width: 600px;">
 					<div class="panel panel-default">
 					
 					<!-- 폼 넣을 곳 -->
 						
 						<form id="frm" method="post" action="${cpath}/userUpdate.do">
 						  <fieldset>
-						    <legend>회원정보</legend>
+						  	<div align="center">
+						    <h2><strong>회원정보</strong></h2>
+						    </div>
+						    <br>
 						    <div class="form-group">
 						      <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
 						      <input type="text" class="form-control" readonly="readonly" name="user_id" id="user_id" value="${vo.user_id}"  placeholder="${vo.user_id}">     
@@ -146,8 +151,12 @@
 						      <label for="exampleInputEmail1">gender</label>
 						      <input type="text" class="form-control" name="user_gender" id="user_gender" value="${vo.user_gender}" placeholder="${vo.user_gender}">
 						    </div>
-						    <input type="submit" value="수정" class="btn btn-primary btn-sm" onclick="updateFn()">
-							<input type='button' value='삭제' class='btn btn-info btn-sm' onclick="goDel()">			    
+						    <br>
+						    <div align="center">
+						    <input type="submit" value="수정" class="btn btn-dark" style="width: 80px;height: 40px;" onclick="updateFn()">
+							<input type='button' value='삭제' class="btn btn-dark" style="width: 80px;height: 40px;" onclick="goDel()">	
+							<input type='button' value='진단내역' class="btn btn-dark" style="width: 110px;height: 40px;">	
+							</div>	    
 						  </fieldset>
 						</form>
 						</div>
