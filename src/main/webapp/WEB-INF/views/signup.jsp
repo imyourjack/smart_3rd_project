@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Erase - Free Bootstrap 4 Template by Colorlib</title>
+    <title>PALETTE</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -77,7 +77,7 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath  }/resources/images/bg_3.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath  }/resources/images/bg_1.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
@@ -103,7 +103,7 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation2.png);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
@@ -114,53 +114,52 @@
 	        </div>
 	      </div>
       </section>
-
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter" style="background-color: black;" >
-				<div style="height:150px;"></div>
-							<form id="srm" name="srm" method="post" class="signForm">
-								<div class="idForm" style="text-align: center;">
-									<input type="text" class="id" placeholder="아이디"
-										name="user_id" id="user_id"> 
-								</div>
-								<br>
-								<div class="passForm" style="text-align: center;">
-									<input type="password" class="pw" placeholder="비밀번호"
-										name="user_password" id="user_password">
-								</div>
-								<br>
-								<div class="passForm" style="text-align: center;">
-									<input type="password" class="pw" placeholder="비밀번호 확인"
-										name="user_password_check" id="user_password_check">
-										<br>
-										<span class="pw1">비밀번호가 일치합니다.</span> <span class="pw2">비밀번호가
-										일치하지 않습니다.</span>
-								</div>
-								<br>
-								<div class="nameForm" style="text-align: center;">
-									<input type="text" class="name" placeholder="이름"
-										name="user_name">
-								</div>
-								<br>
-								<div class="ageForm" style="text-align: center;">
-									<input type="text" class="age" placeholder="나이"
-										name="user_age">
-								</div>
-								<br>
-								<div class="genderForm" style="text-align: center;">
-									<input type="text" class="gender" placeholder="성별"
-										name="user_gender">
-								</div>
-								<br>
-								<br>
-								<div style="text-align: center;">
-								<button type="button" class="btn btn-primary btn-sm" style="text-align: center;width: 100px;height: 40px;" onclick="signupFn()">SIGN UP</button>
-								<div style="height:150px;"></div>
-							</form>
+      <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+	    <br>
+	    <br>
+				<div class="container" style="width: 600px;">
+					
+					<!-- 폼 넣을 곳 -->
+						
+						<form id="srm" name="srm" method="post" class="signForm">					
+						  	<div align="center">
+						    <h2><strong>회원정보</strong></h2>
+						    </div>
+						    <br>
+						    <div class="form-group">
+						      <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
+						      <input type="text" class="form-control" placeholder="아이디" name="user_id" id="user_id">      
+						      </div>
+						    
+						    <div class="form-group">
+						      <label for="exampleInputPassword1">Password</label>
+						      <input type="password" class="form-control" placeholder="비밀번호" name="user_password" id="user_password">
+						    </div>
+						    <div class="form-group">
+						      <label for="exampleInputEmail1">name</label>
+						      <input type="text" class="form-control" placeholder="이름" name="user_name">
+						    </div>
+						    <div class="form-group">
+						      <label for="exampleInputEmail1">age</label>
+						      <input type="text" class="form-control" placeholder="나이" name="user_age">
+						    </div>
+						    <div class="form-group">
+						      <label for="exampleInputEmail1">gender</label>
+						      <input type="text" class="form-control" placeholder="성별" name="user_gender">
+						    </div>
+						    <br>
+						    <div align="center">
+						    <button type="button" class="btn btn-dark" style="text-align: center;width: 100px;height: 40px;" onclick="signupFn()">SIGN UP</button>
+							</div>	    
+						</form>
 						</div>
-						</div>
-					</div>
-				</div>
-			</section>      
+						<!-- 폼 넣을 곳 -->											
+				</div>			
+			</section>
+				<br>
+				<br>
+				<br>
+				<br>
 			
       <footer class="ftco-footer ftco-section img">
 	    	<div class="overlay"></div>

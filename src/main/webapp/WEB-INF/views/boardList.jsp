@@ -85,7 +85,7 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation2.png);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
@@ -107,10 +107,10 @@
 							<table class="table table-hover">
 								<thead>
 									<tr>
-										<th scope="col">번호</th>
+										<th scope="col" style="width:100px;">번호</th>
 										<th scope="col">제목</th>
 										<th scope="col">내용</th>
-										<th scope="col">조회수</th>
+										<th scope="col" style="width:100px;">조회수</th>
 										<th scope="col">작성일</th>
 										<th scope="col">작성자</th>
 									</tr>

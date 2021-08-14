@@ -75,7 +75,7 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath  }/resources/images/bg_3.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath  }/resources/images/bg_1.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
@@ -101,7 +101,7 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/pcolorimg.png);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation2.png);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
@@ -121,26 +121,30 @@
 				<br>
 	
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
-				<div class="container" style="width: 600px; text-align:left;">
+				<div class="container" style="width: 400px; text-align:left;">
 					
 					<!-- 폼 넣을 곳 -->
 						
 						<form method="post">
 						  <fieldset>
-						    <legend>로그인</legend>
+						  	<div align="center">
+						    <h1><strong>로그인</strong></h1>
+						    <br>
+						    </div>
 						    <div class="form-group">
 						      <label for="staticEmail">ID</label>
-						      <input type="text" class="form-control" name="user_id" id="user_id" placeholder="ID">     
+						      <input type="text" class="form-control" name="user_id" id="user_id" placeholder="아이디를 입력해주세요.">     
 						      </div>
 						    
 						    <div class="form-group">
 						      <label for="exampleInputPassword1">Password</label>
-						      <input type="password" class="form-control" name="user_password" id="user_password" placeholder="PW">
+						      <input type="password" class="form-control" name="user_password" id="user_password" placeholder="패스워드를 입력해주세요.">
 						    </div>
 						    <br>
+						    <br>
 						    <div align="center">
-						    <button type="button" class="btn btn-dark" style="width: 80px;height: 40px;" onclick="loginFn()">LOGIN</button>
-							<button type="button" class="btn btn-dark" style="width: 80px;height: 40px;" onclick="gosignupFn()">JOIN</button>	
+						    <button type="button" class="btn btn-dark" style="width: 80px; height: 40px;" onclick="loginFn()">LOGIN</button>
+							<button type="button" class="btn btn-dark" style="width: 80px; height: 40px;" onclick="gosignupFn()">JOIN</button>	
 							</div>	    
 						  </fieldset>
 						</form>

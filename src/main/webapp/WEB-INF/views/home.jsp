@@ -64,7 +64,7 @@
 		<nav id="colorlib-main-nav" role="navigation">
 			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
 			<div class="js-fullheight colorlib-table">
-				<div class="img" style="background-image: url(images/bg_1.jpg);"></div>
+				<div class="img" style="background-image: url(${pageContext.request.contextPath  }/resources/images/bg_1.jpg);"></div>
 				<div class="colorlib-table-cell js-fullheight">
 					<div class="row no-gutters">
 						<div class="col-md-12 text-center">
@@ -124,7 +124,7 @@
 	    		<div class="row no-gutters">
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/main4.JPG);">	
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/main5.jfif);">	
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
@@ -144,7 +144,7 @@
 	    			</div>
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/clothes.jpg);">	
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/clothes1.jpg);">	
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
