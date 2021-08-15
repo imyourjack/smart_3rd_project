@@ -69,5 +69,8 @@ public class pcolorController {
 	@RequestMapping("/fashionResult4.do")
 	public void fashionResult4() {
 	}
+	@RequestMapping("/fashionCheck.do")
+	public void fashionCheck() {
+	}
 
 }

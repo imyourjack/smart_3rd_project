@@ -140,13 +140,13 @@
 						</div>
 					</div>
 				</div>
-			</section>
 			<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 				<br> <br>
 				<div class="container" style="width: 600px;">
 
 					<!-- 폼 넣을 곳 -->
 
+			
 					<form id="srm" name="srm" method="post" class="signForm">
 						<div align="center">
 							<h2>
@@ -313,7 +313,11 @@
 				</div>
 			</div>
 		</footer>
-
+		
+		<jsp:include page="footer.jsp">
+			<jsp:param name="pageSelection" value="footer" />
+		</jsp:include>
+		
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen">
 			<svg class="circular" width="48px" height="48px">
