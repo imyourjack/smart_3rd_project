@@ -102,13 +102,12 @@
 	        </div>
 	      </div>
       </section>
-
 	    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 	    	<div class="container">
 		    	<div class="row no-gutters d-flex">
 	    			<div class="col-md-12 col-lg-6 d-flex align-items-stretch">
 	    				<div class="img-about img d-flex align-items-stretch">
-		    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(${pageContext.request.contextPath}/resources/images/about.jpg); height: 700px;">
+		    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(${pageContext.request.contextPath}/resources/images/MAN.jpg); height: 700px;">
 		    				</div>
 	    				</div>
 	    			</div>

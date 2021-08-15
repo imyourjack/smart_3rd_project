@@ -123,11 +123,11 @@
 						
 						<form id="srm" name="srm" method="post" class="signForm">					
 						  	<div align="center">
-						    <h2><strong>회원정보</strong></h2>
+						    <h1><strong>회원가입</strong></h1>
 						    </div>
 						    <br>
 						    <div class="form-group">
-						      <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
+						      <label for="staticEmail">ID</label>
 						      <input type="text" class="form-control" placeholder="아이디" name="user_id" id="user_id">      
 						      </div>
 						    
@@ -136,15 +136,15 @@
 						      <input type="password" class="form-control" placeholder="비밀번호" name="user_password" id="user_password">
 						    </div>
 						    <div class="form-group">
-						      <label for="exampleInputEmail1">name</label>
+						      <label for="exampleInputEmail1">Name</label>
 						      <input type="text" class="form-control" placeholder="이름" name="user_name">
 						    </div>
 						    <div class="form-group">
-						      <label for="exampleInputEmail1">age</label>
+						      <label for="exampleInputEmail1">Age</label>
 						      <input type="text" class="form-control" placeholder="나이" name="user_age">
 						    </div>
 						    <div class="form-group">
-						      <label for="exampleInputEmail1">gender</label>
+						      <label for="exampleInputEmail1">Gender</label>
 						      <input type="text" class="form-control" placeholder="성별" name="user_gender">
 						    </div>
 						    <br>

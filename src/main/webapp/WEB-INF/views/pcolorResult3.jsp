@@ -134,45 +134,6 @@
 	    			</div>
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/fallSpectrum1.png);">
-	    					</div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html">'가을 웜톤'의 컬러 팔레트</a></h2>
-	    							<p>가을 컬러들은 노란색보다 짙은 황색을 지니고 있는 색의 그룹으로 
-	    							<br>깊고 강하면서 고급스럽고 편안한 컬러들이 주를 이루며 차분한 이미지를 가지고 있는 팔레트입니다.
-									<br>가을 타입에게 잘 어울리는 컬러는
-									<br>아이보리 베이지, 브라운과 같은 진한 톤에서 어두운 톤까지 많은 영역의 컬러를 사용할 수 있습니다.
-									<br>대표적인 컬러는 살색, 골드 등 가을의 자연에서 흔히 볼 수 있는 컬러입니다.
-									<br>가을의 컬러는 따듯함과 안정감 편안한 이미지를 줍니다.</p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/autumnhair2.jpg);"></div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html"> 헤어컬러 </a></h2>
-	    							<p> 골드 색상을 기본으로 한 골드 브라운, 갈색 컬러인 미디움, 다크 브라운 등 봄 웜톤보다는 어두운 계열 브라운의 컬러를 추천해요.<br> 붉은 계열의 버건디나 마르살라는 피하는 것이 좋습니다.<br> 풍성한 웨이브, 갈색, 황색 베이스 염색을 추천합니다. </p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/autumnstar2.jpg);"></div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html"> 유사톤 연예인 </a></h2>
-	    							
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
 	    					<div class="col-md-6 img js-fullheight">
  	    						<c:forEach var="vo" items="${list}" begin="6" end="8" step="1">
 	    						<img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
@@ -194,7 +155,49 @@
 	    					</div>
 	    				</div>
 	    			</div>
-
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/fallSpectrum1.png);">
+	    					</div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html">'가을 웜'의 컬러 팔레트</a></h2>
+	    							<p>가을 컬러들은 노란색보다 짙은 황색을 지니고 있는 색의 그룹으로 
+	    							<br>깊고 강하면서 고급스럽고 편안한 컬러들이 주를 이루며 차분한 이미지를 가지고 있는 팔레트입니다.
+									<br>가을 타입에게 잘 어울리는 컬러는
+									<br>아이보리 베이지, 브라운과 같은 진한 톤에서 어두운 톤까지 많은 영역의 컬러를 사용할 수 있습니다.
+									<br>대표적인 컬러는 살색, 골드 등 가을의 자연에서 흔히 볼 수 있는 컬러입니다.
+									<br>가을의 컬러는 따듯함과 안정감 편안한 이미지를 줍니다.</p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/autumnhair2.jpg);"></div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html">'가을 웜 '의 헤어 컬러 추천</a></h2>
+	    							<p>골드 색상을 베이스로 골드 브라운, 갈색 컬러인 미디움, 다크 브라운 등 
+	    							<br>봄 웜톤보다는 어두운 계열 브라운의 컬러를 추천해요.
+	    							<br>붉은 계열의 버건디나 마르살라는 피하는 것이 좋습니다.
+	    							<br>풍성한 웨이브, 갈색, 황색 베이스 염색을 추천합니다.</p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/autumnstar2.jpg);"></div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html">유사톤을 지닌 '가을 웜' 연예인 </a></h2>
+	    							<p>공유, 이진욱, 박성웅, 이민호, 마동석, 전현무</p>
+	    							
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
 	    </section>
 
       

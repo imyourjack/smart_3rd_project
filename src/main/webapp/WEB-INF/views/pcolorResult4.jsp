@@ -136,35 +136,13 @@
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html">'겨울 쿨톤'의 컬러 팔레트</a></h2>
+	    							<h2 class="mb-4"><a href="blog-single.html">'겨울 쿨'의 컬러 팔레트</a></h2>
 	    							<p>겨울 컬러들은 파란색, 흰색, 검정을 내포하고 있는 차갑고 강렬한 컬러들의 그룹입니다.
 	    							<br>선명하고 강한  컬러들이 속해 모던하고 도회적인 이미지를 가지고 있는 팔레트입니다.
 									<br>겨울 타입에게 잘 어울리는 컬러는 
 									<br>화이트 블랙과 같은 모노톤과 차갑고 선명한 색을 사용할 수 있습니다.
 									<br>대표적인 컬러는  블루, 핫핑크, 레드, 레몬옐로우, 그린 등  차갑고 강한 컬러들입니다. 
 									<br>겨울의 컬러는 차가움과 모던함 카리스마 있는 이미지를 줍니다.</p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/winterhair2.jpg);"></div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html"> 헤어컬러 </a></h2>
-	    							<p> 블루 베이스의 겨울 쿨톤은 블랙 컬러와 같이 진하고 어두운 컬러가 잘 어울려 본인의 헤어 컬러 그대로를 유지하는 것이 좋지만,<br> 다른 컬러로 염색을 한다면 어떤 컬러든지 전체적으로 톤을 낮춰서 하는 것이 좋습니다.<br> 또한 와인 계열의 염색이 잘 어울립니다. </p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/winterstar2.jpg);"></div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a href="blog-single.html"> 유사톤 연예인 </a></h2>
-	    							
 	    						</div>
 	    					</div>
 	    				</div>
@@ -192,6 +170,33 @@
 	    					</div>
 	    				</div>
 	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/winterhair2.jpg);"></div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html">'겨울 쿨'의 헤어 컬러 추천</a></h2>
+	    							<p>블루 베이스의 겨울 쿨톤은
+	    							<br>블랙 컬러와 같이 진하고 어두운 컬러가 잘 어울려 본인의 헤어 컬러 그대로를 유지하는 것이 좋지만,
+	    							<br>다른 컬러로 염색을 한다면 어떤 컬러든지 전체적으로 톤을 최대한 낮춰서 하는 것이 좋습니다.
+	    							<br>또한 와인 계열의 염색이 잘 어울립니다. </p>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/winterstar2.jpg);"></div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a href="blog-single.html">유사톤을 지닌 '겨울 쿨' 연예인 </a></h2>
+	    							<p>조정석, 하정우, 김수현, 이동욱, 이정재, 엑소 디오</p>
+	    							
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			
 	    </section>
 
       
