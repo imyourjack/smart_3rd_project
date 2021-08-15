@@ -2,11 +2,17 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
+
+<%
+   response.setCharacterEncoding("utf-8");
+   String result = request.getParameter("result");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
 <title>PALETTE</title>
+<meta charset="UTF-8">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/open-iconic-bootstrap.min.css">
@@ -21,19 +27,70 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script type="text/javascript">		
+		    function logoutFn(){
+		    	   $.ajax({
+		    	      url: "logout.do",
+		    	      type:"get",
+		    	      success:function(){ 
+		    	         location.href="home.do"
+		    	      },
+		    	     error:function(){alert("error");}	      
+		    	   });	   
+		    	}		 			
+	</script>
 </head>
 <body>
 	<div class="page">
+	<nav id="colorlib-main-nav" role="navigation">
+      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+      <div class="js-fullheight colorlib-table">
+        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);"></div>
+        <div class="colorlib-table-cell js-fullheight">
+          <div class="row no-gutters">
+            <div class="col-md-12 text-center">
+              <h1 class="mb-4"><a href="home.do" class="logo">palette</a></h1>
+              <ul>
+                <jsp:include page="menu.jsp">
+                   <jsp:param name="pageSelection" value="3" />
+                </jsp:include>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
 	 <div id="colorlib-page">
+	  <header>
+      	<div class="container">
+	        <div class="colorlib-navbar-brand">
+	          <a class="colorlib-logo" href="home.do">palette</a>
+	        </div>
+	        <div method="post" action="${cpath}/login.do" class="loginForm">
+				<c:choose>
+					<c:when test="${sessionScope.userVO==null}">
+						<a href = "${cpath}/login.do" style="color : white;">Login</a>
+					</c:when>
+					<c:otherwise>
+						<button class="btn" color="white" style="color : white;">${sessionScope.userVO.user_name}</button>
+						<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+					</c:otherwise>
+				</c:choose>
+			</div>
+	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        </div>
+      </header>
    	    <section class="ftco-section ftco-no-pb ftco-no-pt">
 	    	<div class="container-fluid px-0">
 	    		<div class="row no-gutters">
 	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/fc1.jpg);"></div>
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/fc2.jpg);"></div>
+	    				<div class="row no-gutters align-items-center" style="background-color: black;">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/fc3.png);"></div>
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/fc4.png);"></div>
 	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
+	    						<div class="text p-md-5 p-4 ftco-animate" style="width: 200%;">
 									<!-- 웹 카메라 연결 코드 -->
 									<!-- <video id="video"a width="320" height="240" autoplay></video>
 									   <canvas id="canvas" width="960" height="720"></canvas>
@@ -41,10 +98,10 @@
 									   
 									<!-- 안드로이드 카메라 연결 코드 -->
 								    <form id="take" action="${cpath}/uploadFormAction.do" method="POST" enctype="multipart/form-data" style="text-align: center;"> 
-								    	<label for="cap" class="btn btn-primary btn-sm" style="width: 150px; height: 40px; font-size: 20px;">사진업로드     <span class="ion-ios-arrow-forward"></span></label>
+								    	<label for="cap" class="btn btn-primary btn-sm" style="width: 150px;height: 40px;font-size: 20px; margin-right: 1%;">사진업로드     <span class="ion-ios-arrow-forward"></span></label>
 								    	<!-- <input type="file" id= "cap" name="personalPhoto" accept="image/*" capture="camera" id="camera" style="display:none;"/> -->
 								    	<input type="file" id="cap" name="uploadFile" multiple="multiple" style="display:none;">
-								    	<label for="cap2" class="btn btn-primary btn-sm" style="width: 150px; height: 40px; font-size: 20px;">진단하기     <span class="ion-ios-arrow-forward"></span></label>
+								    	<label for="cap2" class="btn btn-primary btn-sm" style="width: 150px;height: 40px;font-size: 20px; margin-left: 1%;">진단하기     <span class="ion-ios-arrow-forward"></span></label>
 								    	<button id="cap2" style="display:none;">진단</button>
 								    </form>
 	    						</div>
