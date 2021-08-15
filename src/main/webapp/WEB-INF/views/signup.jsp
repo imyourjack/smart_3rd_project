@@ -1,77 +1,98 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="cpath" value="${pageContext.request.contextPath}"/>
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="cpath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>PALETTE</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+<head>
+<title>PALETTE</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/animate.css">
-    
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
+<link
+	href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"
+	rel="stylesheet">
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/aos.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/open-iconic-bootstrap.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/animate.css">
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/ionicons.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jquery.timepicker.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/aos.css">
 
-    
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
-	    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-	<link rel="stylesheet"
-		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<script type="text/javascript">
-	    function signupFn(){
-	        var signData= $("#srm").serialize();
-	         $.ajax({
-	            url: "userInsert.do",
-	            type:"post",
-	            data : signData,
-	            success:function(data){
-	              alert("회원가입 완료")
-	              location.href="pcolor.do"; 
-	            },
-	           error:function(){alert("error");}         
-	         });         
-	      }
-	       	
-	      $(function(){
-	        //비밀번호 확인
-	        $(".pw1").hide();
-	        $(".pw2").hide();
-	           $("#user_password_check").keyup(function(){
-	              var user_password = $("#user_password").val() ;
-	              var user_password_check = $("#user_password_check").val();
-	              if(user_password != "" || user_password_check != ""){
-	                 if(user_password==user_password_check){
-	                     $(".pw1").show();
-	                     $(".pw2").hide();
-	                 }else{
-	                     $(".pw1").hide();
-	                     $(".pw2").show();
-	                 }               
-	              }                 
-	           });        
-	        }); 			
-	</script>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/ionicons.min.css">
+
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/bootstrap-datepicker.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/jquery.timepicker.css">
+
+
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/flaticon.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/icomoon.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/style.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	function signupFn() {
+		var signData = $("#srm").serialize();
+		$.ajax({
+			url : "userInsert.do",
+			type : "post",
+			data : signData,
+			success : function(data) {
+				alert("회원가입 완료")
+				location.href = "pcolor.do";
+			},
+			error : function() {
+				alert("error");
+			}
+		});
+	}
+	
+
+
+	$(function() {
+		//비밀번호 확인
+		$(".pw1").hide();
+		$(".pw2").hide();
+		$("#user_password_check").keyup(function() {
+			var user_password = $("#user_password").val();
+			var user_password_check = $("#user_password_check").val();
+			if (user_password != "" || user_password_check != "") {
+				if (user_password == user_password_check) {
+					$(".pw1").show();
+					$(".pw2").hide();
+				} else {
+					$(".pw1").hide();
+					$(".pw2").show();
+				}
+			}
+		});
+	});
+</script>
 </head>
-  <body>
+<body>
 
     <div class="page">
     <nav id="colorlib-main-nav" role="navigation">
@@ -103,7 +124,7 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation2.png);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
@@ -123,11 +144,11 @@
 						
 						<form id="srm" name="srm" method="post" class="signForm">					
 						  	<div align="center">
-						    <h2><strong>회원정보</strong></h2>
+						    <h1><strong>회원가입</strong></h1>
 						    </div>
 						    <br>
 						    <div class="form-group">
-						      <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
+						      <label for="staticEmail">ID</label>
 						      <input type="text" class="form-control" placeholder="아이디" name="user_id" id="user_id">      
 						      </div>
 						    
@@ -136,15 +157,15 @@
 						      <input type="password" class="form-control" placeholder="비밀번호" name="user_password" id="user_password">
 						    </div>
 						    <div class="form-group">
-						      <label for="exampleInputEmail1">name</label>
+						      <label for="exampleInputEmail1">Name</label>
 						      <input type="text" class="form-control" placeholder="이름" name="user_name">
 						    </div>
 						    <div class="form-group">
-						      <label for="exampleInputEmail1">age</label>
+						      <label for="exampleInputEmail1">Age</label>
 						      <input type="text" class="form-control" placeholder="나이" name="user_age">
 						    </div>
 						    <div class="form-group">
-						      <label for="exampleInputEmail1">gender</label>
+						      <label for="exampleInputEmail1">Gender</label>
 						      <input type="text" class="form-control" placeholder="성별" name="user_gender">
 						    </div>
 						    <br>
@@ -153,40 +174,254 @@
 							</div>	    
 						</form>
 						</div>
-						<!-- 폼 넣을 곳 -->											
-				</div>			
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div id="colorlib-page">
+			<header>
+				<div class="container">
+					<div class="colorlib-navbar-brand">
+						<a class="colorlib-logo" href="home.do">PALETTE</a>
+					</div>
+					<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+				</div>
+			</header>
+
+			<section class="hero-wrap js-fullheight"
+				style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation.jpg);">
+				<div class="overlay"></div>
+				<div class="container-fluid px-0">
+					<div
+						class="row no-gutters text align-items-end js-fullheight justify-content-center"
+						data-scrollax-parent="true">
+						<div class="col-md-12 ftco-animate text-center">
+							<!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
+							<h1 class="bread">JOIN</h1>
+						</div>
+					</div>
+				</div>
 			</section>
-				<br>
-				<br>
-				<br>
-				<br>
+			<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+				<br> <br>
+				<div class="container" style="width: 600px;">
+
+					<!-- 폼 넣을 곳 -->
+
 			
-   		<jsp:include page="footer.jsp">
+					<form id="srm" name="srm" method="post" class="signForm">
+						<div align="center">
+							<h2>
+								<strong>회원정보</strong>
+							</h2>
+						</div>
+						<br>
+						<div class="form-group">
+							<label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
+							<input type="text" class="form-control" placeholder="아이디"
+								name="user_id" id="user_id">
+						</div>
+
+						<div class="form-group">
+							<label for="exampleInputPassword1">Password</label> <input
+								type="password" class="form-control" placeholder="비밀번호"
+								name="user_password" id="user_password">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="비밀번호확인"
+								name="user_password_check" id="user_password_check"> <span
+								class="pw1">비밀번호가 일치합니다.</span> <span class="pw2">비밀번호가
+								일치하지 않습니다.</span>
+						</div>
+						<div class="form-group">
+							<label for="name">name</label> <input type="text"
+								class="form-control" placeholder="이름" name="user_name">
+						</div>
+						<div class="form-group">
+							<label for="age">age</label> <input type="text"
+								class="form-control" placeholder="나이" name="user_age">
+						</div>
+						<input type='radio' name='user_gender' value='female' />여성 <input
+							type='radio' name='user_gender' value='male' />남성
+						<div id='result'></div>
+						<br>
+						<div align="center">
+							<button type="button" class="btn btn-dark"
+								style="text-align: center; width: 100px; height: 40px;"
+								onclick="signupFn()">SIGN UP</button>
+						</div>
+					</form>
+				</div>
+				<!-- 폼 넣을 곳 -->
+		</div>
+		</section>
+		<br> <br> <br> <br>
+
+		<footer class="ftco-footer ftco-section img">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-lg-3">
+						<div class="ftco-footer-widget mb-4">
+							<h2 class="ftco-heading-2 logo">
+								<a href="index.html">Erase</a>
+							</h2>
+							<p>Far far away, behind the word mountains, far from the
+								countries Vokalia and Consonantia, there live the blind texts.</p>
+							<ul
+								class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+								<li class="ftco-animate"><a href="#"><span
+										class="icon-twitter"></span></a></li>
+								<li class="ftco-animate"><a href="#"><span
+										class="icon-facebook"></span></a></li>
+								<li class="ftco-animate"><a href="#"><span
+										class="icon-instagram"></span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="ftco-footer-widget mb-4">
+							<h2 class="ftco-heading-2">Recent Blog</h2>
+							<div class="block-21 mb-4 d-flex">
+								<a class="blog-img mr-4"
+									style="background-image: url(images/image_1.jpg);"></a>
+								<div class="text">
+									<h3 class="heading">
+										<a href="#">Even the all-powerful Pointing has no control
+											about</a>
+									</h3>
+									<div class="meta">
+										<div>
+											<a href="#"><span class="icon-calendar"></span> July 12,
+												2018</a>
+										</div>
+										<div>
+											<a href="#"><span class="icon-person"></span> Admin</a>
+										</div>
+										<div>
+											<a href="#"><span class="icon-chat"></span> 19</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="block-21 mb-4 d-flex">
+								<a class="blog-img mr-4"
+									style="background-image: url(images/image_2.jpg);"></a>
+								<div class="text">
+									<h3 class="heading">
+										<a href="#">Even the all-powerful Pointing has no control
+											about</a>
+									</h3>
+									<div class="meta">
+										<div>
+											<a href="#"><span class="icon-calendar"></span> July 12,
+												2018</a>
+										</div>
+										<div>
+											<a href="#"><span class="icon-person"></span> Admin</a>
+										</div>
+										<div>
+											<a href="#"><span class="icon-chat"></span> 19</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<div class="ftco-footer-widget mb-4 ml-md-4">
+							<h2 class="ftco-heading-2">Site Links</h2>
+							<ul class="list-unstyled">
+								<li><a href="#" class="py-2 d-block">Home</a></li>
+								<li><a href="#" class="py-2 d-block">About</a></li>
+								<li><a href="#" class="py-2 d-block">Model</a></li>
+								<li><a href="#" class="py-2 d-block">Services</a></li>
+								<li><a href="#" class="py-2 d-block">Blog</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="ftco-footer-widget mb-4">
+							<h2 class="ftco-heading-2">Have a Questions?</h2>
+							<div class="block-23 mb-3">
+								<ul>
+									<li><span class="icon icon-map-marker"></span><span
+										class="text">203 Fake St. Mountain View, San Francisco,
+											California, USA</span></li>
+									<li><a href="#"><span class="icon icon-phone"></span><span
+											class="text">+2 392 3929 210</span></a></li>
+									<li><a href="#"><span class="icon icon-envelope"></span><span
+											class="text">info@yourdomain.com</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+
+						<p>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright &copy;
+							<script>
+								document.write(new Date().getFullYear());
+							</script>
+							All rights reserved | This template is made with <i
+								class="icon-heart" aria-hidden="true"></i> by <a
+								href="https://colorlib.com" target="_blank">Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		<jsp:include page="footer.jsp">
 			<jsp:param name="pageSelection" value="footer" />
 		</jsp:include>
+		
+		<!-- loader -->
+		<div id="ftco-loader" class="show fullscreen">
+			<svg class="circular" width="48px" height="48px">
+				<circle class="path-bg" cx="24" cy="24" r="22" fill="none"
+					stroke-width="4" stroke="#eeeeee" />
+				<circle class="path" cx="24" cy="24" r="22" fill="none"
+					stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg>
+		</div>
 
-      <!-- loader -->
-      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-      </div>
-    </div>
+	</div>
+	</div>
 
 
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.magnific-popup.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/aos.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/jquery.animateNumber.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/google-map.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
-    
-  </body>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/jquery.magnific-popup.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/aos.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/jquery.animateNumber.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/scrollax.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/google-map.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+
+</body>
 </html>

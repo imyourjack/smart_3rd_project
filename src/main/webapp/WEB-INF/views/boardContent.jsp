@@ -93,7 +93,7 @@
                         <a href = "${cpath}/login.do" style="color:white;">Login</a>
                      </c:when>
                      <c:otherwise>
-                        <button class="btn" style="color : white;">${userVO.user_name}</button>
+                        <div class="btn" style="color : white;">${userVO.user_name}</div>
                         <a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
                      </c:otherwise>
                   </c:choose>
@@ -102,7 +102,7 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation2.png);">
          <div class="overlay"></div>
          <div class="container-fluid px-0">
            <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
@@ -148,7 +148,7 @@
                      <c:if test="${userVO!=null}">
                      <div class="container">                        
                            <form id="commentForm" name="commentForm" method="post" action="${cpath}/replyInsert.do">
-                           <input type="hidden" id="user_id" name="user_id" value="${vo.user_id}">
+                           <input type="hidden" id="user_id" name="user_id" value="${userVO.user_id}">
                             <input type="hidden" id="board_idx" name="board_idx" value="${vo.board_idx}"> 
                               <br> <br>
                               <div>

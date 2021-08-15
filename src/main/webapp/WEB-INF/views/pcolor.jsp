@@ -92,7 +92,7 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/back1.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_5.gif);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
@@ -109,14 +109,13 @@
 	    		<!-- 작업공간 -->
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);"></div>
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/colormain6.jpg);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a>퍼스널컬러 얼굴 분석을 통한</a></h2>
-	    							<h2 class="mb-4"><a>남성 맞춤형 스타일 개선 서비스</a></h2>
+	    							<h2 class="mb-4"><a>AI 분석을 통한 퍼스널 컬러 진단</a></h2>
 	    							<p>Color types help stylize makeup, fashion. </p>
 	    							<p>have you ever thought about your personal colors that perfectly suit your image?</p>
-									<p class="mb-0 mt-4"><a href="pcolorCheck2.do" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
+									<p class="mb-0 mt-4"><a href="pcolorCheck2.do?user_id=${sessionScope.userVO.user_id}" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
 	    						</div>
 	    					</div>
 	    				</div>

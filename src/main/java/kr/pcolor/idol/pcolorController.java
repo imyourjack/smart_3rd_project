@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.pcolor.domain.ItemVO;
+import kr.pcolor.domain.resultVO;
 import kr.pcolor.mapper.PcolorMapper;
 
 @Controller
@@ -30,6 +31,13 @@ public class pcolorController {
 		List<ItemVO> list = pcolorMapper.pcolorResult1();
 		model.addAttribute("list", list);
 	}
+	
+	@RequestMapping("/pcolorResult1Test.do")
+	public void pcolorResult1Test(Model model) {
+		List<resultVO> list = pcolorMapper.pcolorResult1Test();
+		model.addAttribute("list", list);
+	}
+	
 	@RequestMapping("/pcolorResult2.do")
 	public void pcolorResult2(Model model) {
 		List<ItemVO> list = pcolorMapper.pcolorResult2();

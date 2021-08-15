@@ -85,7 +85,8 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation2.png);">
+
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
@@ -101,15 +102,16 @@
 		<br>
 		<br>
 				<div class="container">
-					<div class="panel panel-default">
+					<div class="table table-hover">
 						<div class="panel-body" >
 							<br>
-							<table class="table table-hover">
-								<thead>
-									<tr>
+
+							<table class="table table-hover" >
+								<thead style="text-align:center">
+									<tr class="table-light">
 										<th scope="col">번호</th>
 										<th scope="col">제목</th>
-										<th scope="col">내용</th>
+										<!--<th scope="col">내용</th>-->
 										<th scope="col">조회수</th>
 										<th scope="col">작성일</th>
 										<th scope="col">작성자</th>
@@ -119,8 +121,7 @@
 									<c:forEach var="vo" items="${list}">
 										<tr class="table-light">
 											<th scope="row"><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_idx}</a></th>
-											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_title}</td>
-											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_contents}</a></td>
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_title}</a></td>
 											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_count}</a></td>
 											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_indate}</a></td>
 											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.user_id}</a></td>									

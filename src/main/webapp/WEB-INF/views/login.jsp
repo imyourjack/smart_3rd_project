@@ -101,7 +101,7 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation2.png);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
@@ -137,8 +137,8 @@
 						    <br>
 						    <br>
 						    <div align="center">
-						    <button type="button" class="btn btn-dark" style="width: 80px;height: 40px;" onclick="loginFn()">LOGIN</button>
-							<button type="button" class="btn btn-dark" style="width: 80px;height: 40px;" onclick="gosignupFn()">JOIN</button>	
+						    <button type="button" class="btn btn-dark" style="width: 80px; height: 40px;" onclick="loginFn()">LOGIN</button>
+							<button type="button" class="btn btn-dark" style="width: 80px; height: 40px;" onclick="gosignupFn()">JOIN</button>	
 							</div>	    
 						  </fieldset>
 						</form>

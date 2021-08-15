@@ -55,7 +55,12 @@
 	             });
 		  	}
 		  
-	</script>    
+	</script>  
+	<style type="text/css">
+	strong{
+	font-weight: 700;
+	}
+	</style>  
   </head>
   <body>
   
@@ -89,22 +94,24 @@
 	        <div class="colorlib-navbar-brand">
 	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
-	        <div method="post" action="${cpath}/login.do" class="loginForm">
+	        <form method="post" action="${cpath}/login.do">
+	        <div class="loginForm">
 						<c:choose>
 							<c:when test="${vo==null}">
 								<a href = "${cpath}/login.do" style="color : white;">Login</a>
 							</c:when>
 							<c:otherwise>
-								<button class="btn" style="color : white;">${vo.user_name}</button>
+								<div class="btn" style="color : white;">${vo.user_name}</div>
 								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a>
 							</c:otherwise>
 						</c:choose>
 					</div>
+					</form>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation2.png);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
@@ -126,7 +133,7 @@
 						<form id="frm" method="post" action="${cpath}/userUpdate.do">
 						  <fieldset>
 						  	<div align="center">
-						    <h2><strong>회원정보</strong></h2>
+						    <h1><strong>회원정보</strong></h1>
 						    </div>
 						    <br>
 						    <div class="form-group">
@@ -139,29 +146,33 @@
 						      <input type="password" class="form-control" name="user_password" id="user_password" value="${vo.user_password}" placeholder="${vo.user_password}">
 						    </div>
 						    <div class="form-group">
-						      <label for="exampleInputEmail1">name</label>
+						      <label for="exampleInputEmail1">Name</label>
 						      <input type="text" class="form-control" name="user_name" id="user_name" value="${vo.user_name}" placeholder="${vo.user_name}">
 						    </div>
 						    <div class="form-group">
-						      <label for="exampleInputEmail1">age</label>
+						      <label for="exampleInputEmail1">Age</label>
 						      <input type="text" class="form-control" name="user_age" id="user_age" value="${vo.user_age}" placeholder="${vo.user_age}">
 						    </div>
 						    <div class="form-group">
-						      <label for="exampleInputEmail1">gender</label>
+						      <label for="exampleInputEmail1">Gender</label>
 						      <input type="text" class="form-control" name="user_gender" id="user_gender" value="${vo.user_gender}" placeholder="${vo.user_gender}">
 						    </div>
 						    <br>
 						    <div align="center">
-						    <input type="submit" value="수정" class="btn btn-dark" style="width: 80px;height: 40px;" onclick="updateFn()">
-							<input type='button' value='삭제' class="btn btn-dark" style="width: 80px;height: 40px;" onclick="goDel()">	
-							<input type='button' value='진단내역' class="btn btn-dark" style="width: 110px;height: 40px;">	
-							</div>	    
+						    <input type="submit" value="수정" class="btn btn-dark" style="width: 80px; height: 40px;" onclick="updateFn()">	
+							<input type='button' value='진단내역' class="btn btn-dark" style="width: 110px; height: 40px;">
+							<br>
+							<br>
+							<a style="font-size:14px;">회원탈퇴를 원하십니까? > </a>
+							<a type="button" style="font-size : 14px" onclick="goDel()"> 회원탈퇴</a>	
+							</div>
 						  </fieldset>
 						</form>
 						</div>
+						<br>
 						<!-- 폼 넣을 곳 -->						
 					</div>
-					
+				</div>
 			</section>
 			<br>
 			<br>
