@@ -119,7 +119,7 @@
 									<c:forEach var="vo" items="${list}">
 										<tr class="table-light">
 											<th scope="row"><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_idx}</a></th>
-											<td ><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_title}</td>
+											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_title}</a></td>
 											<!--<td width="450"><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_contents}</a></td>-->
 											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_count}</a></td>
 											<td><a href="${cpath}/boardContent.do?board_idx=${vo.board_idx}">${vo.board_indate}</a></td>

@@ -177,12 +177,13 @@
 								class="form-control" placeholder="이름" name="user_name">
 						</div>
 						<div class="form-group">
-							<label for="age">age</label> <input type="text"
-								class="form-control" placeholder="나이" name="user_age">
+							<label for="age">age</label> 
+							<input type="text" class="form-control" placeholder="나이" name="user_age">
 						</div>
-						<input type='radio' name='user_gender' value='female' />여성 <input
-							type='radio' name='user_gender' value='male' />남성
-						<div id='result'></div>
+						<div>
+							<label for="gender">gender</label>
+							<input type="text" class="form-control" placeholder="성별" name="user_gender">
+						</div>
 						<br>
 						<div align="center">
 							<button type="button" class="btn btn-dark"
@@ -192,7 +193,6 @@
 					</form>
 				</div>
 				<!-- 폼 넣을 곳 -->
-		</div>
 		</section>
 		<br> <br> <br> <br>
 

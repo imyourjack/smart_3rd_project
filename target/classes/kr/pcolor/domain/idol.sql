@@ -18,18 +18,6 @@ SELECT * FROM tbl_result;
 SELECT * FROM tbl_reply;
 
 
--- tbl_user 생성
-CREATE TABLE tbl_user(
-    user_id              VARCHAR(30) NOT NULL,
-    user_password        VARCHAR(30) NOT NULL,
-    user_name            VARCHAR(30),
-    user_age             VARCHAR(30),
-    user_gender          VARCHAR(30),
-    pc_idx           INT(20),
-    PRIMARY KEY(user_id),
-    FOREIGN KEY(pc_idx) REFERENCES tbl_pcolor(pc_idx)
-);
-
 -- tbl_pcolor 생성
 CREATE TABLE tbl_pcolor (
     pc_idx           INT(20) NOT NULL auto_increment, -- pc_idx 1 : 봄웜 / pc_idx 2 : 여쿨 / pc_idx 3 : 가웜 / pc_idx 4 : 겨쿨
@@ -49,6 +37,17 @@ CREATE TABLE tbl_pccs (
     FOREIGN KEY(pc_idx) REFERENCES tbl_pcolor(pc_idx)
 );
 
+-- tbl_user 생성
+CREATE TABLE tbl_user(
+    user_id              VARCHAR(30) NOT NULL,
+    user_password        VARCHAR(30) NOT NULL,
+    user_name            VARCHAR(30),
+    user_age             VARCHAR(30),
+    user_gender          VARCHAR(30),
+    pc_idx           INT(20),
+    PRIMARY KEY(user_id),
+    FOREIGN KEY(pc_idx) REFERENCES tbl_pcolor(pc_idx)
+);
 
 -- tbl_board 생성
 CREATE TABLE tbl_board (
