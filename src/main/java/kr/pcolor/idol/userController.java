@@ -53,6 +53,12 @@ public class userController {
       }
    }
    
+//   @RequestMapping("getLogin.do")
+//   public void getLogin (Model model, String user_id) {
+//	   UserVO vo = userMapper.userList(user_id);
+//	   model.addAttribute("vo", vo);
+//   }
+   
    
    @RequestMapping("logout.do")
    public void logout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

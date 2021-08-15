@@ -30,17 +30,17 @@
 	    		<div class="row no-gutters">
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/pcc1.jpg);"></div>
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/pcc2.jpg);"></div>
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/fc1.jpg);"></div>
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/fc2.jpg);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
 									<!-- 웹 카메라 연결 코드 -->
-									<!-- <video id="video" width="320" height="240" autoplay></video>
+									<!-- <video id="video"a width="320" height="240" autoplay></video>
 									   <canvas id="canvas" width="960" height="720"></canvas>
 									   <button type="button" id="webcamBtn">캡쳐하기</button> -->
 									   
 									<!-- 안드로이드 카메라 연결 코드 -->
-								    <form id="take" action="${cpath}/uploadFormAction.do?user_id=${sessionScope.userVO.user_id}" method="POST" enctype="multipart/form-data" style="text-align: center;"> 
+								    <form id="take" action="${cpath}/uploadFormAction.do" method="POST" enctype="multipart/form-data" style="text-align: center;"> 
 								    	<label for="cap" class="btn btn-primary btn-sm" style="width: 150px; height: 40px; font-size: 20px;">사진업로드     <span class="ion-ios-arrow-forward"></span></label>
 								    	<!-- <input type="file" id= "cap" name="personalPhoto" accept="image/*" capture="camera" id="camera" style="display:none;"/> -->
 								    	<input type="file" id="cap" name="uploadFile" multiple="multiple" style="display:none;">
