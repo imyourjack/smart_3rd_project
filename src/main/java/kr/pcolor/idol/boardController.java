@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.pcolor.domain.BoardVO;
@@ -39,7 +40,8 @@ public class boardController {
    @RequestMapping("/boardContent.do")
    public String boardContent(int board_idx, Model model) {      
          BoardVO vo =boardMapper.boardContent(board_idx);         
-         List<ReplyVO> list = boardMapper.replyList(board_idx);         
+         List<ReplyVO> list = boardMapper.replyList(board_idx); 
+         boardMapper.updatecnt(board_idx);
          model.addAttribute("vo", vo);
          model.addAttribute("list", list);         
          return "boardContent";
@@ -62,17 +64,28 @@ public class boardController {
       return "boardList";
    }   
    
+// 게시글 자세히보기
+//	@RequestMapping("/updatereplycnt")
+//	public String updatereplycnt(@RequestParam("board_idx") int board_idx) throws Exception {		
+//		boardMapper.updatereplycnt(board_idx);		
+//		return "boardList";
+//	}
+   
    @RequestMapping("/replyInsert.do")
-   public ModelAndView replyInsert(ReplyVO vo, int board_idx) {
-   boardMapper.replyInsert(vo);
-    ModelAndView mav = new ModelAndView();
-      List<ReplyVO> cList = boardMapper.replyList(board_idx);
-      BoardVO bList = boardMapper.boardContent(board_idx);
-      mav.setViewName("boardContent");
-      mav.addObject("list", cList);
-      mav.addObject("vo", bList);
-      return mav;
+   public String replyInsert(ReplyVO vo, int board_idx) {
+	   boardMapper.replyInsert(vo);
+	   //ModelAndView mav = new ModelAndView();
+	   //List<ReplyVO> cList = boardMapper.replyList(board_idx);
+	   //BoardVO bList = boardMapper.boardContent(board_idx);
+	   // mav.setViewName("boardContent");
+	   // mav.addObject("list", cList);
+	   //mav.addObject("vo", bList);
+	   //System.out.println("mav입니다 -> "+mav);
+      
+	   return "redirect:/boardContent.do?board_idx="+board_idx;
    }
+  
+   
    
    @RequestMapping("/replyDelete.do")
       public void replyDelete(int reply_idx) {

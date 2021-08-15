@@ -55,7 +55,7 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
@@ -92,7 +92,7 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_5.gif);">
       	<div class="overlay"></div>
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text js-fullheight align-items-end justify-content-center" data-scrollax-parent="true">
@@ -108,9 +108,8 @@
 		    	<div class="row no-gutters d-flex">
 	    			<div class="col-md-12 col-lg-6 d-flex align-items-stretch">
 	    				<div class="img-about img d-flex align-items-stretch">
-		    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(${pageContext.request.contextPath}/resources/images/about.jpg); height: 700px;">
-		    				</div>
-	    				</div>
+		    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(${pageContext.request.contextPath}/resources/images/fashionmain.jpg); height: 700px;">
+		    				</div>	    				</div>
 	    			</div>
 	    			<div class="col-md-12 col-lg-6 pl-lg-5 py-5 d-flex align-items-center">
 	    				<div class="p-0 px-lg-5 p-lg-0">
@@ -121,13 +120,14 @@
 				          </div>
 				        </div>
 				        <div class="row">
-				        	<div class="col-md-6">
+				        	<div class="col-md-6" style="width: 1000px;">
 				        		<div class="media block-6 services d-block ftco-animate">
-				           	     <form action="${cpath}/uploadFormAction.do" method="post" enctype="multipart/form-data">
-									<input type="file" name="uploadFile" multiple="multiple">
-									<button>파일 업로드</button>
-									<input type="text" id="imgdata" value = "<%=result%>">
-								</form>
+								    <form id="take" action="${cpath}/uploadFormAction.do" method="POST" enctype="multipart/form-data"> 
+								    	<label for="cap" class="btn btn-primary btn-sm" style="width: 150px;height: 40px;font-size: 20px;margin-top: 30px;">사진업로드     <span class="ion-ios-arrow-forward"></span></label>
+								    	<input type="file" id="cap" name="uploadFile" multiple="multiple" style="display:none;">
+								    	<label for="cap2" class="btn btn-primary btn-sm" style="width: 150px;height: 40px;font-size: 20px;margin-top: 30px;">진단하기     <span class="ion-ios-arrow-forward"></span></label>
+								    	<button id="cap2" style="display:none;">진단</button>
+								    </form>
 				        	</div>
 				        	<div class="col-md-6">
 				        	
@@ -143,83 +143,9 @@
 	      </div>
 	    </section>
       
-      <footer class="ftco-footer ftco-section img">
-	    	<div class="overlay"></div>
-	      <div class="container">
-	        <div class="row mb-5">
-	          <div class="col-lg-3">
-	            <div class="ftco-footer-widget mb-4">
-	              <h2 class="ftco-heading-2 logo"><a href="home.do">palette</a></h2>
-	              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-	              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-	              </ul>
-	            </div>
-	          </div>
-	          <div class="col-lg-4">
-	            <div class="ftco-footer-widget mb-4">
-	              <h2 class="ftco-heading-2">Recent Blog</h2>
-	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);"></a>
-	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-	                  <div class="meta">
-	                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-	                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-	                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-	                  </div>
-	                </div>
-	              </div>
-	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_2.jpg);"></a>
-	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-	                  <div class="meta">
-	                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-	                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-	                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-	                  </div>
-	                </div>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="col-lg-2">
-	             <div class="ftco-footer-widget mb-4 ml-md-4">
-	              <h2 class="ftco-heading-2">Site Links</h2>
-	              <ul class="list-unstyled">
-	                <li><a href="#" class="py-2 d-block">Home</a></li>
-	                <li><a href="#" class="py-2 d-block">About</a></li>
-	                <li><a href="#" class="py-2 d-block">Model</a></li>
-	                <li><a href="#" class="py-2 d-block">Services</a></li>
-	                <li><a href="#" class="py-2 d-block">Blog</a></li>
-	              </ul>
-	            </div>
-	          </div>
-	          <div class="col-lg-3">
-	            <div class="ftco-footer-widget mb-4">
-	            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-	            	<div class="block-23 mb-3">
-		              <ul>
-		                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-		                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-		                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-		              </ul>
-		            </div>
-	            </div>
-	          </div>
-	        </div>
-	        <div class="row">
-	          <div class="col-md-12 text-center">
-
-	            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-	          </div>
-	        </div>
-	      </div>
-	    </footer>
+	<jsp:include page="footer.jsp">
+		<jsp:param name="pageSelection" value="footer" />
+	</jsp:include>
 
       <!-- loader -->
       <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>

@@ -1,11 +1,11 @@
 -- table 삭제
+DROP TABLE tbl_pccs;
 DROP TABLE tbl_result;
 DROP TABLE tbl_item;
-DROP TABLE tbl_board;
-DROP TABLE tbl_pccs;
-DROP TABLE tbl_pcolor;
-DROP TABLE tbl_user;
 DROP TABLE tbl_reply;
+DROP TABLE tbl_board;
+DROP TABLE tbl_user;
+DROP TABLE tbl_pcolor;
 
 
 -- table 검색
@@ -28,7 +28,9 @@ CREATE TABLE tbl_user(
     user_name            VARCHAR(30),
     user_age             VARCHAR(30),
     user_gender          VARCHAR(30),
-    PRIMARY KEY(user_id)
+    pc_idx           INT(20),
+    PRIMARY KEY(user_id),
+    FOREIGN KEY(pc_idx) REFERENCES tbl_pcolor(pc_idx)
 );
 
 -- tbl_pcolor 생성
@@ -106,7 +108,6 @@ CREATE TABLE tbl_reply(
 );
 
 -- table 데이터 삽입
-INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender) VALUES('admin', '12345', '아무개', '26', '남자');
 INSERT INTO tbl_pcolor(pc_name, pc_contents) VALUES('봄웜', '따뜻한 봄날의 향기');
 INSERT INTO tbl_pcolor(pc_name, pc_contents) VALUES('여쿨', '시원한 여름 밤');
 INSERT INTO tbl_pcolor(pc_name, pc_contents) VALUES('가웜', '가을의 높은 하늘');
@@ -115,19 +116,20 @@ INSERT INTO tbl_pccs(pccs_name, pc_idx) VALUES('보라색', 1);
 INSERT INTO tbl_pccs(pccs_name, pc_idx) VALUES('남색', 2);
 INSERT INTO tbl_pccs(pccs_name, pc_idx) VALUES('카키색', 3);
 INSERT INTO tbl_pccs(pccs_name, pc_idx) VALUES('파란', 4);
-INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '처음 가입해서 글 좀 올립니다.', 'admin');
-INSERT INTO tbl_reply(reply_text,user_id,board_idx) VALUES ('쌉노잼 페이지네요 다시 만들어주세요','admin','1');
-INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender) VALUES('jongwon', '12345', '정종원', '27', '남자');
-INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender) VALUES('youngjoo', '12345', '김영주', '26', '여자');
-INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender) VALUES('onyu', '12345', '김온유', '26', '여자');
-INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender) VALUES('junhyuck', '12345', '이준혁', '28', '남자');
-INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender) VALUES('gangjoon', '12345', '최강준', '26', '남자');
+INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender,pc_idx) VALUES('admin', '12345', '아무개', '26', '남자','1');
+INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender,pc_idx) VALUES('jongwon', '12345', '정종원', '27', '남자','1');
+INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender,pc_idx) VALUES('youngjoo', '12345', '김영주', '26', '여자','2');
+INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender,pc_idx) VALUES('onyu', '12345', '김온유', '26', '여자','3');
+INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender,pc_idx) VALUES('junhyuck', '12345', '이준혁', '28', '남자','4');
+INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender,pc_idx) VALUES('gangjoon', '12345', '최강준', '26', '남자','3');
 INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '유익한 사이트예요.', 'admin');
 INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '처음 가입해서 글 좀 올립니다.', 'youngjoo');
 INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '저는 겨울쿨이네요!!', 'jongwon');
 INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '저 봄웜인가요?', 'onyu');
 INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '게시판 테스트!', 'junhyuck');
 INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '정말 유용한 사이트예요 감사합니다', 'gangjoon');
+INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '처음 가입해서 글 좀 올립니다.', 'admin');
+INSERT INTO tbl_reply(reply_text,user_id,board_idx) VALUES ('쌉노잼 페이지네요 다시 만들어주세요','admin','1');
 
 -- item_향수_insert_data
 INSERT INTO tbl_item(item_category, item_img_url, item_name, item_tag, item_explain, item_product_url, pc_idx) 

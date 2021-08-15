@@ -10,41 +10,25 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link
-	href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
-	rel="stylesheet">
-<link
-	href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/open-iconic-bootstrap.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/animate.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/open-iconic-bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/animate.css">
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/aos.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/aos.css">
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/ionicons.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/ionicons.min.css">
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/bootstrap-datepicker.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/jquery.timepicker.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/flaticon.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/icomoon.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jquery.timepicker.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 	<script type="text/javascript">		
 		    function logoutFn(){
 		    	   $.ajax({
@@ -64,7 +48,7 @@
 		<nav id="colorlib-main-nav" role="navigation">
 			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
 			<div class="js-fullheight colorlib-table">
-				<div class="img" style="background-image: url(images/bg_3.jpg);"></div>
+				<div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);"></div>
 				<div class="colorlib-table-cell js-fullheight">
 					<div class="row no-gutters">
 						<div class="col-md-12 text-center">
@@ -89,23 +73,22 @@
 					<div class="colorlib-navbar-brand">
 						<a class="colorlib-logo" href="home.do">palette</a>
 					</div>
-					<div method="post" action="${cpath}/login.do" class="loginForm">
+					<form method="post" action="${cpath}/loginUser.do" class="loginForm">
 						<c:choose>
-							<c:when test="${sessionScope.userVO==null}">
+							<c:when test="${userVO==null}">
 								<a href = "${cpath}/login.do" style="color:white;">Login</a>
 							</c:when>
 							<c:otherwise>
-								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
+								<button class="btn" style="color : white;">${userVO.user_name}</button>
 								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
 							</c:otherwise>
 						</c:choose>
-					</div>
+					</form>
 					<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 				</div>
 			</header>
 		 </div>
-
-	    			<section class="hero-wrap js-fullheight">
+	    	<section class="hero-wrap js-fullheight">
 				<div class="container-fluid px-0">
 					<div
 						class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
@@ -186,8 +169,8 @@
 	    						<div class="text p-md-5 p-4 ftco-animate">
 	    							<div class="icon d-flex align-items-center mb-5">
 	    							</div>
-	    							<h2 class="mb-4"><a href="blog-single.html">'퍼스널 컬러'에 따른
-	    							<br>헤어 컬러 추천 서비스 </a></h2>
+	    							<h2 class="mb-4"><a href="blog-single.html">
+	    							퍼스널 컬러 분석기반 <br>헤어 컬러 추천 서비스 </a></h2>
 	    							<p>이미지 분석하여 진단한 퍼스널 컬러에 따라
 	    							<br>내 피부톤과 어울리는 헤어 컬러로 스타일 Up Up!</p>
 	    							<p class="mb-0 mt-4"><a href="pcolor.do" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
@@ -195,11 +178,37 @@
 	    					</div>
 	    				</div>
 	    			</div>
+					<div class="col-md-12 blog-wrap bg-darken">
+						<div class="row no-gutters align-items-center">
+							<div
+								class="col-md-6 d-flex justify-content-center align-items-center order-md-last js-fullheight">
+								<div class="img"
+									style="background-image: url(${pageContext.request.contextPath}/resources/images/color2.jpg);"></div>
+							</div>
+							<div class="col-md-6">
+								<div class="text p-md-5 p-4 ftco-animate">
+									<h2 class="mb-4">
+										<a href="blog-single.html">좋은 첫인상을 위한 <br>나만의 '퍼스널
+											컬러'와 '스타일링'
+										</a>
+									</h2>
+									<p>
+										모든 만남은 첫인상이 중요합니다. <br>특히 취업 최종 관문인 면접에서 결정적인 역할을 하곤 하죠.
+										<br>긍정적인 첫인상을 남기기 위해서 여러가지 준비할 것이 많은데, <br>그 중 내게
+										어울리는 색을 찾는 '퍼스널 컬러'의 중요성이 더 커지고 있습니다. <br>면접을 앞둔 취준생은 물론
+										나만의 색을 찾아 보다 멋진 스타일링을 원하는 분을 위한 퍼스널 컬러 진단을 하러 가볼까요?
+									</p>
+									<p class="mb-0 mt-4">
+										<a href="#" class="btn btn-primary">진단하기 <span
+											class="ion-ios-arrow-forward"></span></a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_7.jpg);">
-	    						
-	    					</div>
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_7.jpg);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
 	    							<div class="icon d-flex align-items-center mb-5">
@@ -216,366 +225,11 @@
 	    					</div>
 	    				</div>
 	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_8.jpg);">
-	    						
-	    					</div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<div class="icon d-flex align-items-center mb-5">
-	    								<div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/person_3.jpg);"></div>
-	    								<div class="position pl-3">
-	    									<h4 class="mb-0">Jamie Jonson</h4>
-	    									<span>fashion.com</span>
-	    								</div>
-	    							</div>
-	    							<h2 class="mb-4"><a href="blog-single.html">Make Peace With Your Broken Pieces</a></h2>
-	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">Read more <span class="ion-ios-arrow-forward"></span></a></p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_9.jpg);">
-	    						
-	    					</div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<div class="icon d-flex align-items-center mb-5">
-	    								<div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/person_3.jpg);"></div>
-	    								<div class="position pl-3">
-	    									<h4 class="mb-0">Jamie Jonson</h4>
-	    									<span>fashion.com</span>
-	    								</div>
-	    							</div>
-	    							<h2 class="mb-4"><a href="blog-single.html">Make Peace With Your Broken Pieces</a></h2>
-	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">Read more <span class="ion-ios-arrow-forward"></span></a></p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
+	    			
 
 
-			<section class="ftco-section ftco-no-pb ftco-no-pt">
-				<div class="container-fluid px-0">
-					<div class="row no-gutters">
-						<div class="col-md-12 blog-wrap">
-							<div class="row no-gutters align-items-center">
-								<div class="col-md-6 img js-fullheight"
-									style="background-image: url(${pageContext.request.contextPath}/resources/images/main4.JPG);">
-								</div>
-								<div class="col-md-6">
-									<div class="text p-md-5 p-4 ftco-animate">
-										<div class="icon d-flex align-items-center mb-5"></div>
-										<h2 class="mb-4">
-											<a href="blog-single.html">좋은 첫인상을 위한 
-											<br>나만의 '퍼스널컬러'와 '스타일링'
-											</a>
-										</h2>
-										<p>
-											모든 만남은 첫인상이 중요합니다. <br>특히 취업 최종 관문인 면접에서 결정적인 역할을 하곤 하죠.
-											<br>긍정적인 첫인상을 남기기 위해서 여러가지 준비할 것이 많은데, <br>그 중 내게
-											어울리는 색을 찾는 '퍼스널 컬러'의 중요성이 더 커지고 있습니다. <br>면접을 앞둔 취준생은 물론
-											나만의 색을 찾아 보다 멋진 스타일링을 원하는 분을 위한 퍼스널 컬러 진단을 하러 가볼까요?
-										</p>
-										<p class="mb-0 mt-4">
-											<a href="#" class="btn btn-primary">진단하기 <span
-												class="ion-ios-arrow-forward"></span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 blog-wrap bg-darken">
-							<div class="row no-gutters align-items-center">
-								<div
-									class="col-md-6 d-flex justify-content-center align-items-center order-md-last js-fullheight">
-									<div class="img"
-										style="background-image: url(${pageContext.request.contextPath}/resources/images/color2.jpg);"></div>
-								</div>
-								<div class="col-md-6">
-									<div class="text p-md-5 p-4 ftco-animate">
-										<h2 class="mb-4">
-											<a href="blog-single.html">좋은 첫인상을 위한 <br>나만의 '퍼스널
-												컬러'와 '스타일링'
-											</a>
-										</h2>
-										<p>
-											모든 만남은 첫인상이 중요합니다. <br>특히 취업 최종 관문인 면접에서 결정적인 역할을 하곤 하죠.
-											<br>긍정적인 첫인상을 남기기 위해서 여러가지 준비할 것이 많은데, <br>그 중 내게
-											어울리는 색을 찾는 '퍼스널 컬러'의 중요성이 더 커지고 있습니다. <br>면접을 앞둔 취준생은 물론
-											나만의 색을 찾아 보다 멋진 스타일링을 원하는 분을 위한 퍼스널 컬러 진단을 하러 가볼까요?
-										</p>
-										<p class="mb-0 mt-4">
-											<a href="#" class="btn btn-primary">진단하기 <span
-												class="ion-ios-arrow-forward"></span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 blog-wrap">
-							<div class="row no-gutters align-items-center">
-								<div class="col-md-6 img js-fullheight"
-									style="background-image: url(${pageContext.request.contextPath}/resources/images/image_5.jpg);">
-
-								</div>
-								<div class="col-md-6">
-									<div class="text p-md-5 p-4 ftco-animate">
-										<div class="icon d-flex align-items-center mb-5">
-											<div class="position pl-3">
-												<h4 class="mb-0">App에서의 퍼스널 컬러 진단 방법</h4>
-											</div>
-										</div>
-										<h2 class="mb-4">
-											<a href="blog-single.html">퍼스널 컬러 진단방법</a>
-										</h2>
-										<p>
-											정확한 진단이 되기 위해서 <br>컬러 카드와 함께 얼굴 정면이 나오도록 찍어주세요. <br>밝은
-											곳에서 촬영해주세요. (역광은 금물! 빛을 바라보고 찍어 주세요.) <br>참고사항 : 개인정보는 앱
-											내 저장 되지 않으며, 다른 용도로 절대 사용되지 않습니다. <br>주변 환경과 조건에 따라 다소
-											오차가 발생할 수 있습니다.
-										</p>
-										<p class="mb-0 mt-4">
-											<a href="#" class="btn btn-primary">진단하기 <span
-												class="ion-ios-arrow-forward"></span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 blog-wrap">
-							<div class="row no-gutters align-items-center">
-								<div class="col-md-6 img js-fullheight"
-									style="background-image: url(${pageContext.request.contextPath}/resources/images/image_6.jpg);">
-
-								</div>
-								<div class="col-md-6">
-									<div class="text p-md-5 p-4 ftco-animate">
-										<div class="icon d-flex align-items-center mb-5">
-											<div class="img"
-												style="background-image: url(${pageContext.request.contextPath}/resources/images/person_3.jpg);"></div>
-											<div class="position pl-3">
-												<h4 class="mb-0">Jamie Jonson</h4>
-												<span>fashion.com</span>
-											</div>
-										</div>
-										<h2 class="mb-4">
-											<a href="blog-single.html">Make Peace With Your Broken
-												Pieces</a>
-										</h2>
-										<p>Far far away, behind the word mountains, far from the
-											countries Vokalia and Consonantia, there live the blind
-											texts. Separated they live in Bookmarksgrove.</p>
-										<p class="mb-0 mt-4">
-											<a href="#" class="btn btn-primary">Read more <span
-												class="ion-ios-arrow-forward"></span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 blog-wrap">
-							<div class="row no-gutters align-items-center">
-								<div class="col-md-6 img js-fullheight"
-									style="background-image: url(${pageContext.request.contextPath}/resources/images/image_7.jpg);">
-
-								</div>
-								<div class="col-md-6">
-									<div class="text p-md-5 p-4 ftco-animate">
-										<div class="icon d-flex align-items-center mb-5">
-											<div class="img"
-												style="background-image: url(${pageContext.request.contextPath}/resources/images/person_4.jpg);"></div>
-											<div class="position pl-3">
-												<h4 class="mb-0">Jamie Jonson</h4>
-												<span>fashion.com</span>
-											</div>
-										</div>
-										<h2 class="mb-4">
-											<a href="blog-single.html">Make Peace With Your Broken
-												Pieces</a>
-										</h2>
-										<p>Far far away, behind the word mountains, far from the
-											countries Vokalia and Consonantia, there live the blind
-											texts. Separated they live in Bookmarksgrove.</p>
-										<p class="mb-0 mt-4">
-											<a href="#" class="btn btn-primary">Read more <span
-												class="ion-ios-arrow-forward"></span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 blog-wrap">
-							<div class="row no-gutters align-items-center">
-								<div class="col-md-6 img js-fullheight"
-									style="background-image: url(${pageContext.request.contextPath}/resources/images/image_8.jpg);">
-
-								</div>
-								<div class="col-md-6">
-									<div class="text p-md-5 p-4 ftco-animate">
-										<div class="icon d-flex align-items-center mb-5">
-											<div class="img"
-												style="background-image: url(${pageContext.request.contextPath}/resources/images/person_3.jpg);"></div>
-											<div class="position pl-3">
-												<h4 class="mb-0">Jamie Jonson</h4>
-												<span>fashion.com</span>
-											</div>
-										</div>
-										<h2 class="mb-4">
-											<a href="blog-single.html">Make Peace With Your Broken
-												Pieces</a>
-										</h2>
-										<p>Far far away, behind the word mountains, far from the
-											countries Vokalia and Consonantia, there live the blind
-											texts. Separated they live in Bookmarksgrove.</p>
-										<p class="mb-0 mt-4">
-											<a href="#" class="btn btn-primary">Read more <span
-												class="ion-ios-arrow-forward"></span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 blog-wrap">
-							<div class="row no-gutters align-items-center">
-								<div class="col-md-6 img js-fullheight"
-									style="background-image: url(${pageContext.request.contextPath}/resources/images/image_9.jpg);">
-
-								</div>
-								<div class="col-md-6">
-									<div class="text p-md-5 p-4 ftco-animate">
-										<div class="icon d-flex align-items-center mb-5">
-											<div class="img"
-												style="background-image: url(${pageContext.request.contextPath}/resources/images/person_3.jpg);"></div>
-											<div class="position pl-3">
-												<h4 class="mb-0">Jamie Jonson</h4>
-												<span>fashion.com</span>
-											</div>
-										</div>
-										<h2 class="mb-4">
-											<a href="blog-single.html">Make Peace With Your Broken
-												Pieces</a>
-										</h2>
-										<p>Far far away, behind the word mountains, far from the
-											countries Vokalia and Consonantia, there live the blind
-											texts. Separated they live in Bookmarksgrove.</p>
-										<p class="mb-0 mt-4">
-											<a href="#" class="btn btn-primary">Read more <span
-												class="ion-ios-arrow-forward"></span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-12 blog-wrap">
-							<div class="row no-gutters align-items-center">
-								<div class="col-md-6 img js-fullheight"
-									style="background-image: url(${pageContext.request.contextPath}/resources/images/image_10.jpg);">
-
-								</div>
-								<div class="col-md-6">
-									<div class="text p-md-5 p-4 ftco-animate">
-										<div class="icon d-flex align-items-center mb-5">
-											<div class="img"
-												style="background-image: url(${pageContext.request.contextPath}/resources/images/person_3.jpg);"></div>
-											<div class="position pl-3">
-												<h4 class="mb-0">Jamie Jonson</h4>
-												<span>fashion.com</span>
-											</div>
-										</div>
-										<h2 class="mb-4">
-											<a href="blog-single.html">Make Peace With Your Broken
-												Pieces</a>
-										</h2>
-										<p>Far far away, behind the word mountains, far from the
-											countries Vokalia and Consonantia, there live the blind
-											texts. Separated they live in Bookmarksgrove.</p>
-										<p class="mb-0 mt-4">
-											<a href="#" class="btn btn-primary">Read more <span
-												class="ion-ios-arrow-forward"></span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-12 blog-wrap bg-darken">
-							<div class="row no-gutters align-items-center">
-								<div
-									class="col-md-6 d-flex justify-content-center align-items-center order-md-last js-fullheight">
-									<div class="img"
-										style="background-image: url(${pageContext.request.contextPath}/resources/images/image_11.jpg);"></div>
-								</div>
-								<div class="col-md-6">
-									<div class="text p-md-5 p-4 ftco-animate">
-										<div class="icon d-flex align-items-center mb-5">
-											<div class="img"
-												style="background-image: url(${pageContext.request.contextPath}/resources/images/person_2.jpg);"></div>
-											<div class="position pl-3">
-												<h4 class="mb-0">Jamie Jonson</h4>
-												<span>fashion.com</span>
-											</div>
-										</div>
-										<h2 class="mb-4">
-											<a href="blog-single.html">Make Peace With Your Broken
-												Pieces</a>
-										</h2>
-										<p>Far far away, behind the word mountains, far from the
-											countries Vokalia and Consonantia, there live the blind
-											texts. Separated they live in Bookmarksgrove.</p>
-										<p class="mb-0 mt-4">
-											<a href="#" class="btn btn-primary">Read more <span
-												class="ion-ios-arrow-forward"></span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-12 blog-wrap">
-							<div class="row no-gutters align-items-center">
-								<div class="col-md-6 img js-fullheight"
-									style="background-image: url(${pageContext.request.contextPath}/resources/images/image_12.jpg);">
-
-								</div>
-								<div class="col-md-6">
-									<div class="text p-md-5 p-4 ftco-animate">
-										<div class="icon d-flex align-items-center mb-5">
-											<div class="img"
-												style="background-image: url(${pageContext.request.contextPath}/resources/images/person_3.jpg);"></div>
-											<div class="position pl-3">
-												<h4 class="mb-0">Jamie Jonson</h4>
-												<span>fashion.com</span>
-											</div>
-										</div>
-										<h2 class="mb-4">
-											<a href="blog-single.html">Make Peace With Your Broken
-												Pieces</a>
-										</h2>
-										<p>Far far away, behind the word mountains, far from the
-											countries Vokalia and Consonantia, there live the blind
-											texts. Separated they live in Bookmarksgrove.</p>
-										<p class="mb-0 mt-4">
-											<a href="#" class="btn btn-primary">Read more <span
-												class="ion-ios-arrow-forward"></span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-		<footer class="ftco-footer ftco-section img" style="width: 100%;">
-	    	<div class="overlay"></div>
+   	<footer class="ftco-footer ftco-section img" style="width:100%;">
+	    <div class="overlay"></div>
 	      <div class="container">
 	        <div class="row mb-5">
 	          <div class="col-lg-3">
@@ -645,47 +299,31 @@
 	        <div class="row">
 	          <div class="col-md-12 text-center">
 
-	            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Why is this working
-	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Why is this working</p>
 	          </div>
 	        </div>
 	      </div>
-	    </footer>
+	</footer>
       <!-- loader -->
       <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
       </div>
     </div>
 
-
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.magnific-popup.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.magnific-popup.min.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/aos.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.animateNumber.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/scrollax.min.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/google-map.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.animateNumber.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/scrollax.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/google-map.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 
 </body>
