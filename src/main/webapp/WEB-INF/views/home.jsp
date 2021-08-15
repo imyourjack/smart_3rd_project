@@ -107,7 +107,7 @@
 	    		<div class="row no-gutters">
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/main4.JPG);">	
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/main5.jfif);">	
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
@@ -127,14 +127,14 @@
 	    			</div>
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/clothes.jpg);">	
+	    					<div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/clothes1.jpg);">	
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
 	    							<div class="icon d-flex align-items-center mb-5">
 	    							</div>
 	    							<h2 class="mb-4"><a href="blog-single.html">내 옷장에 옷들과 
-	    							<br>마이 '퍼스널 컬러' 매칭 적합도</a></h2>
+	    							<br>나의 '퍼스널 컬러' 매칭 적합도</a></h2>
 	    							<p>이미지 분석하여 진단한 내 퍼스널 컬러와
 	    							<br>내가 가지고 있는 옷들이 얼마나 어울릴까?
 	    							<br>
@@ -225,11 +225,41 @@
 	    					</div>
 	    				</div>
 	    			</div>
-	    			
+						<div class="col-md-12 blog-wrap">
+							<div class="row no-gutters align-items-center">
+								<div class="col-md-6 img js-fullheight"
+									style="background-image: url(${pageContext.request.contextPath}/resources/images/image_5.jpg);">
+
+								</div>
+								<div class="col-md-6">
+									<div class="text p-md-5 p-4 ftco-animate">
+										<div class="icon d-flex align-items-center mb-5">
+											<div class="position pl-3">
+												<h4 class="mb-0">App에서의 퍼스널 컬러 진단 방법</h4>
+											</div>
+										</div>
+										<h2 class="mb-4">
+											<a href="blog-single.html">퍼스널 컬러 진단방법</a>
+										</h2>
+										<p>
+											정확한 진단이 되기 위해서 <br>컬러 카드와 함께 얼굴 정면이 나오도록 찍어주세요. 
+											<br>밝은 곳에서 촬영해주세요. (역광은 금물! 빛을 바라보고 찍어 주세요.)
+											<br>참고사항 : 개인정보는 앱 내 저장 되지 않으며, 다른 용도로 절대 사용되지 않습니다.
+											<br>주변 환경과 조건에 따라 다소 오차가 발생할 수 있습니다.
+										</p>
+										<p class="mb-0 mt-4">
+											<a href="#" class="btn btn-primary">진단하기 <span
+												class="ion-ios-arrow-forward"></span></a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+				</section>
 
 
-   	<footer class="ftco-footer ftco-section img" style="width:100%;">
-	    <div class="overlay"></div>
+		<footer class="ftco-footer ftco-section img" style="width: 100%;">
+	    	<div class="overlay"></div>
 	      <div class="container">
 	        <div class="row mb-5">
 	          <div class="col-lg-3">
