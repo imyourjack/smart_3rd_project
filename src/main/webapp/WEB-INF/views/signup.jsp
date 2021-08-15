@@ -140,6 +140,7 @@
 						</div>
 					</div>
 				</div>
+			</section>
 			<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
 				<br> <br>
 				<div class="container" style="width: 600px;">
