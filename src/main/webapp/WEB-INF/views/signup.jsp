@@ -10,49 +10,30 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link
-	href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
-	rel="stylesheet">
-<link
-	href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/open-iconic-bootstrap.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/animate.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/open-iconic-bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/animate.css">
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/aos.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/aos.css">
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/ionicons.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/ionicons.min.css">
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/bootstrap-datepicker.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/jquery.timepicker.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jquery.timepicker.css">
 
 
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/flaticon.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/icomoon.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/style.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	function signupFn() {
 		var signData = $("#srm").serialize();
@@ -91,7 +72,6 @@
 </script>
 </head>
 <body>
-
 	<div class="page">
 		<nav id="colorlib-main-nav" role="navigation">
 			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
@@ -114,7 +94,6 @@
 				</div>
 			</div>
 		</nav>
-
 		<div id="colorlib-page">
 			<header>
 				<div class="container">
@@ -195,46 +174,23 @@
 				<jsp:param name="pageSelection" value="footer" />
 			</jsp:include>
 
-			<!-- loader -->
-			<div id="ftco-loader" class="show fullscreen">
-				<svg class="circular" width="48px" height="48px">
-				<circle class="path-bg" cx="24" cy="24" r="22" fill="none"
-						stroke-width="4" stroke="#eeeeee" />
-				<circle class="path" cx="24" cy="24" r="22" fill="none"
-						stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg>
-			</div>
-
 		</div>
 	</div>
-
-
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.magnific-popup.min.js"></script>
+	
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.magnific-popup.min.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/aos.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.animateNumber.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/scrollax.min.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/google-map.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery.animateNumber.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/scrollax.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/google-map.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 
 </body>
