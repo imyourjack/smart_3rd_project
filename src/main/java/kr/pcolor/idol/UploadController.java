@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.pcolor.domain.AttachFileVO;
+import kr.pcolor.domain.resultVO;
 
 @Controller
 public class UploadController {
@@ -34,11 +35,13 @@ public class UploadController {
    // MultipartFile[] : 파일에 대한 정보를 받기 위한 것(파일에 대한 데이터는 여러가지 이므로 [](배열)형태로 받는다)
    public String uploadFormAction(MultipartFile[] uploadFile, Model model) {
       
+	  // DB에서 user_id에 대한 정보를 담을 VO객체 생성
+	  List<resultVO> list_user = new ArrayList<resultVO>();
+	   
       // 업로드 파일에 대한 정보를 담을 VO객체 생성
       List<AttachFileVO> list = new ArrayList<AttachFileVO>();
       
-      String uploadFolder="C:\\Users\\21SMT74\\00. 3차프로젝트_idol\\upload";
-      // String uploadFolderPath = getFolder(); // 2021\07\27(오늘날짜 데이터가 들어감)
+      String uploadFolder="C:\\Users\\21SMT74\\00_3차프로젝트_idol\\upload";
       
       // 실제로 디렉토리(폴더)를 만들기 위해서.
       File uploadPath = new File(uploadFolder);
@@ -51,13 +54,8 @@ public class UploadController {
       
       // 파일 1개씩 데이터를 사용하기 위해 for문을 사용
       for(MultipartFile multipartFile : uploadFile) {
-            // 파일 이름, 파일 크기 출력 테스트
-         // System.out.print(multipartFile.getOriginalFilename()+":");
-         // System.out.println(multipartFile.getSize());
          
          AttachFileVO vo = new AttachFileVO();
-         
-         // 선택한 파일을 실제로 업로드!
          
          // 파일이름을 String형 변수에 저장
          String uploadFileName = multipartFile.getOriginalFilename();
@@ -70,9 +68,6 @@ public class UploadController {
          try {
             // 기존에 있는 파일을 복사.
             multipartFile.transferTo(saveFile);
-            
-            // vo에 uuid정보, 파일 경로를 설정
-            //vo.setUploadPath(uploadFolderPath);
             
             // list에 vo 데이터 입력
             list.add(vo);
@@ -91,10 +86,9 @@ public class UploadController {
       // model.addAttribute("list", list);
       
       /*String flaskUrl = "http://localhost:5000?imgurl="+filename;*/
-      String flaskUrl = "http://192.168.177.37:5000?imgurl="+filename;
+      String flaskUrl = "http://192.168.20.37:5000?imgurl="+filename;
       
-      return "redirect:" + flaskUrl;
-      
+      return "redirect:"+flaskUrl;
    }
    
    private String getFolder() {

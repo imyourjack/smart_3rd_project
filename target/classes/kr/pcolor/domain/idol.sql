@@ -18,6 +18,9 @@ SELECT * FROM tbl_result;
 SELECT * FROM tbl_reply;
 
 
+-- 사용자 진단결과 톤을 SELECT하기 위한 쿼리문
+SELECT DISTINCT pc_name FROM tbl_result r, tbl_pcolor p WHERE r.pc_idx = p.pc_idx AND user_id = 'admin'
+
 -- tbl_user 생성
 CREATE TABLE tbl_user(
     user_id              VARCHAR(30) NOT NULL,
