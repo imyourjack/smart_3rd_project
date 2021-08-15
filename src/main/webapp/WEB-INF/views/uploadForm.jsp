@@ -108,9 +108,8 @@
 		    	<div class="row no-gutters d-flex">
 	    			<div class="col-md-12 col-lg-6 d-flex align-items-stretch">
 	    				<div class="img-about img d-flex align-items-stretch">
-		    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(${pageContext.request.contextPath}/resources/images/about.jpg); height: 700px;">
-		    				</div>
-	    				</div>
+		    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(${pageContext.request.contextPath}/resources/images/fashionmain.jpg); height: 700px;">
+		    				</div>	    				</div>
 	    			</div>
 	    			<div class="col-md-12 col-lg-6 pl-lg-5 py-5 d-flex align-items-center">
 	    				<div class="p-0 px-lg-5 p-lg-0">

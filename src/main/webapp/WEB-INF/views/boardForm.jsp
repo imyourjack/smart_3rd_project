@@ -126,7 +126,7 @@
 								<div class="form-group">
 								<br>
 									<label>작성자</label> <input type="text" class="form-control"
-										id="user_id" name="user_id">
+										id="user_id" name="user_id" value="${sessionScope.userVO.user_id}" readonly="readonly">
 										<br>
 								</div>
 								<input type="submit" class="btn btn-primary btn-sm" style="width: 80px; height: 52px;" value="작성">

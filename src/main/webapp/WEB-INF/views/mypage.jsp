@@ -89,17 +89,19 @@
 	        <div class="colorlib-navbar-brand">
 	          <a class="colorlib-logo" href="home.do">PALETTE</a>
 	        </div>
-	        <div method="post" action="${cpath}/login.do" class="loginForm">
+	        <form method="post" action="${cpath}/login.do">
+	        <div class="loginForm">
 						<c:choose>
 							<c:when test="${vo==null}">
 								<a href = "${cpath}/login.do" style="color : white;">Login</a>
 							</c:when>
 							<c:otherwise>
-								<button class="btn" style="color : white;">${vo.user_name}</button>
+								<div class="btn" style="color : white;">${vo.user_name}</div>
 								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a>
 							</c:otherwise>
 						</c:choose>
 					</div>
+					</form>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
@@ -146,10 +148,6 @@
 						    <div class="form-group">
 						      <label for="exampleInputEmail1">age</label>
 						      <input type="text" class="form-control" name="user_age" id="user_age" value="${vo.user_age}" placeholder="${vo.user_age}">
-						    </div>
-						    <div class="form-group">
-						      <label for="exampleInputEmail1">gender</label>
-						      <input type="text" class="form-control" name="user_gender" id="user_gender" value="${vo.user_gender}" placeholder="${vo.user_gender}">
 						    </div>
 						    <br>
 						    <div align="center">

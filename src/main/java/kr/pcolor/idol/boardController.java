@@ -72,16 +72,20 @@ public class boardController {
 //	}
    
    @RequestMapping("/replyInsert.do")
-   public ModelAndView replyInsert(ReplyVO vo, int board_idx) {
-   boardMapper.replyInsert(vo);
-    ModelAndView mav = new ModelAndView();
-      List<ReplyVO> cList = boardMapper.replyList(board_idx);
-      //BoardVO bList = boardMapper.boardContent(board_idx);
-      mav.setViewName("boardContent");
-      mav.addObject("list", cList);
-      //mav.addObject("vo", bList);
-      return mav;
+   public String replyInsert(ReplyVO vo, int board_idx) {
+	   boardMapper.replyInsert(vo);
+	   //ModelAndView mav = new ModelAndView();
+	   //List<ReplyVO> cList = boardMapper.replyList(board_idx);
+	   //BoardVO bList = boardMapper.boardContent(board_idx);
+	   // mav.setViewName("boardContent");
+	   // mav.addObject("list", cList);
+	   //mav.addObject("vo", bList);
+	   //System.out.println("mav입니다 -> "+mav);
+      
+	   return "redirect:/boardContent.do?board_idx="+board_idx;
    }
+  
+   
    
    @RequestMapping("/replyDelete.do")
       public void replyDelete(int reply_idx) {
