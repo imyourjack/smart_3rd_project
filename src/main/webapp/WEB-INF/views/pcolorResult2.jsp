@@ -108,8 +108,8 @@
                   <div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/summerColor.png);"></div>
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
-						<h2 class="mb-4"><a>당신의 퍼스널 컬러는</a></h2>
-						<h2 class="mb-4"><a>'여름 쿨톤' 입니다.</a></h2>
+						<h2 class="mb-4">당신의 퍼스널 컬러는</h2>
+						<h2 class="mb-4">'여름 쿨톤' 입니다.</h2>
 						<p>여름 쿨톤인 사람은 대체적으로 깨끗한 이미지를 가지고 있습니다.
 						<br>또한 여름 타입은 시원하고 부드러운 스타일이 주로 많습니다.
 						<br>여름 타입은 흰색과 파랑을 지닌 차가운 유형으로 
@@ -126,7 +126,7 @@
    					</div>
    					<div class="col-md-6">
    						<div class="text p-md-5 p-4 ftco-animate">
-   							<h2 class="mb-4"><a href="blog-single.html">'여름 쿨'의 컬러 팔레트</a></h2>
+   							<h2 class="mb-4">'여름 쿨'의 컬러 팔레트</h2>
    							<p>흰색과 파란색을 머금고 있는 여름 컬러들은
    							<br>소프트하고 밝은 컬러, 그레이쉬한 컬러들로 이루어져 있어 시원하고 화려한 인상을 줍니다.
    							<br>여름 쿨톤의 컬러들은 블루 베이스로 이루어져 있고 난색이어도 차가운 느낌을 가집니다.
@@ -149,6 +149,9 @@
 	    					
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
+									<h2 class="mb-4">'여름 쿨'에 어울리는 향수</h2>
+									<br>
+									<br>
 	    							<c:forEach var="vo" items="${list}" begin="3" end="5" step="1">
 	    							<div width="300" height="300">
 		    							<h3 class="mb-4">${vo.item_name}</h3>

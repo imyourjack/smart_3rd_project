@@ -129,13 +129,7 @@
 								    	<label for="cap2" class="btn btn-primary btn-sm" style="width: 150px;height: 40px;font-size: 20px;margin-top: 30px;">진단하기     <span class="ion-ios-arrow-forward"></span></label>
 								    	<button id="cap2" style="display:none;">진단</button>
 								    </form>
-				        	</div>
-				        	<div class="col-md-6">
-				        	
-				       		 </div>
-			         		 <div class="counter-wrap mb-0 ftco-animate d-flex mt-md-3">
-			         		 
-			          		</div>
+				        		</div>
 			     		    </div>
 				        </div>
 				        </div>
