@@ -62,29 +62,31 @@
       <header>
          <div class="container">
            <div class="colorlib-navbar-brand">
-             <a class="colorlib-logo" href="home.do">palette</a>
+             <a class="colorlib-logo" href="home.do" style="position: absolute; z-index: 2; top: 45px;">PALETTE</a>
            </div>
-           <div method="post" action="${cpath}/login.do" class="loginForm">
-                  <c:choose>
-                     <c:when test="${sessionScope.userVO==null}">
-                        <a href = "${cpath}/login.do" style="color: white;">Login</a>
-                     </c:when>
-                     <c:otherwise>
-                        <button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-                        <a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
-                     </c:otherwise>
-                  </c:choose>
-               </div>
+	        <div method="post" action="${cpath}/login.do" class="loginForm">
+				<c:choose>
+					<c:when test="${sessionScope.userVO==null}">
+						<a href = "${cpath}/login.do" style="color : white; margin-left: 2160%;">Login</a>
+					</c:when>
+					<c:otherwise>
+						<div class="logoutForm">
+							<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
+							<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+						</div>
+					</c:otherwise>
+				</c:choose>
+			</div>
            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_3.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/spring.jpg);">
          <div class="overlay"></div>
          <div class="container-fluid px-0">
            <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
              <div class="col-md-12 ftco-animate text-center">
-               <h1 class="bread">personal color</h1>
+               <h1 class="bread">spring</h1>
              </div>
            </div>
          </div>
@@ -96,11 +98,12 @@
                   <div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/springColor.png);"></div>
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
-						<h2 class="mb-4">당신의 퍼스널 컬러는</h2>
-						<h2 class="mb-4">'봄 웜' 입니다.</h2>
+                  <h2 class="mb-4">당신의 퍼스널 컬러는</h2>
+                  <h2 class="mb-4">'봄 웜' 입니다.</h2>
                         <p>한국인의 많은 사람이 봄 웜톤의 피부색을 가지고 있습니다.
                         <br>봄 웜톤인 사람은 봄의 느낌처럼 밝고 노란빛의 피부를 가지고 있습니다.
-                        <br>봄 타입은 노란색을 지닌 따듯한 유형으로 선명 하고 밝은 톤과 엷은 톤으로 생동감과 에너지를 느끼게 합니다.
+                        <br>봄 타입은 노란색을 지닌 따듯한 유형으로
+                        <br>선명 하고 밝은 톤과 엷은 톤으로 생동감과 에너지를 느끼게 합니다.
                         <br>피부는 밝으면서 매끄럽고 투명한 분들이 많고 피부가 얇아서 주근깨 같은 잡티가 있는 경우도 있습니다.</p>
                      </div>
                   </div>
@@ -116,10 +119,10 @@
                         <p>봄 컬러들은 전체적으로 노란색을 가지고 있는 그룹으로 
                         <br>밝고 따뜻한 색이 이루어져 있어 활기찬 느낌이 나는 탄력 있는 팔레트입니다.
                         <br>따라서 봄의 맑은 이미지를 생각하며 스타일링 하는 것을 추천합니다.
-	                    <br>봄 타입에게 잘 어울리는 컬러는 
-	                    <br>아이보리 베이지와 같은 밝은 톤과 알록달록한 선명한 컬러를 사용할 수 있는데 
-	                    <br>대표적인 컬러는 복숭아 핑크, 오렌지 레드, 옐로우, 그린, 퍼플 등
-	                    <br>싱그러운 과일이나 햇살을 듬뿍 머금은 선명한 컬러입니다.</p>
+                       <br>봄 타입에게 잘 어울리는 컬러는 
+                       <br>아이보리 베이지와 같은 밝은 톤과 알록달록한 선명한 컬러를 사용할 수 있는데 
+                       <br>대표적인 컬러는 복숭아 핑크, 오렌지 레드, 옐로우, 그린, 퍼플 등
+                       <br>싱그러운 과일이나 햇살을 듬뿍 머금은 선명한 컬러입니다.</p>
                      </div>
                   </div>
                </div>
@@ -128,28 +131,28 @@
                 <div class="row no-gutters align-items-center">
                    <div class="col-md-6 img js-fullheight">
                          <c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
-                         	<img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
+                            <img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
                          </c:forEach>
                    </div>
                    
-		           <div class="col-md-6">
-		               <div class="text p-md-5 p-4 ftco-animate">
-		                  <h2 class="mb-4">'봄 웜'에 어울리는 향수</h2>
-		                  <br>
-		                  <br>
-		                  <c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
-		                   <div width="300" height="300">
-		                      <h3 class="mb-4">${vo.item_name}</h3>
-		                      <p style=" font-size: 12px;">${vo.item_tag}</p>
-		                      <p style=" font-size: 15px;">${vo.item_explain}</p>
-		                      <a style=" font-size: 15px;" href="${vo.item_product_url}">${vo.item_product_url}</a>
-		                  </div>
-		               	  <br>
-		                 </c:forEach>
-		               </div>
-		            </div>
-			     </div>
-		   </div>
+                 <div class="col-md-6">
+                     <div class="text p-md-5 p-4 ftco-animate">
+                        <h2 class="mb-4">'봄 웜'에 어울리는 향수</h2>
+                        <br>
+                        <br>
+                        <c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
+                         <div width="300" height="300">
+                            <h3 class="mb-4">${vo.item_name}</h3>
+                            <p style=" font-size: 12px;">${vo.item_tag}</p>
+                            <p style=" font-size: 15px;">${vo.item_explain}</p>
+                            <a style=" font-size: 15px;" href="${vo.item_product_url}">${vo.item_product_url}</a>
+                        </div>
+                          <br>
+                       </c:forEach>
+                     </div>
+                  </div>
+              </div>
+         </div>
             
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
@@ -178,9 +181,9 @@
    </section>
 
       
-   		<jsp:include page="footer.jsp">
-			<jsp:param name="pageSelection" value="footer" />
-		</jsp:include>
+         <jsp:include page="footer.jsp">
+         <jsp:param name="pageSelection" value="footer" />
+      </jsp:include>
 
       <!-- loader -->
       <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>

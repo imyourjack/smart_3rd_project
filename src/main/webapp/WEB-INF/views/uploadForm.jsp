@@ -64,22 +64,24 @@
     </nav>
     <div id="colorlib-page">
       <header>
-      	<div class="container">
-	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="home.do">palette</a>
-	        </div>
+         <div class="container">
+           <div class="colorlib-navbar-brand">
+             <a class="colorlib-logo" href="home.do" style="position: absolute; z-index: 2; top: 45px;">PALETTE</a>
+           </div>
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
 				<c:choose>
 					<c:when test="${sessionScope.userVO==null}">
-						<a href = "${cpath}/login.do" style="color : white;">Login</a>
+						<a href = "${cpath}/login.do" style="color : white; margin-left: 2160%;">Login</a>
 					</c:when>
 					<c:otherwise>
-						<button class="btn" color="white" style="color : white;">${sessionScope.userVO.user_name}</button>
-						<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+						<div class="logoutForm">
+							<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
+							<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+						</div>
 					</c:otherwise>
 				</c:choose>
 			</div>
-	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+           <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
 
@@ -107,7 +109,7 @@
 	    							<p>Color types help stylize makeup, fashion. </p>
 	    							<p>have you ever thought about your personal colors</p>
 	    							<p>that perfectly suit your image?</p>
-									<p class="mb-0 mt-4"><a href="fashionCheck.do?user_id=${sessionScope.userVO.user_id}" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
+									<p class="mb-0 mt-4"><a href="fashionCheck.do?user_id=${sessionScope.userVO.user_id}" class="btn btn-dark">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
 	    						</div>
 	    					</div>
 	    				</div>
