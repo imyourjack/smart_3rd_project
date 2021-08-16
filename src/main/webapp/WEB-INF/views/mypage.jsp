@@ -32,36 +32,36 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">		
-		    function logoutFn(){
-		    	   $.ajax({
-		    	      url: "logout.do",
-		    	      type:"get",
-		    	      success:function(){ 
-		    	         location.href="home.do"
-		    	      },
-		    	     error:function(){alert("error");}	      
-		    	   });	   
-		    	}		    
-		    function goDel(){
-		    	var user_id=$("#user_id").val();
-	             $.ajax({
-	                url : "userDelete.do",
-	                 data : {"user_id":user_id},
-	                 success : function(data){
-	                       location.href="home.do"; 
-	                 },       
-	                 error : function(){alert("error");}            
-	             });
-		  	}
+    <script type="text/javascript">      
+          function logoutFn(){
+                $.ajax({
+                   url: "logout.do",
+                   type:"get",
+                   success:function(){ 
+                      location.href="home.do"
+                   },
+                  error:function(){alert("error");}         
+                });      
+             }          
+          function goDel(){
+             var user_id=$("#user_id").val();
+                $.ajax({
+                   url : "userDelete.do",
+                    data : {"user_id":user_id},
+                    success : function(data){
+                          location.href="home.do"; 
+                    },       
+                    error : function(){alert("error");}            
+                });
+           }
 
-		  
-	</script>  
-	<style type="text/css">
-	strong{
-	font-weight: 700;
-	}
-	</style>  
+        
+   </script>  
+   <style type="text/css">
+   strong{
+   font-weight: 700;
+   }
+   </style>  
   </head>
   <body>
   
@@ -76,8 +76,8 @@
             <div class="col-md-12 text-center">
               <h1 class="mb-4"><a href="home.do" class="logo">palette</a></h1>
               <ul>
-              	
-              	<jsp:include page="menu.jsp">
+                 
+                 <jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="5" />
                 </jsp:include>
                 
@@ -90,106 +90,100 @@
     
     <div id="colorlib-page">
       <header>
-      	<div class="container">
-      	
-	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="home.do">PALETTE</a>
-	        </div>
-	        <form method="post" action="${cpath}/login.do">
-	        <div class="loginForm">
-						<c:choose>
-							<c:when test="${vo==null}">
-								<a href = "${cpath}/login.do" style="color : white;">Login</a>
-							</c:when>
-							<c:otherwise>
-								<div class="btn" style="color : white;">${vo.user_name}</div>
-								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a>
-							</c:otherwise>
-						</c:choose>
-					</div>
-					</form>
-	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+         <div class="container">
+         
+           <div class="colorlib-navbar-brand">
+             <a class="colorlib-logo" href="home.do">PALETTE</a>
+           </div>
+           <div method="post" action="${cpath}/login.do" class="loginForm">
+            <c:choose>
+               <c:when test="${sessionScope.userVO==null}">
+                  <a href = "${cpath}/login.do" style="color : white; margin-left: 2160%;">Login</a>
+               </c:when>
+               <c:otherwise>
+                  <div class="logoutForm">
+                     <button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
+                     <a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+                  </div>
+               </c:otherwise>
+            </c:choose>
+         </div>
+           <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
-
+      
       <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation2.png);">
-      	<div class="overlay"></div>
-	      <div class="container-fluid px-0">
-	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
-	          <div class="col-md-12 ftco-animate text-center">
-	            <h1 class="bread">mypage</h1>
-	          </div>
-	        </div>
-	      </div>
+         <div class="overlay"></div>
+         <div class="container-fluid px-0">
+           <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
+             <div class="col-md-12 ftco-animate text-center">
+               <h1 class="bread">mypage</h1>
+             </div>
+           </div>
+         </div>
       </section>
 
-	    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
-	    <br>
-	    <br>
-				<div class="container" style="width: 600px;">
-					<div class="panel panel-default">
-					
-					<!-- 폼 넣을 곳 -->
-						<div style="height:50px"></div>
-						<form id="frm" method="post" action="${cpath}/userUpdate.do">
-						  <fieldset>
-						  	<div align="center">
-						    <h1><strong>회원정보</strong></h1>
-						    </div>
-						    <br>
-						    <div class="form-group">
-						      <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
-						      <input type="text" class="form-control" readonly="readonly" name="user_id" id="user_id" value="${vo.user_id}"  placeholder="${vo.user_id}">     
-						      </div>
-						    
-						    <div class="form-group">
-						      <label for="exampleInputPassword1">Password</label>
-						      <input type="password" class="form-control" name="user_password" id="user_password" value="${vo.user_password}" placeholder="${vo.user_password}">
-						    </div>
-						    <div class="form-group">
-						      <label for="exampleInputEmail1">Name</label>
-						      <input type="text" class="form-control" name="user_name" id="user_name" value="${vo.user_name}" placeholder="${vo.user_name}">
-						    </div>
-						    <div class="form-group">
-						      <label for="exampleInputEmail1">Age</label>
-						      <input type="text" class="form-control" name="user_age" id="user_age" value="${vo.user_age}" placeholder="${vo.user_age}">
-						    </div>
-						    <div class="form-group">
-						      <label for="exampleInputEmail1">Gender</label>
-						      <input type="text" class="form-control" name="user_gender" id="user_gender" value="${vo.user_gender}" placeholder="${vo.user_gender}">
-						    </div>
-						    <br>
-						    <div align="center">
-						    <input type="submit" value="수정" class="btn btn-dark" style="width: 80px; height: 40px;" onclick="updateFn()">	
-							<a href="${cpath}/goResult.do?user_id=${vo.user_id}"><input type='button' value='진단내역' class="btn btn-dark" style="width: 110px; height: 40px;"></a>
-							<br>
-							<br>
-							<a style="font-size:14px;">회원탈퇴를 원하십니까? > </a>
-							<a type="button" style="font-size : 14px" onclick="goDel()"> 회원탈퇴</a>	
-							</div>
-						  </fieldset>
-						</form>
-						</div>
-						<br>
-						<!-- 폼 넣을 곳 -->						
-					</div>
-				</div>
-			</section>
-			<br>
-			<br>
-			<br>
-
-      
-   		<jsp:include page="footer.jsp">
-			<jsp:param name="pageSelection" value="footer" />
-		</jsp:include>
+       <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
+       <br>
+       <br>
+            <div class="container" style="width: 600px;">
+               <div class="panel panel-default">
+               
+               <!-- 폼 넣을 곳 -->
+                  <div style="height:50px"></div>
+                  <form id="frm" method="post" action="${cpath}/userUpdate.do">
+                    <fieldset>
+                       <div align="center">
+                      <h1><strong>회원정보</strong></h1>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
+                        <input type="text" class="form-control" readonly="readonly" name="user_id" id="user_id" value="${vo.user_id}"  placeholder="${vo.user_id}">     
+                        </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" name="user_password" id="user_password" value="${vo.user_password}" placeholder="${vo.user_password}">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="text" class="form-control" name="user_name" id="user_name" value="${vo.user_name}" placeholder="${vo.user_name}">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Age</label>
+                        <input type="text" class="form-control" name="user_age" id="user_age" value="${vo.user_age}" placeholder="${vo.user_age}">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Gender</label>
+                        <input type="text" class="form-control" name="user_gender" id="user_gender" value="${vo.user_gender}" placeholder="${vo.user_gender}">
+                      </div>
+                      <br>
+                      <div align="center">
+                      <input type="submit" value="수정" class="btn btn-dark" style="width: 80px; height: 40px;" onclick="updateFn()">   
+                     <a href="${cpath}/goResult.do?user_id=${vo.user_id}"><input type='button' value='진단내역' class="btn btn-dark" style="width: 110px; height: 40px;"></a>
+                     <br>
+                     <br>
+                     <a style="font-size:14px;">회원탈퇴를 원하십니까? > </a>
+                     <a type="button" style="font-size : 14px" onclick="goDel()"> 회원탈퇴</a>   
+                     </div>
+                    </fieldset>
+                  </form>
+                  </div>
+                  <br>
+                  <!-- 폼 넣을 곳 -->                  
+               </div>
+         </section>
+            </div>
+               <br><br><br>
+               
+         <jsp:include page="footer.jsp">
+            <jsp:param name="pageSelection" value="footer" />
+          </jsp:include>
 
       <!-- loader -->
       <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
       </div>
-    </div>
-
 
     <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>

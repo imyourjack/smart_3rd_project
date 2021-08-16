@@ -20,7 +20,7 @@ public interface UserMapper {
    public UserVO loginUser(UserVO vo);
    
 //   @Select("select count(*) from tbl_user where user_id = #{user_id}")
-//   public void checkUser(String user_id);
+//   public int checkUser(String user_id);
     
     @Insert("insert into tbl_user (user_id, user_password, user_name, user_age, user_gender) values (#{user_id}, #{user_password}, #{user_name}, #{user_age}, #{user_gender})")
     public void insertUser(UserVO vo);

@@ -11,22 +11,15 @@
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/animate.css">
-    
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
-
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/aos.css">
-
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/ionicons.min.css">
-
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jquery.timepicker.css">
-
-    
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
@@ -43,9 +36,25 @@
 		    	      },
 		    	     error:function(){alert("error");}	      
 		    	   });	   
-		    	}		 			
-	</script>
-    
+		    	}
+    function checkLogin(){
+    	var user_id=$("#user_id").val();
+        var user_password=$("#user_password").val();
+        $.ajax({
+           url : "loginUser.do",
+            data : {"user_id":user_id,"user_password":user_password},
+            success : function(data){
+               if(data=="NO"){
+                  alert("로그인 후 이용가능합니다.");
+                  location.href="login.do"
+               }else{
+                  location.href="pcolorCheck2.do?user_id=${sessionScope.userVO.user_id}"; // 메인화면으로
+               }    
+            },       
+            error : function(){alert("error");}            
+        }); 
+    }    
+	</script>   
   </head>
   <body>
 
@@ -112,11 +121,14 @@
 	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/colormain.png);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a>AI 분석을 통한 퍼스널 컬러 진단</a></h2>
+	    							<input type="hidden" name="user_id" id = "user_id" value="${sessionScope.userVO.user_id}">
+	    							<input type="hidden" name="user_password" id = "user_password" value="${sessionScope.userVO.user_password}">
+	    							<h2 class="mb-4">AI 분석을 통한</h2>
+	    							<h2 class="mb-4">퍼스널 컬러 진단</h2>
 	    							<p>Color types help stylize makeup, fashion. </p>
 	    							<p>have you ever thought about your personal colors that perfectly suit your image?</p>
-									<p class="mb-0 mt-4"><a href="pcolorCheck2.do?user_id=${sessionScope.userVO.user_id}" class="btn btn-dark">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
-	    						</div>
+									<p class="mb-0 mt-4"><button class="btn btn-dark" onclick="checkLogin()">진단하기 <span class="ion-ios-arrow-forward"></span></button></p>
+	    						</div>	    						
 	    					</div>
 	    				</div>
 	    			</div>
@@ -124,7 +136,6 @@
 	    		</div>
 	    	</div>
 	    </section>
-
       
    		<jsp:include page="footer.jsp">
 			<jsp:param name="pageSelection" value="footer" />

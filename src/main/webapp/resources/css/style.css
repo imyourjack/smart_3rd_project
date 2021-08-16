@@ -65,10 +65,13 @@ body {
   background-color: #fff; }
   
 .loginForm{
-	color: #fff;
+    color: #fff;
     top: 40px;
-    right: 450px;
     position: absolute;
+}
+.logoutForm{
+    width: 800%;
+    margin-left: 700%;
 }
 div.radio-wrap {
   display: inline-flex;
