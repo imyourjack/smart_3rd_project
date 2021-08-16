@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var ="cpath" value ="${pageContext.request.contextPath}"/>
+<c:set var="cpath" value="${pageContext.request.contextPath}"/>
 
 <%
    response.setCharacterEncoding("utf-8");
@@ -14,28 +14,21 @@
     <title>PALETTE</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/animate.css">
-    
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
-
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/aos.css">
-
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/ionicons.min.css">
-
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jquery.timepicker.css">
-
-    
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">		
 		    function logoutFn(){
 		    	   $.ajax({
@@ -50,8 +43,7 @@
 	</script>
   </head>
   <body>
-
-    <div class="page">
+   <div class="page">
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
@@ -70,7 +62,6 @@
         </div>
       </div>
     </nav>
-    
     <div id="colorlib-page">
       <header>
       	<div class="container">
@@ -78,16 +69,16 @@
 	          <a class="colorlib-logo" href="home.do">palette</a>
 	        </div>
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
-						<c:choose>
-							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do" style="color : white;">Login</a>
-							</c:when>
-							<c:otherwise>
-								<button class="btn" color="white" style="color : white;">${sessionScope.userVO.user_name}</button>
-								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
-							</c:otherwise>
-						</c:choose>
-					</div>
+				<c:choose>
+					<c:when test="${sessionScope.userVO==null}">
+						<a href = "${cpath}/login.do" style="color : white;">Login</a>
+					</c:when>
+					<c:otherwise>
+						<button class="btn" color="white" style="color : white;">${sessionScope.userVO.user_name}</button>
+						<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+					</c:otherwise>
+				</c:choose>
+			</div>
 	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
@@ -102,15 +93,26 @@
 	        </div>
 	      </div>
       </section>
-
-	    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
-	    	<div class="container">
-		    	<div class="row no-gutters d-flex">
-	    			<div class="col-md-12 col-lg-6 d-flex align-items-stretch">
-	    				<div class="img-about img d-flex align-items-stretch">
-		    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(${pageContext.request.contextPath}/resources/images/fashionmain.jpg); height: 700px;">
-		    				</div>	    				</div>
+	    
+		<section class="ftco-section ftco-no-pb ftco-no-pt">
+	    	<div class="container-fluid px-0">
+	    		<div class="row no-gutters">
+	    		<!-- 작업공간 -->
+	    			<div class="col-md-12 blog-wrap">
+	    				<div class="row no-gutters align-items-center">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/MAN_1.jpg); height: 700px;"></div>
+	    					<div class="col-md-6">
+	    						<div class="text p-md-5 p-4 ftco-animate">
+	    							<h2 class="mb-4"><a>의상 컬러 적합도 진단</a></h2>
+	    							<p>Color types help stylize makeup, fashion. </p>
+	    							<p>have you ever thought about your personal colors</p>
+	    							<p>that perfectly suit your image?</p>
+									<p class="mb-0 mt-4"><a href="fashionCheck.do?user_id=${sessionScope.userVO.user_id}" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
+	    						</div>
+	    					</div>
+	    				</div>
 	    			</div>
+<<<<<<< HEAD
 	    			<div class="col-md-12 col-lg-6 pl-lg-5 py-5 d-flex align-items-center">
 	    				<div class="p-0 px-lg-5 p-lg-0">
 		    				<div class="row justify-content-start pb-3">
@@ -141,6 +143,11 @@
 			      </div>
 		      </div>
 	      </div>
+=======
+				<!-- 작업공간 -->
+	    		</div>
+	    	</div>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-4/3rd_idol.git
 	    </section>
       
 	<jsp:include page="footer.jsp">

@@ -17,7 +17,26 @@ SELECT * FROM tbl_item;
 SELECT * FROM tbl_result;
 SELECT * FROM tbl_reply;
 
+<<<<<<< HEAD
 
+=======
+
+-- 사용자 진단결과 톤을 SELECT하기 위한 쿼리문
+SELECT DISTINCT pc_name FROM tbl_result r, tbl_pcolor p WHERE r.pc_idx = p.pc_idx AND user_id = 'admin'
+
+-- tbl_user 생성
+CREATE TABLE tbl_user(
+    user_id              VARCHAR(30) NOT NULL,
+    user_password        VARCHAR(30) NOT NULL,
+    user_name            VARCHAR(30),
+    user_age             VARCHAR(30),
+    user_gender          VARCHAR(30),
+    pc_idx           INT(20),
+    PRIMARY KEY(user_id),
+    FOREIGN KEY(pc_idx) REFERENCES tbl_pcolor(pc_idx)
+);
+
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-4/3rd_idol.git
 -- tbl_pcolor 생성
 CREATE TABLE tbl_pcolor (
     pc_idx           INT(20) NOT NULL auto_increment, -- pc_idx 1 : 봄웜 / pc_idx 2 : 여쿨 / pc_idx 3 : 가웜 / pc_idx 4 : 겨쿨
