@@ -99,4 +99,19 @@ public class userController {
 //      userMapper.checkUser(user_id);
 //   }
    
+   @RequestMapping("/goResult.do")
+   public String goResult(String user_id) {
+	   int result = userMapper.goResult(user_id);
+	   UserVO vo = userMapper.userList(user_id);
+	   		if(result==1) {
+	   			return "redirect:/pcolorResult1.do?user_id="+user_id;
+	   		}else if(result==2){
+	   			return "redirect:/pcolorResult2.do?user_id="+user_id;
+	   		}else if(result==3) {
+	   			return "redirect:/pcolorResult3.do?user_id="+user_id;
+	   		}else {
+	   			return "redirect:/pcolorResult4.do?user_id="+user_id;
+	   		}
+   }
+   
 }

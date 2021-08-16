@@ -35,8 +35,7 @@
     <script type="text/javascript">
 		function goWrite() {
 			location.href = "${cpath}/boardForm.do";			
-		}	
-	
+		}			
 	</script>
   </head>
   <body>
@@ -104,11 +103,10 @@
 		<br>
 		<br>
 				<div class="container">
-					<div class="table table-hover">
 						<div class="panel-body" >
 							<br>
 
-							<table class="table table-hover" >
+							<table class="table table-hover">
 								<thead style="text-align:center">
 									<tr class="table-light">
 										<th scope="col">번호</th>
@@ -150,7 +148,6 @@
 								</form>
 						</div>
 					</div>
-				</div>
 				</div>
 				<br>
 				<br>

@@ -52,7 +52,7 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/main2.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
@@ -187,7 +187,6 @@
                      <div class="text p-md-5 p-4 ftco-animate">
                         <h2 class="mb-4">유사톤을 지닌 '가을 웜' 연예인</h2>
                         <p>공유, 이진욱, 박성웅, 이민호, 마동석, 전현무</p>
-                        
                      </div>
                   </div>
                </div>

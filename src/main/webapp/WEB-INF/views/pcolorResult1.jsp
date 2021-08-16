@@ -40,7 +40,7 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/main2.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
@@ -80,7 +80,7 @@
            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
-
+      
       <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/spring.jpg);">
          <div class="overlay"></div>
          <div class="container-fluid px-0">

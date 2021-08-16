@@ -52,7 +52,7 @@
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
-        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/main2.jpg);"></div>
+        <div class="img" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_1.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
@@ -103,7 +103,6 @@
            </div>
          </div>
       </section>
-
        <section class="ftco-section ftco-no-pb ftco-no-pt">
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
@@ -188,7 +187,6 @@
                   </div>
                </div>
             </div>
-                
        </section>
       
          <jsp:include page="footer.jsp">
