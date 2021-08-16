@@ -97,7 +97,7 @@
 									   <button type="button" id="webcamBtn">캡쳐하기</button> -->
 									   
 									<!-- 안드로이드 카메라 연결 코드 -->
-								    <form id="take" action="${cpath}/uploadFormAction.do" method="POST" enctype="multipart/form-data" style="text-align: center;"> 
+								    <form id="take" action="${cpath}/uploadFormActionCloths.do?user_id=${sessionScope.userVO.user_id}" method="POST" enctype="multipart/form-data" style="text-align: center;"> 
 								    	<label for="cap" class="btn btn-primary btn-sm" style="width: 150px;height: 40px;font-size: 20px; margin-right: 1%;">사진업로드     <span class="ion-ios-arrow-forward"></span></label>
 								    	<!-- <input type="file" id= "cap" name="personalPhoto" accept="image/*" capture="camera" id="camera" style="display:none;"/> -->
 								    	<input type="file" id="cap" name="uploadFile" multiple="multiple" style="display:none;">

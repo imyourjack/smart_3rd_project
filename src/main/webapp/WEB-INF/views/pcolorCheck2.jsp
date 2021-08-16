@@ -9,6 +9,8 @@
 <title>PALETTE</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/animate.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
@@ -92,13 +94,8 @@
 									   <button type="button" id="webcamBtn">캡쳐하기</button> -->
 									   
 									<!-- 안드로이드 카메라 연결 코드 -->
-<<<<<<< HEAD
 								    <form id="take" action="${cpath}/uploadFormActionPersonal.do?user_id=${sessionScope.userVO.user_id}" method="POST" enctype="multipart/form-data" style="text-align: center;"> 
 								    	<label for="cap" class="btn btn-primary btn-sm" style="width: 150px; height: 40px; font-size: 20px;">사진업로드     <span class="ion-ios-arrow-forward"></span></label>
-=======
-								    <form id="take" action="${cpath}/uploadFormAction.do?user_id=${sessionScope.userVO.user_id}" method="POST" enctype="multipart/form-data" style="text-align: center;"> 
-								    	<label for="cap" class="btn btn-primary btn-sm" style="width: 150px; height: 40px; font-size: 20px; margin-right: 1%;">사진업로드     <span class="ion-ios-arrow-forward"></span></label>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-4/3rd_idol.git
 								    	<!-- <input type="file" id= "cap" name="personalPhoto" accept="image/*" capture="camera" id="camera" style="display:none;"/> -->
 								    	<input type="file" id="cap" name="uploadFile" multiple="multiple" style="display:none;">
 								    	<label for="cap2" class="btn btn-primary btn-sm" style="width: 150px; height: 40px; font-size: 20px; margin-left: 1%;">진단하기     <span class="ion-ios-arrow-forward"></span></label>

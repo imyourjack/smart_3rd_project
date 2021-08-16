@@ -41,7 +41,7 @@ public class UploadController {
 
 	@RequestMapping("/uploadFormAction.do")
 	// MultipartFile[] : 파일에 대한 정보를 받기 위한 것(파일에 대한 데이터는 여러가지 이므로 [](배열)형태로 받는다)
-	public String uploadFormAction(MultipartFile[] uploadFile, Model model, String user_id,HttpServletRequest request, HttpServletResponse response)
+	public String uploadFormAction(MultipartFile[] uploadFile, Model model, String user_id, HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String userid = user_id;
@@ -85,9 +85,7 @@ public class UploadController {
 			}
 		}
 
-		System.out.println(list.get(0).getFileName());
-		System.out.println(list.get(0).getUploadPath());
-		System.out.println(list.get(0).getUuid());
+		System.out.println("파일이름:"+list.get(0).getFileName());
 
 		String filename = list.get(0).getFileName();
 
@@ -139,8 +137,7 @@ public class UploadController {
 	}
 	
 	@RequestMapping("/uploadFormActionPersonal.do")
-	// MultipartFile[] : 파일에 대한 정보를 받기 위한 것(파일에 대한 데이터는 여러가지 이므로 [](배열)형태로 받는다)
-	public String uploadFormActionPersonal(MultipartFile[] uploadFile, Model model, String user_id,HttpServletRequest request, HttpServletResponse response)
+	public String uploadFormActionPersonal(MultipartFile[] uploadFile, Model model, String user_id, HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String userid = user_id;
@@ -184,16 +181,14 @@ public class UploadController {
 			}
 		}
 
-		System.out.println(list.get(0).getFileName());
-		System.out.println(list.get(0).getUploadPath());
-		System.out.println(list.get(0).getUuid());
+		System.out.println("파일이름:"+list.get(0).getFileName());
 
 		String filename = list.get(0).getFileName();
 
 		String ipAddress=request.getRemoteAddr();
 		System.out.println("클라이언트 IP 주소: "+ipAddress);
 		
-		String flaskUrl = "http://"+ipAddress+":5000/personal?imgurl=" + filename + "&user_id=" + userid;
+		String flaskUrl = "http://"+ipAddress+":5000/personal?imgurl="+filename+"&user_id="+userid;
 		System.out.println(flaskUrl);
 
 		return "redirect:" + flaskUrl;
@@ -245,9 +240,7 @@ public class UploadController {
 			}
 		}
 
-		System.out.println(list.get(0).getFileName());
-		System.out.println(list.get(0).getUploadPath());
-		System.out.println(list.get(0).getUuid());
+		System.out.println("파일이름:"+list.get(0).getFileName());
 
 		String filename = list.get(0).getFileName();
 

@@ -25,19 +25,19 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">		
+    <script type="text/javascript">      
     
     function logoutFn(){
-		    	   $.ajax({
-		    	      url: "logout.do",
-		    	      type:"get",
-		    	      success:function(){ 
-		    	         location.href="home.do"
-		    	      },
-		    	     error:function(){alert("error");}	      
-		    	   });	   
-		    	}		 			
-	</script>
+                $.ajax({
+                   url: "logout.do",
+                   type:"get",
+                   success:function(){ 
+                      location.href="home.do"
+                   },
+                  error:function(){alert("error");}         
+                });      
+             }                
+   </script>
     
   </head>
   <body>
@@ -52,8 +52,8 @@
             <div class="col-md-12 text-center">
               <h1 class="mb-4"><a href="home.do" class="logo">palette</a></h1>
               <ul>
-              	
-              	<jsp:include page="menu.jsp">
+                 
+                 <jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="2" />
                 </jsp:include>
                 
@@ -66,67 +66,63 @@
     
     <div id="colorlib-page">
       <header>
-      	<div class="container">
-	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="home.do">PALETTE</a>
-	        </div>
-	        <div method="post" action="${cpath}/login.do" class="loginForm">
-						<c:choose>
-							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do" style="color : white;">Login</a>
-							</c:when>
-							<c:otherwise>
-								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
-							</c:otherwise>
-						</c:choose>
-					</div>
-	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+         <div class="container">
+           <div class="colorlib-navbar-brand">
+             <a class="colorlib-logo" href="home.do">PALETTE</a>
+           </div>
+           <div method="post" action="${cpath}/login.do" class="loginForm">
+                  <c:choose>
+                     <c:when test="${sessionScope.userVO==null}">
+                        <a href = "${cpath}/login.do" style="color : white;">Login</a>
+                     </c:when>
+                     <c:otherwise>
+                        <button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
+                        <a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+                     </c:otherwise>
+                  </c:choose>
+               </div>
+           <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
 
       <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/bg_5.gif);">
-      	<div class="overlay"></div>
-	      <div class="container-fluid px-0">
-	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
-	          <div class="col-md-12 ftco-animate text-center">
-	            <h1 class="bread">personal color</h1>
-	          </div>
-	        </div>
-	      </div>
+         <div class="overlay"></div>
+         <div class="container-fluid px-0">
+           <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
+             <div class="col-md-12 ftco-animate text-center">
+               <h1 class="bread">personal color</h1>
+             </div>
+           </div>
+         </div>
       </section>
 
-	    <section class="ftco-section ftco-no-pb ftco-no-pt">
-	    	<div class="container-fluid px-0">
-	    		<div class="row no-gutters">
-	    		<!-- 작업공간 -->
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-<<<<<<< HEAD
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/colorname.png);"></div>
-=======
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/colormain.png);"></div>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-4/3rd_idol.git
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4">AI 분석을 통한</h2>
-	    							<h2 class="mb-4">퍼스널 컬러 진단</h2>
-	    							<p>Color types help stylize makeup, fashion. </p>
-	    							<p>have you ever thought about your personal colors that perfectly suit your image?</p>
-									<p class="mb-0 mt-4"><a href="pcolorCheck2.do?user_id=${sessionScope.userVO.user_id}" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
-				<!-- 작업공간 -->
-	    		</div>
-	    	</div>
-	    </section>
+       <section class="ftco-section ftco-no-pb ftco-no-pt">
+          <div class="container-fluid px-0">
+             <div class="row no-gutters">
+             <!-- 작업공간 -->
+                <div class="col-md-12 blog-wrap">
+                   <div class="row no-gutters align-items-center">
+                      <div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/colormain.png);"></div>
+                      <div class="col-md-6">
+                         <div class="text p-md-5 p-4 ftco-animate">
+                            <h2 class="mb-4">AI 분석을 통한</h2>
+                            <h2 class="mb-4">퍼스널 컬러 진단</h2>
+                            <p>Color types help stylize makeup, fashion. </p>
+                            <p>have you ever thought about your personal colors that perfectly suit your image?</p>
+                           <p class="mb-0 mt-4"><a href="pcolorCheck2.do?user_id=${sessionScope.userVO.user_id}" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+            <!-- 작업공간 -->
+             </div>
+          </div>
+       </section>
 
       
-   		<jsp:include page="footer.jsp">
-			<jsp:param name="pageSelection" value="footer" />
-		</jsp:include>
+         <jsp:include page="footer.jsp">
+         <jsp:param name="pageSelection" value="footer" />
+      </jsp:include>
 
       <!-- loader -->
       <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
