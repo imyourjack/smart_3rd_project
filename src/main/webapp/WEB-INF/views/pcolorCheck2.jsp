@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 </head>
 <body>
+	<div id="div_load_image" style="position:absolute; top:50%; left:50%;width:0px;height:0px; z-index:9999; background:#f0f0f0; filter:alpha(opacity=50); opacity:alpha*0.5; margin:auto; padding:0; text-align:center"> <img src="${pageContext.request.contextPath}/resources/images/loading.gif" style="width:200px; height:200px;"> </div>
 	<div class="page">
 	 <div id="colorlib-page">
    	    <section class="ftco-section ftco-no-pb ftco-no-pt">
@@ -49,6 +50,11 @@
 								    </form>
 	    						</div>
 	    					</div>
+	    					<!--로딩바
+							<div id="loading" style="margin-left: 0px;">
+								<img src="${pageContext.request.contextPath}/resources/images/loadingbar.gif">
+								<p>변환중입니다..잠시기다려주세요.</p>
+							</div>-->	    					
 	    				</div>
 	    			</div>
 
@@ -76,6 +82,38 @@
             function() {
                context.drawImage(video, 0, 0, 960, 720);
             });
+      
+      $(document).ready(function() {
+			$("#div_load_image").hide();
+			$('#take').submit(function(){
+			$("#div_load_image").show();
+			});
+          });
+	
+/*       function callAjax(test, test2){ 
+    	  var sendData; 
+    	  sendData = JSON.stringify({ 
+    		  "test" : test, 
+    		  "test2": test2 
+    		  }); 
+    	  $("#div_load_image").show(); 
+    	  $.ajax({ 
+    		  type : 'POST', 
+    		  url : "/test", 
+    		  contentType: "application/json;charset=UTF-8", 
+    		  data : sendData, 
+    		  dataType : 'json', 
+    		  success : function(data){ // 조회성공 
+    			  $("#div_load_image").hidden(); 
+    		  }, 
+    		  error: function(jqXHR, textStatus, errorThrown){ 
+    			  alert("오류가 발생하였습니다."); 
+    			  $("#div_load_image").hidden(); 
+    			  } 
+    		  }); 
+    	  }
+ */
+
    </script>
     <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>

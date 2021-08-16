@@ -115,7 +115,7 @@
 	    							<h2 class="mb-4"><a>AI 분석을 통한 퍼스널 컬러 진단</a></h2>
 	    							<p>Color types help stylize makeup, fashion. </p>
 	    							<p>have you ever thought about your personal colors that perfectly suit your image?</p>
-									<p class="mb-0 mt-4"><a href="pcolorCheck2.do?user_id=${sessionScope.userVO.user_id}" class="btn btn-primary">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
+									<p class="mb-0 mt-4"><a href="pcolorCheck2.do?user_id=${sessionScope.userVO.user_id}" class="btn btn-dark">진단하기 <span class="ion-ios-arrow-forward"></span></a></p>
 	    						</div>
 	    					</div>
 	    				</div>

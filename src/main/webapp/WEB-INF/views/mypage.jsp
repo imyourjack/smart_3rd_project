@@ -54,6 +54,7 @@
 	                 error : function(){alert("error");}            
 	             });
 		  	}
+
 		  
 	</script>  
 	<style type="text/css">
@@ -160,7 +161,7 @@
 						    <br>
 						    <div align="center">
 						    <input type="submit" value="수정" class="btn btn-dark" style="width: 80px; height: 40px;" onclick="updateFn()">	
-							<input type='button' value='진단내역' class="btn btn-dark" style="width: 110px; height: 40px;">
+							<a href="${cpath}/goResult.do?user_id=${vo.user_id}"><input type='button' value='진단내역' class="btn btn-dark" style="width: 110px; height: 40px;"></a>
 							<br>
 							<br>
 							<a style="font-size:14px;">회원탈퇴를 원하십니까? > </a>

@@ -157,6 +157,12 @@
 						      <input type="password" class="form-control" placeholder="비밀번호" name="user_password" id="user_password">
 						    </div>
 						    <div class="form-group">
+							<input type="password" class="form-control" placeholder="비밀번호확인"
+								name="user_password_check" id="user_password_check"> <span
+								class="pw1">비밀번호가 일치합니다.</span> <span class="pw2">비밀번호가
+								일치하지 않습니다.</span>
+							</div>
+						    <div class="form-group">
 						      <label for="exampleInputEmail1">Name</label>
 						      <input type="text" class="form-control" placeholder="이름" name="user_name">
 						    </div>
@@ -180,82 +186,7 @@
 		</nav>
 
 		<div id="colorlib-page">
-			<header>
-				<div class="container">
-					<div class="colorlib-navbar-brand">
-						<a class="colorlib-logo" href="home.do">PALETTE</a>
-					</div>
-					<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-				</div>
-			</header>
-
-			<section class="hero-wrap js-fullheight"
-				style="background-image: url(${pageContext.request.contextPath}/resources/images/gradation.jpg);">
-				<div class="overlay"></div>
-				<div class="container-fluid px-0">
-					<div
-						class="row no-gutters text align-items-end js-fullheight justify-content-center"
-						data-scrollax-parent="true">
-						<div class="col-md-12 ftco-animate text-center">
-							<!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
-							<h1 class="bread">JOIN</h1>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="ftco-section ftco-no-pt ftco-no-pb ftco-about ftco-counter">
-				<br> <br>
-				<div class="container" style="width: 600px;">
-
-					<!-- 폼 넣을 곳 -->
-
 			
-					<form id="srm" name="srm" method="post" class="signForm">
-						<div align="center">
-							<h2>
-								<strong>회원정보</strong>
-							</h2>
-						</div>
-						<br>
-						<div class="form-group">
-							<label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
-							<input type="text" class="form-control" placeholder="아이디"
-								name="user_id" id="user_id">
-						</div>
-
-						<div class="form-group">
-							<label for="exampleInputPassword1">Password</label> <input
-								type="password" class="form-control" placeholder="비밀번호"
-								name="user_password" id="user_password">
-						</div>
-						<div class="form-group">
-							<input type="password" class="form-control" placeholder="비밀번호확인"
-								name="user_password_check" id="user_password_check"> <span
-								class="pw1">비밀번호가 일치합니다.</span> <span class="pw2">비밀번호가
-								일치하지 않습니다.</span>
-						</div>
-						<div class="form-group">
-							<label for="name">name</label> <input type="text"
-								class="form-control" placeholder="이름" name="user_name">
-						</div>
-						<div class="form-group">
-							<label for="age">age</label> 
-							<input type="text" class="form-control" placeholder="나이" name="user_age">
-						</div>
-						<div>
-							<label for="gender">gender</label>
-							<input type="text" class="form-control" placeholder="성별" name="user_gender">
-						</div>
-						<br>
-						<div align="center">
-							<button type="button" class="btn btn-dark"
-								style="text-align: center; width: 100px; height: 40px;"
-								onclick="signupFn()">SIGN UP</button>
-						</div>
-					</form>
-				</div>
-				<!-- 폼 넣을 곳 -->
-		</section>
 		<br> <br> <br> <br>
 
 		<footer class="ftco-footer ftco-section img">

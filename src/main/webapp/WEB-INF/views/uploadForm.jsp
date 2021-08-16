@@ -124,9 +124,9 @@
 				        	<div class="col-md-6" style="width: 1000px;">
 				        		<div class="media block-6 services d-block ftco-animate">
 								    <form id="take" action="${cpath}/uploadFormAction.do" method="POST" enctype="multipart/form-data"> 
-								    	<label for="cap" class="btn btn-primary btn-sm" style="width: 150px;height: 40px;font-size: 20px;margin-top: 30px;">사진업로드     <span class="ion-ios-arrow-forward"></span></label>
+								    	<label for="cap" class="btn btn-dark" style="width: 150px;height: 40px;font-size: 20px;margin-top: 30px;">사진업로드     <span class="ion-ios-arrow-forward"></span></label>
 								    	<input type="file" id="cap" name="uploadFile" multiple="multiple" style="display:none;">
-								    	<label for="cap2" class="btn btn-primary btn-sm" style="width: 150px;height: 40px;font-size: 20px;margin-top: 30px;">진단하기     <span class="ion-ios-arrow-forward"></span></label>
+								    	<label for="cap2" class="btn btn-dark" style="width: 150px;height: 40px;font-size: 20px;margin-top: 30px;">진단하기     <span class="ion-ios-arrow-forward"></span></label>
 								    	<button id="cap2" style="display:none;">진단</button>
 								    </form>
 				        	</div>

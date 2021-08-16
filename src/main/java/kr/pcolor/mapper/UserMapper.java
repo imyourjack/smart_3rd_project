@@ -33,4 +33,7 @@ public interface UserMapper {
   
     @Update("update tbl_user set user_password = #{user_password}, user_name = #{user_name}, user_age = #{user_age}, user_gender = #{user_gender} where user_id = #{user_id}" )
     public void userUpdate(UserVO vo);
+    
+	@Select("select pc_idx from tbl_user where user_id = #{user_id}")
+    public int goResult(String user_id);
 }

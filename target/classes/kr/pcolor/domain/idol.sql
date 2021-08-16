@@ -249,8 +249,3 @@ INSERT INTO tbl_item(item_category, item_img_url, item_name, item_tag, item_expl
    'https://www.oliveyoung.co.kr/store/G.do?goodsNo=A000000148147',
    4);
    
-   
-INSERT INTO tbl_result(pc_idx, user_id) VALUES(1, 'admin');
-
-insert into tbl_reply (reply_text,user_id) values('댓글','admin');
-   
