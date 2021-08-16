@@ -145,7 +145,7 @@
 						<!-- 폼 넣을 곳 -->	
 					</div>				
 			</section>
-				<div style="height:100px"></div>
+		<div style="height:100px"></div>
 				
 		
 		
