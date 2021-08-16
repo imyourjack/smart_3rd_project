@@ -3,6 +3,16 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
+
+<%
+	response.setCharacterEncoding("utf-8");
+	String spring = request.getParameter("spring");
+	String summer = request.getParameter("summer");
+	String fall = request.getParameter("fall");
+	String winter = request.getParameter("winter");
+	String imgname = request.getParameter("imgname");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -49,7 +59,13 @@
     
   </head>
   <body>
-
+	<div>
+		<p><%=spring%></p>
+        <p><%=summer%></p>
+        <p><%=fall%></p>
+        <p><%=winter%></p>
+        <p><%=imgname%></p>
+	</div>
     <div class="page">
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>

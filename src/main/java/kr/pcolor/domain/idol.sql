@@ -18,21 +18,6 @@ SELECT * FROM tbl_result;
 SELECT * FROM tbl_reply;
 
 
--- 사용자 진단결과 톤을 SELECT하기 위한 쿼리문
-SELECT DISTINCT pc_name FROM tbl_result r, tbl_pcolor p WHERE r.pc_idx = p.pc_idx AND user_id = 'admin'
-
--- tbl_user 생성
-CREATE TABLE tbl_user(
-    user_id              VARCHAR(30) NOT NULL,
-    user_password        VARCHAR(30) NOT NULL,
-    user_name            VARCHAR(30),
-    user_age             VARCHAR(30),
-    user_gender          VARCHAR(30),
-    pc_idx           INT(20),
-    PRIMARY KEY(user_id),
-    FOREIGN KEY(pc_idx) REFERENCES tbl_pcolor(pc_idx)
-);
-
 -- tbl_pcolor 생성
 CREATE TABLE tbl_pcolor (
     pc_idx           INT(20) NOT NULL auto_increment, -- pc_idx 1 : 봄웜 / pc_idx 2 : 여쿨 / pc_idx 3 : 가웜 / pc_idx 4 : 겨쿨
@@ -52,6 +37,17 @@ CREATE TABLE tbl_pccs (
     FOREIGN KEY(pc_idx) REFERENCES tbl_pcolor(pc_idx)
 );
 
+-- tbl_user 생성
+CREATE TABLE tbl_user(
+    user_id              VARCHAR(30) NOT NULL,
+    user_password        VARCHAR(30) NOT NULL,
+    user_name            VARCHAR(30),
+    user_age             VARCHAR(30),
+    user_gender          VARCHAR(30),
+    pc_idx           INT(20),
+    PRIMARY KEY(user_id),
+    FOREIGN KEY(pc_idx) REFERENCES tbl_pcolor(pc_idx)
+);
 
 -- tbl_board 생성
 CREATE TABLE tbl_board (
@@ -240,6 +236,9 @@ INSERT INTO tbl_item(item_category, item_img_url, item_name, item_tag, item_expl
    
    
 INSERT INTO tbl_result(pc_idx, user_id) VALUES(1, 'admin');
+-- INSERT INTO tbl_result(pc_idx, user_id) VALUES(2, 'jongwon');
+-- INSERT INTO tbl_result(pc_idx, user_id) VALUES(3, 'youngjoo');
+-- INSERT INTO tbl_result(pc_idx, user_id) VALUES(4, 'onyu');
 
 insert into tbl_reply (reply_text,user_id) values('댓글','admin');
    
