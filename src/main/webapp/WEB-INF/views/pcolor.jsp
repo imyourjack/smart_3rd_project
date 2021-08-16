@@ -109,7 +109,7 @@
 	    		<!-- 작업공간 -->
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/colormain6.jpg);"></div>
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/colorname.png);"></div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
 	    							<h2 class="mb-4"><a>AI 분석을 통한 퍼스널 컬러 진단</a></h2>
