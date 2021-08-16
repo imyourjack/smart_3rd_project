@@ -101,7 +101,6 @@
            </div>
          </div>
       </section>
-
        <section class="ftco-section ftco-no-pb ftco-no-pt">
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">

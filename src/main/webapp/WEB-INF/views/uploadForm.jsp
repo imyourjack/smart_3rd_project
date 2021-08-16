@@ -131,11 +131,10 @@
                       </div>
                    </div>
                 </div>
-            <!-- 작업공간 -->
-             </div>
+            	<!-- 작업공간 -->
+          	</div>
           </div>
-       </section>
-      
+	    </section>      
    <jsp:include page="footer.jsp">
       <jsp:param name="pageSelection" value="footer" />
    </jsp:include>

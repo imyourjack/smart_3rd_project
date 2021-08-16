@@ -96,11 +96,12 @@
                   <div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/springColor.png);"></div>
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
-						<h2 class="mb-4">당신의 퍼스널 컬러는</h2>
-						<h2 class="mb-4">'봄 웜' 입니다.</h2>
+                  <h2 class="mb-4">당신의 퍼스널 컬러는</h2>
+                  <h2 class="mb-4">'봄 웜' 입니다.</h2>
                         <p>한국인의 많은 사람이 봄 웜톤의 피부색을 가지고 있습니다.
                         <br>봄 웜톤인 사람은 봄의 느낌처럼 밝고 노란빛의 피부를 가지고 있습니다.
-                        <br>봄 타입은 노란색을 지닌 따듯한 유형으로 선명 하고 밝은 톤과 엷은 톤으로 생동감과 에너지를 느끼게 합니다.
+                        <br>봄 타입은 노란색을 지닌 따듯한 유형으로
+                        <br>선명 하고 밝은 톤과 엷은 톤으로 생동감과 에너지를 느끼게 합니다.
                         <br>피부는 밝으면서 매끄럽고 투명한 분들이 많고 피부가 얇아서 주근깨 같은 잡티가 있는 경우도 있습니다.</p>
                      </div>
                   </div>
@@ -116,10 +117,10 @@
                         <p>봄 컬러들은 전체적으로 노란색을 가지고 있는 그룹으로 
                         <br>밝고 따뜻한 색이 이루어져 있어 활기찬 느낌이 나는 탄력 있는 팔레트입니다.
                         <br>따라서 봄의 맑은 이미지를 생각하며 스타일링 하는 것을 추천합니다.
-	                    <br>봄 타입에게 잘 어울리는 컬러는 
-	                    <br>아이보리 베이지와 같은 밝은 톤과 알록달록한 선명한 컬러를 사용할 수 있는데 
-	                    <br>대표적인 컬러는 복숭아 핑크, 오렌지 레드, 옐로우, 그린, 퍼플 등
-	                    <br>싱그러운 과일이나 햇살을 듬뿍 머금은 선명한 컬러입니다.</p>
+                       <br>봄 타입에게 잘 어울리는 컬러는 
+                       <br>아이보리 베이지와 같은 밝은 톤과 알록달록한 선명한 컬러를 사용할 수 있는데 
+                       <br>대표적인 컬러는 복숭아 핑크, 오렌지 레드, 옐로우, 그린, 퍼플 등
+                       <br>싱그러운 과일이나 햇살을 듬뿍 머금은 선명한 컬러입니다.</p>
                      </div>
                   </div>
                </div>
@@ -128,29 +129,28 @@
                 <div class="row no-gutters align-items-center">
                    <div class="col-md-6 img js-fullheight">
                          <c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
-                         	<img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
+                            <img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
                          </c:forEach>
                    </div>
                    
-		           <div class="col-md-6">
-		               <div class="text p-md-5 p-4 ftco-animate">
-		                  <h2 class="mb-4">'봄 웜'에 어울리는 향수</h2>
-		                  <br>
-		                  <br>
-		                  <c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
-		                   <div width="300" height="300">
-		                      <h3 class="mb-4">${vo.item_name}</h3>
-		                      <p style=" font-size: 12px;">${vo.item_tag}</p>
-		                      <p style=" font-size: 15px;">${vo.item_explain}</p>
-		                      <a style=" font-size: 15px;" href="${vo.item_product_url}">${vo.item_product_url}</a>
-		                  </div>
-		               	  <br>
-		                 </c:forEach>
-		               </div>
-		            </div>
-			     </div>
-		   </div>
-            
+                 <div class="col-md-6">
+                     <div class="text p-md-5 p-4 ftco-animate">
+                        <h2 class="mb-4">'봄 웜'에 어울리는 향수</h2>
+                        <br>
+                        <br>
+                        <c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
+                         <div width="300" height="300">
+                            <h3 class="mb-4">${vo.item_name}</h3>
+                            <p style=" font-size: 12px;">${vo.item_tag}</p>
+                            <p style=" font-size: 15px;">${vo.item_explain}</p>
+                            <a style=" font-size: 15px;" href="${vo.item_product_url}">${vo.item_product_url}</a>
+                        </div>
+                          <br>
+                       </c:forEach>
+                     </div>
+                  </div>
+              </div>
+         </div>            
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
                   <div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/springhair2.jpg);"></div>

@@ -2,6 +2,16 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
+
+<%
+	response.setCharacterEncoding("utf-8");
+	String spring = request.getParameter("spring");
+	String summer = request.getParameter("summer");
+	String fall = request.getParameter("fall");
+	String winter = request.getParameter("winter");
+	String imgname = request.getParameter("imgname");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

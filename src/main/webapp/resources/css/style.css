@@ -65,11 +65,13 @@ body {
   background-color: #fff; }
   
 .loginForm{
+   z-index: 1;
     color: #fff;
     top: 40px;
     position: absolute;
 }
 .logoutForm{
+   z-index: 1;
     width: 800%;
     margin-left: 700%;
 }
