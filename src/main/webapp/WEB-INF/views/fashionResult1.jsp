@@ -11,7 +11,6 @@
 	String fall = request.getParameter("fall");
 	String winter = request.getParameter("winter");
 	String imgname = request.getParameter("imgname");
-	System.out.print(imgname);
 %>
 
 <!DOCTYPE html>
@@ -79,6 +78,7 @@
 
 </head>
 <body>
+
 	<div class="page">
 		<nav id="colorlib-main-nav" role="navigation">
 			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
@@ -108,16 +108,20 @@
 			<header>
 				<div class="container">
 					<div class="colorlib-navbar-brand">
-						<a class="colorlib-logo" href="home.do">PALETTE</a>
+						<a class="colorlib-logo" href="home.do"
+							style="position: absolute; z-index: 2; top: 45px;">PALETTE</a>
 					</div>
 					<div method="post" action="${cpath}/login.do" class="loginForm">
 						<c:choose>
 							<c:when test="${sessionScope.userVO==null}">
-								<a href="${cpath}/login.do" style="color: white;">Login</a>
+								<a href="${cpath}/login.do"
+									style="color: white; margin-left: 2160%;">Login</a>
 							</c:when>
 							<c:otherwise>
-								<button class="btn" style="color: white;">${sessionScope.userVO.user_name}</button>
-								<a type="button" style="font-size: 16px" onclick="logoutFn()">Logout</a>
+								<div class="logoutForm">
+									<button class="btn" style="color: white;">${sessionScope.userVO.user_name}</button>
+									<a type="button" style="font-size: 16px" onclick="logoutFn()">Logout</a>
+								</div>
 							</c:otherwise>
 						</c:choose>
 					</div>
@@ -143,52 +147,43 @@
 				<div class="container-fluid px-0">
 					<div class="row no-gutters">
 
-						<div class="col-md-12 blog-wrap">
+						<div class="col-md-12 blog-wrap" style="text-align: center;">
 							<div class="row no-gutters align-items-center">
-
-								<!-- 	
-								<div class="col-md-6 img js-fullheight"
-									style="background-image: url(${pageContext.request.contextPath}/resources/images/result/${imgname});"></div> -->
-								<img width=45% alt="의상이미지" 
-									src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">
-									
+								<div class="col-md-6 img js-fullheight">
+									<img style="height: 80%; width: 80%;" alt="의상이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">	
+								</div>
 								<div class="col-md-6">
 									<div class="text p-md-5 p-4 ftco-animate">
-										<h2 class="mb-4">
-											<a>당신과의 "의상 적합도"는...?</a>
-										</h2>
-										<div class="d-flex">
-											<div class="animal-label d-flex align-items-center">
-											<table width=100% style="text-align:center">
-												<tr>
-													<td width=200>봄웜</td>	
-													<td border-radius=value width=1000;" bgcolor="green"><font color="white"><%=spring%></font></td>
-												</tr>
-												<tr>
-													<td width=100>여름쿨</td>
-													<td width=1000 style="text-align: center;" bgcolor="blue"><font color="white"><%=summer%></font></td>
-												</tr>
-												<tr>
-													<td width=100>가을웜</td>
-													<td width=1000 style="text-align: center;" bgcolor="orange"><font color="white"><%=fall%></font></td>
-												</tr>
-												<tr>
-													<td width=100>겨울쿨</td>
-													<td width=1000 style="text-align: center;" bgcolor="gray"><font color="white"><%=winter%></font></td>
-												</tr>
-											</table>
-											</div>
-											<!-- 
-											<div class="bar-container position-relative container">
-											<div class="spring-box"></div>
-											<div class="d-flex justify-content-center align-items-center summer-bar"></div>
-											</div> -->
-											
+										<h2 class="mb-4"><a>의상 진단의 결과는?!</a></h2>
+										<br><br><br>
+										<div class="progress" style="height: 50%">
+											<b style="font-size: 15px; width: 10%;">봄 웜</b>
+											<div class="progress-bar progress-bar-striped"
+												role="progressbar" style="width: <%=spring%>%;" aria-valuenow="10"
+												aria-valuemin="0" aria-valuemax="100"><%=spring%>%</div>
 										</div>
-										<p class="mb-0 mt-4">
-											<a href="#" class="btn btn-primary">추천의상 보러가기 <span
-												class="ion-ios-arrow-forward"></span></a>
-										</p>
+										<br>
+										<div class="progress" style="height: 50%">
+											<b style="font-size: 15px; width: 10%;">여름 쿨</b>
+											<div class="progress-bar progress-bar-striped bg-success"
+												role="progressbar" style="width: <%=summer%>%;" aria-valuenow="25"
+												aria-valuemin="0" aria-valuemax="100"><%=summer%>%</div>
+										</div>
+										<br>
+										<div class="progress" style="height: 50%">
+											<b style="font-size: 15px; width: 10%;">가을 웜</b>
+											<div class="progress-bar progress-bar-striped bg-info"
+												role="progressbar" style="width: <%=fall%>%;" aria-valuenow="50"
+												aria-valuemin="0" aria-valuemax="100"><%=fall%>%</div>
+										</div>
+										<br>
+										<div class="progress" style="height: 50%">
+											<b style="font-size: 15px; width: 10%;">겨울 쿨</b>
+											<div class="progress-bar progress-bar-striped bg-warning"
+												role="progressbar" style="width: <%=winter%>%;" aria-valuenow="75"
+												aria-valuemin="0" aria-valuemax="100"><%=winter%>%</div>
+										</div>
+
 									</div>
 								</div>
 							</div>
