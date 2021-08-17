@@ -117,12 +117,13 @@
                         <a href="${cpath}/login.do"
                            style="color: white; margin-left: 2160%;">Login</a>
                      </c:when>
-                     <c:otherwise>
-                        <div class="logoutForm">
-                           <button class="btn" style="color: white;">${sessionScope.userVO.user_name}</button>
-                           <a type="button" style="font-size: 16px" onclick="logoutFn()">Logout</a>
-                        </div>
-                     </c:otherwise>
+					<c:otherwise>
+						<div class="logoutForm">
+							<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
+							<label for="labelLogout">Logout</label>
+							<a id ="labelLogout" type="button" style="display: none;" onclick="logoutFn()">Logout</a> 
+						</div>
+					</c:otherwise>
                   </c:choose>
                </div>
                <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
