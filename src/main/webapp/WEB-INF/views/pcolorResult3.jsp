@@ -105,6 +105,21 @@
       </section>
 
        <section class="ftco-section ftco-no-pb ftco-no-pt">
+       
+			<div class="col-md-12 blog-wrap" style="text-align: center;">
+               <div class="row no-gutters align-items-center">
+                  <div class="col-md-6">
+                     <div class="text p-md-5 p-4 ftco-animate">
+                        <h2 class="mb-4"><a>퍼스널컬러 진단의 결과</a></h2>
+                     </div>
+                  </div>
+                  <div class="col-md-6 img js-fullheight">
+                  	 <br><br><br>
+                     <img style="height: 80%; width: 80%;" alt="얼굴이미지" src="${pageContext.request.contextPath}/resources/images/fall.jpg">   
+                  </div>
+               </div>
+            </div>       
+       
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
                   <div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/fallColor.png);"></div>
