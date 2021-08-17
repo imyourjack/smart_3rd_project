@@ -42,7 +42,7 @@
 		    	}	
 		    $(document).ready(function() {
 				$("#div_load_image").hide();
-				$('#take').submit(function(){
+				$('#take').submit(function(){					
 				$("#div_load_image").show();
 				});
 	          });

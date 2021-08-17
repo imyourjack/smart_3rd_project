@@ -48,7 +48,7 @@
                 $.ajax({
                    url : "userDelete.do",
                     data : {"user_id":user_id},
-                    success : function(data){
+                    success : function(data){                    
                           location.href="home.do"; 
                     },       
                     error : function(){alert("error");}            
