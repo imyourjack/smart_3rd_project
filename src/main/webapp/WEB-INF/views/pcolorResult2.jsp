@@ -74,22 +74,25 @@
       <header>
          <div class="container">
            <div class="colorlib-navbar-brand">
-             <a class="colorlib-logo" href="home.do">palette</a>
+             <a class="colorlib-logo" href="home.do" style="position: absolute; z-index: 2; top: 45px;">PALETTE</a>
            </div>
-           <div method="post" action="${cpath}/login.do" class="loginForm">
-                  <c:choose>
-                           <c:when test="${sessionScope.userVO==null}">
-                              <a href = "${cpath}/login.do" style="color: white;">Login</a>
-                           </c:when>
-                     <c:otherwise>
-                        <button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-                        <a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
-                     </c:otherwise>
-                  </c:choose>
-               </div>
+	        <div method="post" action="${cpath}/login.do" class="loginForm">
+				<c:choose>
+					<c:when test="${sessionScope.userVO==null}">
+						<a href = "${cpath}/login.do" style="color : white; margin-left: 2160%;">Login</a>
+					</c:when>
+					<c:otherwise>
+						<div class="logoutForm">
+							<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
+							<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+						</div>
+					</c:otherwise>
+				</c:choose>
+			</div>
            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
+
       <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/summer.jpg);">
          <div class="overlay"></div>
          <div class="container-fluid px-0">
@@ -105,6 +108,24 @@
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
 						<div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/summerColor.png);"></div>
+                  <div class="col-md-6">
+                     <div class="text p-md-5 p-4 ftco-animate">
+                  <h2 class="mb-4">당신의 퍼스널 컬러는</h2>
+                  <h2 class="mb-4">'여름 쿨톤' 입니다.</h2>
+                  <p>여름 쿨톤인 사람은 대체적으로 깨끗한 이미지를 가지고 있습니다.
+                  <br>또한 여름 타입은 시원하고 부드러운 스타일이 주로 많습니다.
+                  <br>여름 타입은 흰색과 파랑을 지닌 차가운 유형으로 
+                  <br>연한 톤과 밝은 잿빛 톤의 시원스럽고 화려함을 느끼게 합니다.
+                  <br>핑크빛과 붉은빛이 감도는 혈색 좋은 피부 톤을 가지고 있습니다.
+                  <br>지적이고 세련되며 우아한 인상이 여름 타입의 특징입니다.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-12 blog-wrap">
+               <div class="row no-gutters align-items-center">
+                  <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerSpectrum1.png);">
+                  </div>
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
                   <h2 class="mb-4">당신의 퍼스널 컬러는</h2>
@@ -191,6 +212,7 @@
                </div>
             </div>
        </section>
+
          <jsp:include page="footer.jsp">
          <jsp:param name="pageSelection" value="footer" />
       </jsp:include>

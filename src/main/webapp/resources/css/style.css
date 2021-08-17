@@ -64,16 +64,28 @@ body {
   text-align: left;
   background-color: #fff; }
   
+/* header{
+    position: fixed;
+} */
+
 .loginForm{
-   z-index: 1;
+	z-index: 1;
     color: #fff;
     top: 40px;
     position: absolute;
 }
 .logoutForm{
-   z-index: 1;
-    width: 800%;
+	position: sticky;
+    width: max-content;
     margin-left: 700%;
+/* 	z-index: 1;
+	white-space: nowrap;
+    top: 4%;
+    position: fixed;
+    right: 10%; */
+    
+/* 	width: 800%;
+    margin-left: 700%; */
 }
 div.radio-wrap {
   display: inline-flex;
