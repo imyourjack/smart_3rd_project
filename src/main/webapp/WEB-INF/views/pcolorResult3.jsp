@@ -105,7 +105,7 @@
       </section>
 
        <section class="ftco-section ftco-no-pb ftco-no-pt">
-            <div class="col-md-12 blog-wrap">
+            <div id = come class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
                   <div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/fallColor.png);"></div>
                   <div class="col-md-6">
