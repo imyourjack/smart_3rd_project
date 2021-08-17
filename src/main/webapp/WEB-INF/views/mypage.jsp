@@ -91,23 +91,22 @@
     <div id="colorlib-page">
       <header>
          <div class="container">
-         
            <div class="colorlib-navbar-brand">
-             <a class="colorlib-logo" href="home.do">PALETTE</a>
+             <a class="colorlib-logo" href="home.do" style="position: absolute; z-index: 2; top: 45px;">PALETTE</a>
            </div>
-           <div method="post" action="${cpath}/login.do" class="loginForm">
-            <c:choose>
-               <c:when test="${sessionScope.userVO==null}">
-                  <a href = "${cpath}/login.do" style="color : white; margin-left: 2160%;">Login</a>
-               </c:when>
-               <c:otherwise>
-                  <div class="logoutForm">
-                     <button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-                     <a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
-                  </div>
-               </c:otherwise>
-            </c:choose>
-         </div>
+	        <div method="post" action="${cpath}/login.do" class="loginForm">
+				<c:choose>
+					<c:when test="${sessionScope.userVO==null}">
+						<a href = "${cpath}/login.do" style="color : white; margin-left: 2160%;">Login</a>
+					</c:when>
+					<c:otherwise>
+						<div class="logoutForm">
+							<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
+							<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+						</div>
+					</c:otherwise>
+				</c:choose>
+			</div>
            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
@@ -174,11 +173,11 @@
                </div>
          </section>
             </div>
-               <br><br><br>
-               
+		         <br><br><br>
+		         
          <jsp:include page="footer.jsp">
-            <jsp:param name="pageSelection" value="footer" />
-          </jsp:include>
+         	<jsp:param name="pageSelection" value="footer" />
+      	 </jsp:include>
 
       <!-- loader -->
       <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>

@@ -62,23 +62,25 @@
       <header>
          <div class="container">
            <div class="colorlib-navbar-brand">
-             <a class="colorlib-logo" href="home.do">palette</a>
+             <a class="colorlib-logo" href="home.do" style="position: absolute; z-index: 2; top: 45px;">PALETTE</a>
            </div>
-           <div method="post" action="${cpath}/login.do" class="loginForm">
-                  <c:choose>
-                     <c:when test="${sessionScope.userVO==null}">
-                        <a href = "${cpath}/login.do" style="color: white;">Login</a>
-                     </c:when>
-                     <c:otherwise>
-                        <button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-                        <a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
-                     </c:otherwise>
-                  </c:choose>
-               </div>
+	        <div method="post" action="${cpath}/login.do" class="loginForm">
+				<c:choose>
+					<c:when test="${sessionScope.userVO==null}">
+						<a href = "${cpath}/login.do" style="color : white; margin-left: 2160%;">Login</a>
+					</c:when>
+					<c:otherwise>
+						<div class="logoutForm">
+							<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
+							<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+						</div>
+					</c:otherwise>
+				</c:choose>
+			</div>
            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
-     
+      
       <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/spring.jpg);">
          <div class="overlay"></div>
          <div class="container-fluid px-0">
@@ -150,7 +152,8 @@
                      </div>
                   </div>
               </div>
-         </div>            
+         </div>
+            
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
                   <div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/springhair2.jpg);"></div>

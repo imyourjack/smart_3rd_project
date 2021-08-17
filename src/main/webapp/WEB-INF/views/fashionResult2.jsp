@@ -83,22 +83,24 @@
     
     <div id="colorlib-page">
       <header>
-      	<div class="container">
-	        <div class="colorlib-navbar-brand">
-	          <a class="colorlib-logo" href="home.do">PALETTE</a>
-	        </div>
+         <div class="container">
+           <div class="colorlib-navbar-brand">
+             <a class="colorlib-logo" href="home.do" style="position: absolute; z-index: 2; top: 45px;">PALETTE</a>
+           </div>
 	        <div method="post" action="${cpath}/login.do" class="loginForm">
-						<c:choose>
-							<c:when test="${sessionScope.userVO==null}">
-								<a href = "${cpath}/login.do" style="color : white;">Login</a>
-							</c:when>
-							<c:otherwise>
-								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-								<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
-							</c:otherwise>
-						</c:choose>
-					</div>
-	        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+				<c:choose>
+					<c:when test="${sessionScope.userVO==null}">
+						<a href = "${cpath}/login.do" style="color : white; margin-left: 2160%;">Login</a>
+					</c:when>
+					<c:otherwise>
+						<div class="logoutForm">
+							<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
+							<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+						</div>
+					</c:otherwise>
+				</c:choose>
+			</div>
+           <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
 
@@ -117,20 +119,46 @@
 	    	<div class="container-fluid px-0">
 	    		<div class="row no-gutters">
 	    		
-	    			<div class="col-md-12 blog-wrap">
-	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);"></div>
-	    					<div class="col-md-6">
-	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<h2 class="mb-4"><a>퍼스널컬러 분석 기반</a></h2>
-	    							<h2 class="mb-4"><a>남성 패션 개선 서비스</a></h2>
-	    							<p>Color types help stylize makeup, fashion. </p>
-	    							<p>have you ever thought about your personal colors that perfectly suit your image?</p>
-									<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">버튼 <span class="ion-ios-arrow-forward"></span></a></p>
-	    						</div>
-	    					</div>
-	    				</div>
-	    			</div>
+	    			<div class="col-md-12 blog-wrap" style="text-align: center;">
+							<div class="row no-gutters align-items-center">
+								<div class="col-md-6 img js-fullheight">
+									<img style="height: 80%; width: 80%;" alt="의상이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">	
+								</div>
+								<div class="col-md-6">
+									<div class="text p-md-5 p-4 ftco-animate">
+
+										<div class="progress" style="height: 50%">
+											<b style="font-size: 15px; width: 10%;">봄 웜</b>
+											<div class="progress-bar progress-bar-striped"
+												role="progressbar" style="width: <%=spring%>%;" aria-valuenow="10"
+												aria-valuemin="0" aria-valuemax="100"><%=spring%>%</div>
+										</div>
+										<br>
+										<div class="progress" style="height: 50%">
+											<b style="font-size: 15px; width: 10%;">여름 쿨</b>
+											<div class="progress-bar progress-bar-striped bg-success"
+												role="progressbar" style="width: <%=summer%>%;" aria-valuenow="25"
+												aria-valuemin="0" aria-valuemax="100"><%=summer%>%</div>
+										</div>
+										<br>
+										<div class="progress" style="height: 50%">
+											<b style="font-size: 15px; width: 10%;">가을 웜</b>
+											<div class="progress-bar progress-bar-striped bg-info"
+												role="progressbar" style="width: <%=fall%>%;" aria-valuenow="50"
+												aria-valuemin="0" aria-valuemax="100"><%=fall%>%</div>
+										</div>
+										<br>
+										<div class="progress" style="height: 50%">
+											<b style="font-size: 15px; width: 10%;">겨울 쿨</b>
+											<div class="progress-bar progress-bar-striped bg-warning"
+												role="progressbar" style="width: <%=winter%>%;" aria-valuenow="75"
+												aria-valuemin="0" aria-valuemax="100"><%=winter%>%</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
 	    			
 	    			<!-- 작업공간 -->
 		   			
