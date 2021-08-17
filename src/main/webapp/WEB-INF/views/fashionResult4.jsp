@@ -124,7 +124,7 @@
 								</div>
 								<div class="col-md-6">
 									<div class="text p-md-5 p-4 ftco-animate">
-
+										<h2 class="mb-4"><a>의상 진단의 결과는?!</a></h2>
 										<div class="progress" style="height: 50%">
 											<b style="font-size: 15px; width: 10%;">봄 웜</b>
 											<div class="progress-bar progress-bar-striped"
