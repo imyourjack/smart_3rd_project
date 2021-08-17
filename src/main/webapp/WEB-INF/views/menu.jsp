@@ -3,11 +3,24 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 <%
    String num = request.getParameter("pageSelection");
 %>
 
+<head>
+   <script type="text/javascript">
+    function logoutFn(){
+          $.ajax({
+             url: "logout.do",
+             type:"get",
+             success:function(){ 
+                location.href="home.do"
+             },
+            error:function(){alert("error");}         
+          });      
+       }   
+   </script>
+</head>
 <li>
    <a class=menuFont href="home.do?user_id=${sessionScope.userVO.user_id}"
       <%
@@ -64,12 +77,33 @@
 </li>
 
 <li>
-   <a class=menuFont href="login.do"
-      <%
-         if(num.equals("6")){
-      %>
-         style="color:#f8b500;"
-      <% } %>
-
-   >로그인</a>
+	<c:choose>
+		<c:when test="${sessionScope.userVO==null}">
+		   <a class=menuFont href="login.do"
+		      <%
+		         if(num.equals("6")){
+		      %>
+		         style="color:#f8b500;"
+		      <% } %>
+		
+		   >로그인</a>
+		</c:when>
+		<c:otherwise>
+			   <label for="labelLogout" class=btn style="color:white">로그아웃</label>
+			   <a id ="labelLogout" style="display: none;" onclick="logoutFn()"
+			      <%
+			         if(num.equals("6")){
+			      %>
+			         style="color:#f8b500;"
+			      <% } %>
+			
+			   >로그아웃</a>
+			<div class="logoutForm">
+				<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
+				<label for="labelLogout">로그아웃</label>
+				<a id ="labelLogout" type="button" style="display: none;" onclick="logoutFn()">Logout</a> 
+			</div>
+		</c:otherwise>
+	</c:choose>
+				
 </li>
