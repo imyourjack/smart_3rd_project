@@ -123,6 +123,7 @@
 	    			<div class="col-md-12 blog-wrap" style="text-align: center;">
                      <div class="row no-gutters align-items-center">
                         <div class="col-md-6 img js-fullheight">
+                           <br><br>
                            <img style="height: 80%; width: 80%;" alt="의상이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">   
                         </div>
                         <div class="col-md-6">
@@ -165,6 +166,10 @@
                      </div>
                   </div>
 	    			
+				<div style="text-align: center; height: 300px; width: 100%; ">
+                  	<h1 style="color: cadetblue;">Summer Cool</h1>
+                  	<br><h2 class="mb-4">베스트 컬러 매칭 패션 아이템</h2>
+                </div>
 	    			<!-- 작업공간 -->
 		   			
 	    			<div class="col-md-12 blog-wrap" style="text-align: center;">
