@@ -3,6 +3,16 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
+
+<%
+   response.setCharacterEncoding("utf-8");
+   String spring = request.getParameter("spring");
+   String summer = request.getParameter("summer");
+   String fall = request.getParameter("fall");
+   String winter = request.getParameter("winter");
+   String imgname = request.getParameter("imgname");
+%>
+
 <html lang="en">
   <head>
     <title>PALETTE</title>
@@ -84,7 +94,8 @@
 					<c:otherwise>
 						<div class="logoutForm">
 							<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-							<a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> 
+							<label for="labelLogout">Logout</label>
+							<a id ="labelLogout" type="button" style="display: none;" onclick="logoutFn()">Logout</a> 
 						</div>
 					</c:otherwise>
 				</c:choose>
@@ -105,7 +116,22 @@
       </section>
 
        <section class="ftco-section ftco-no-pb ftco-no-pt">
-            <div id = come class="col-md-12 blog-wrap">
+       
+			<div class="col-md-12 blog-wrap" style="text-align: center;">
+               <div class="row no-gutters align-items-center">
+                  <div class="col-md-6">
+                     <div class="text p-md-5 p-4 ftco-animate">
+                        <h2 class="mb-4"><a>퍼스널컬러 진단의 결과</a></h2>
+                     </div>
+                  </div>
+                  <div class="col-md-6 img js-fullheight">
+                  	 <br><br><br>
+                     <img style="height: 80%; width: 80%;" alt="얼굴이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">   
+                  </div>
+               </div>
+            </div>       
+       
+            <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
                   <div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/fallColor.png);"></div>
                   <div class="col-md-6">

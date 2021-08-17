@@ -77,15 +77,7 @@ body {
 .logoutForm{
 	position: sticky;
     width: max-content;
-    margin-left: 700%;
-/* 	z-index: 1;
-	white-space: nowrap;
-    top: 4%;
-    position: fixed;
-    right: 10%; */
-    
-/* 	width: 800%;
-    margin-left: 700%; */
+    margin-left: 670%;
 }
 div.radio-wrap {
   display: inline-flex;
