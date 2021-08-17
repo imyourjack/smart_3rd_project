@@ -74,6 +74,9 @@
          }
       });
    }
+   $(document).ready(function() {
+	   $('html, body').animate({scrollTop:$(#come).position().top}, 'slow');
+	}); 
 </script>
 
 </head>
@@ -145,7 +148,7 @@
          </section>
 
          <section class="ftco-section ftco-no-pb ftco-no-pt">
-            <div class="container-fluid px-0">
+            <div class="container-fluid px-0" id="come">
                <div class="row no-gutters">
 
                   <div class="col-md-12 blog-wrap" style="text-align: center;">
