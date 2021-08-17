@@ -3,6 +3,16 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
+
+<%
+   response.setCharacterEncoding("utf-8");
+   String spring = request.getParameter("spring");
+   String summer = request.getParameter("summer");
+   String fall = request.getParameter("fall");
+   String winter = request.getParameter("winter");
+   String imgname = request.getParameter("imgname");
+%>
+
 <html lang="en">
   <head>
     <title>PALETTE</title>
@@ -116,7 +126,7 @@
                   </div>
                   <div class="col-md-6 img js-fullheight">
                   	 <br><br><br>
-                     <img style="height: 80%; width: 80%;" alt="얼굴이미지" src="${pageContext.request.contextPath}/resources/images/fall.jpg">   
+                     <img style="height: 80%; width: 80%;" alt="얼굴이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">   
                   </div>
                </div>
             </div>       

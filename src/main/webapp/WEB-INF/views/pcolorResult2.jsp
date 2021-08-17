@@ -3,6 +3,16 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="cpath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
+
+<%
+   response.setCharacterEncoding("utf-8");
+   String spring = request.getParameter("spring");
+   String summer = request.getParameter("summer");
+   String fall = request.getParameter("fall");
+   String winter = request.getParameter("winter");
+   String imgname = request.getParameter("imgname");
+%>
+
 <html lang="en">
   <head>
     <title>PALETTE</title>
@@ -116,7 +126,7 @@
                   </div>
                   <div class="col-md-6 img js-fullheight">
                   	 <br><br><br>
-                     <img style="height: 80%; width: 80%;" alt="얼굴이미지" src="${pageContext.request.contextPath}/resources/images/summer.jpg">   
+                     <img style="height: 80%; width: 80%;" alt="얼굴이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">   
                   </div>
                </div>
             </div>
@@ -124,24 +134,6 @@
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
 						<div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/summerColor.png);"></div>
-                  <div class="col-md-6">
-                     <div class="text p-md-5 p-4 ftco-animate">
-                  <h2 class="mb-4">당신의 퍼스널 컬러는</h2>
-                  <h2 class="mb-4">'여름 쿨톤' 입니다.</h2>
-                  <p>여름 쿨톤인 사람은 대체적으로 깨끗한 이미지를 가지고 있습니다.
-                  <br>또한 여름 타입은 시원하고 부드러운 스타일이 주로 많습니다.
-                  <br>여름 타입은 흰색과 파랑을 지닌 차가운 유형으로 
-                  <br>연한 톤과 밝은 잿빛 톤의 시원스럽고 화려함을 느끼게 합니다.
-                  <br>핑크빛과 붉은빛이 감도는 혈색 좋은 피부 톤을 가지고 있습니다.
-                  <br>지적이고 세련되며 우아한 인상이 여름 타입의 특징입니다.</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-md-12 blog-wrap">
-               <div class="row no-gutters align-items-center">
-                  <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/summerSpectrum1.png);">
-                  </div>
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
                   <h2 class="mb-4">당신의 퍼스널 컬러는</h2>

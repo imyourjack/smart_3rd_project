@@ -126,10 +126,8 @@ public class UploadController {
 
 		String filename = list.get(0).getFileName();
 
-		String ipAddress=request.getRemoteAddr();
-		System.out.println("클라이언트 IP 주소: "+ipAddress);
-		
-		
+		// String ipAddress=request.getRemoteAddr();
+		// System.out.println("클라이언트 IP 주소: "+ipAddress);
 		// String flaskUrl = "http://"+ipAddress+":5000/personal?imgurl="+filename+"&user_id="+userid;
 		String flaskUrl = "http://192.168.6.37:5000/personal?imgurl="+filename+"&user_id="+userid;
 		System.out.println(flaskUrl);
@@ -186,8 +184,8 @@ public class UploadController {
 
 		String filename = list.get(0).getFileName();
 
-		String ipAddress=request.getRemoteAddr();
-		System.out.println("클라이언트 IP 주소: "+ipAddress);
+		// String ipAddress=request.getRemoteAddr();
+		// System.out.println("클라이언트 IP 주소: "+ipAddress);
 		
 		String flaskUrl = "http://192.168.6.37:5000/cloths?imgurl="+filename+"&user_id="+userid;
 		System.out.println(flaskUrl);
