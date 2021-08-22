@@ -89,7 +89,7 @@
 		   >로그인</a>
 		</c:when>
 		<c:otherwise>
-			   <label for="labelLogout" class=btn style="color:white">로그아웃</label>
+			   <label for="labelLogout" class=btn style="color:white" onclick="logoutFn()">로그아웃</label>
 			   <a id ="labelLogout" style="display: none;" onclick="logoutFn()"
 			      <%
 			         if(num.equals("6")){
@@ -99,8 +99,8 @@
 			
 			   >로그아웃</a>
 			<div class="logoutForm">
-				<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-				<label for="labelLogout">로그아웃</label>
+				<button class="btn" style="color : white;" onclick="logoutFn()">${sessionScope.userVO.user_name}</button>
+				<label for="labelLogout" onclick="logoutFn()">로그아웃</label>
 				<a id ="labelLogout" type="button" style="display: none;" onclick="logoutFn()">Logout</a> 
 			</div>
 		</c:otherwise>

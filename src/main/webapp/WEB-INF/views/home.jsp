@@ -81,7 +81,7 @@
 						<c:otherwise>
 							<div class="logoutForm">
 								<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-								<label for="labelLogout">Logout</label>
+								<label for="labelLogout" onclick="logoutFn()">Logout</label>
 								<a id ="labelLogout" type="button" style="display: none;" onclick="logoutFn()">Logout</a> 
 								<!-- <a type="button" style="font-size : 16px" onclick="logoutFn()">Logout</a> --> 
 							</div>
@@ -215,24 +215,24 @@
 	            <div class="ftco-footer-widget mb-4">
 	              <h2 class="ftco-heading-2">Recent Blog</h2>
 	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_1.jpg);"></a>
+	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/blog_1.png);"></a>
 	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+	                  <h3 class="heading"><a href="https://blog.naver.com/dkdk9998/222471240990">(Git) How to log in using Personal access token</a></h3>
 	                  <div class="meta">
-	                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-	                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-	                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+	                    <div><a href="https://blog.naver.com/dkdk9998/222471240990"><span class="icon-calendar"></span> Aug 15, 2021</a></div>
+	                    <div><a href="https://blog.naver.com/dkdk9998/222471240990"><span class="icon-person"></span> imyourjack</a></div>
+	                    <div><a href="https://blog.naver.com/dkdk9998/222471240990"><span class="icon-chat"></span> 21</a></div>
 	                  </div>
 	                </div>
 	              </div>
 	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/image_2.jpg);"></a>
+	                <a class="blog-img mr-4" style="background-image: url(${pageContext.request.contextPath}/resources/images/blog_2.png);"></a>
 	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+	                  <h3 class="heading"><a href="https://blog.naver.com/dkdk9998/222453490055">Even the all-powerful Pointing has no control about</a></h3>
 	                  <div class="meta">
-	                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-	                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-	                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+	                    <div><a href="https://blog.naver.com/dkdk9998/222453490055"><span class="icon-calendar"></span> Aug 1, 2021</a></div>
+	                    <div><a href="https://blog.naver.com/dkdk9998/222453490055"><span class="icon-person"></span> imyourjack</a></div>
+	                    <div><a href="https://blog.naver.com/dkdk9998/222453490055"><span class="icon-chat"></span> 19</a></div>
 	                  </div>
 	                </div>
 	              </div>
@@ -258,7 +258,7 @@
 		              <ul>
 		                <li><span class="icon icon-map-marker"></span><span class="text">3rd floor 31-15, Yesul-gil, Dong-gu, Gwangju, Republic of Korea</span></li>
 		                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+81 10 5315 6111</span></a></li>
-		                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">dkdk9998@naver.com</span></a></li>
+		                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">dkdk9998@gmail.com</span></a></li>
 		              </ul>
 		            </div>
 	            </div>
