@@ -118,13 +118,11 @@
 						<div class="panel-body">
 							<form id="frm" method="post" action="${cpath}/boardInsert.do">
 								<div class="form-group">
-									<label>제목</label> <input type="text" class="form-control"
-										id="board_title" name="board_title">
+									<label>제목</label> <input type="text" class="form-control" id="board_title" name="board_title">
 								</div>
 								<div class="form-group" style="height: 470px;">
 									<label>내용</label>
-									<textarea class="form-control" rows="5" id=board_contents
-										name="board_contents"></textarea>
+									<textarea class="form-control" rows="5" id=board_contents name="board_contents"></textarea>
 								</div>
 								<div class="form-group">
 								<br>
@@ -141,7 +139,7 @@
 					</div>
 				</div>
 				<br>
-			</section>
+		</section>
 
       
    		<jsp:include page="footer.jsp">

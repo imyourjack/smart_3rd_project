@@ -93,7 +93,6 @@
 	      <div class="container-fluid px-0">
 	        <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-12 ftco-animate text-center">
-	            <!-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Blog</span></p> -->
 	            <h1 class="bread">Community</h1>
 	          </div>
 	        </div>
@@ -106,13 +105,11 @@
 				<div class="container">
 						<div class="panel-body" >
 							<br>
-
 							<table class="table table-hover">
 								<thead style="text-align:center">
 									<tr class="table-light">
 										<th scope="col">번호</th>
 										<th scope="col">제목</th>
-										<!--<th scope="col">내용</th>-->
 										<th scope="col">조회수</th>
 										<th scope="col">작성일</th>
 										<th scope="col">작성자</th>

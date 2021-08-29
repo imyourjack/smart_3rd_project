@@ -153,13 +153,14 @@
                   </div>
                </div>
             </div>
-             <div class="col-md-12 blog-wrap">
-                <div class="row no-gutters align-items-center">
-                   <div class="col-md-6 img js-fullheight">
+            
+            <div class="col-md-12 blog-wrap">
+              <div class="row no-gutters align-items-center">
+                 <div class="col-md-6 img js-fullheight">
                          <c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
                             <img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
                          </c:forEach>
-                   </div>
+                 </div>
                    
                  <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
@@ -167,7 +168,7 @@
                         <br>
                         <br>
                         <c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
-                         <div width="300" height="300">
+                         <div style = "width:300; height:300;">
                             <h3 class="mb-4">${vo.item_name}</h3>
                             <p style=" font-size: 12px;">${vo.item_tag}</p>
                             <p style=" font-size: 15px;">${vo.item_explain}</p>
@@ -175,10 +176,10 @@
                         </div>
                           <br>
                        </c:forEach>
-                     </div>
-                  </div>
+                   </div>
+                </div>
               </div>
-         </div>
+            </div>
             
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
